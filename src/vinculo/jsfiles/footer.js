@@ -6,13 +6,23 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <div className="footer-address">
-          <p>123 Street Name, City, Country</p>
-          <p>Phone: +1234567890</p>
+        <div className="footer-about">
+          <div className="about-us">
+            <h3>About Us</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec nisi auctor, ultrices mauris vel,
+              vestibulum velit. Nullam lobortis libero at justo elementum fermentum.
+            </p>
+          </div>
+          <div className="footer-social">
+            <a href="https://facebook.com"><FaFacebook /></a>
+            <a href="https://twitter.com"><FaTwitter /></a>
+            <a href="https://instagram.com"><FaInstagram /></a>
+          </div>
         </div>
         <div className="footer-links">
+          <h3>COMPANY</h3>
           <ul>
-            <li><a href="#">COMPANY</a></li>
             <li><a href="#">Search</a></li>
             <li><a href="#">Return/Exchange Policy</a></li>
             <li><a href="#">Privacy Policy</a></li>
@@ -25,10 +35,10 @@ const Footer = () => {
             <li><a href="#">About Us</a></li>
           </ul>
         </div>
-        <div className="footer-social">
-          <a href="https://facebook.com"><FaFacebook /></a>
-          <a href="https://twitter.com"><FaTwitter /></a>
-          <a href="https://instagram.com"><FaInstagram /></a>
+        <div className="footer-contact">
+          <h2>Contact us</h2>
+          <p>123 Street Name, City, Country</p>
+          <p>Phone: +1234567890</p>
         </div>
       </div>
       <div className="map-container">
@@ -41,10 +51,6 @@ const Footer = () => {
           loading="lazy"
         ></iframe>
       </div>
-      <div className="about-us">
-        <h3>About Us</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec nisi auctor, ultrices mauris vel, vestibulum velit. Nullam lobortis libero at justo elementum fermentum.</p>
-      </div>
       <div className="copyright">
         <p>&copy; 2024 Your Company Name. All rights reserved.</p>
       </div>
@@ -53,8 +59,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-
-
-//background-color: #234E70;
-    //color: #FBF8BE;

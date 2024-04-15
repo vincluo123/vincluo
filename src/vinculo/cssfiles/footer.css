@@ -1,89 +1,74 @@
 .footer {
-  background-color: #234E70;
-  color: #FBF8BE;
-  padding: 20px;
+  background-color: #fbf8be;
+  color: #234E70;
+  padding: 20px 0;
 }
 
 .footer-container {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.footer-address,
-.footer-links,
-.footer-social {
+.footer-about {
+  flex: 1 1 30%;
+}
+
+.footer-about .about-us {
   margin-bottom: 20px;
 }
 
-.footer-address p {
-  margin: 5px 0;
+.footer-about .footer-social {
+  display: flex;
+}
+
+.footer-about .footer-social a {
+  margin-right: 10px;
+  color: #234E70;
+  font-size: 20px;
+}
+
+.footer-links {
+  margin-left: 90px;
+  flex: 1 1 30%;
 }
 
 .footer-links ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
 }
 
 .footer-links ul li {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .footer-links ul li a {
-  color: #FBF8BE;
+  color: #234E70;
   text-decoration: none;
 }
 
-.footer-social a {
-  margin-right: 10px;
-  color: #fff;
-  text-decoration: none;
+.footer-contact {
+  flex: 1 1 30%;
 }
 
 .map-container {
-  width: 100%;
-  overflow: hidden;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .map-container iframe {
   width: 100%;
-  height: 300px;
 }
 
-/* Media Queries for Responsive Design */
-
-@media screen and (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-  }
-
-  .footer-links {
-    order: 3; /* Reorder the links section to be at the bottom */
-  }
-
-  .footer-social {
-    order: 2; /* Reorder the social links section to be above the links */
-  }
-
-  .map-container {
-    order: 4; /* Reorder the map to be at the bottom */
-  }
-}
-/* Existing CSS styles... */
-
-.about-us {
-  margin-bottom: 20px;
+.copyright {
+  text-align: center;
+  margin-top: 20px;
 }
 
-.about-us h3 {
-  color: #FBF8BE;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+.copyright p {
+  color: #234E70;
+  font-size: 14px;
 }
-
-.about-us p {
-  color: #FBF8BE;
-}
-
-/* Media Queries for Responsive Design... */
