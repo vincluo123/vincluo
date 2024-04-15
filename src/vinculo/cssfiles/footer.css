@@ -1,7 +1,7 @@
 /* Footer Container */
 .footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #234E70;
+    color: #FBF8BE;
     padding: 20px 0;
   }
   
@@ -20,7 +20,7 @@
   
   /* Social Icons */
   .footer-social a {
-    color: #fff;
+    color: #FBF8BE;
     font-size: 24px;
     margin-right: 10px;
     text-decoration: none;
