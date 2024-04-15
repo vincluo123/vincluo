@@ -32,9 +32,10 @@ function UncontrolledExample() {
       </Carousel.Item>
     </Carousel>
     </div>
-    </div>
-    </div>
+    
   );
 }
+</div>
+    </div>
 
 export default UncontrolledExample;
