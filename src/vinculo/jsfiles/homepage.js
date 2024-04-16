@@ -4,7 +4,7 @@ import '../cssfiles/homepage.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { Carousel } from 'react-bootstrap'; // Import Carousel component from react-bootstrap
 
-function home() {
+function Home() {
 
     const products = [
         {
@@ -153,4 +153,4 @@ function home() {
 
 }
 
-export default home;
+export default Home;

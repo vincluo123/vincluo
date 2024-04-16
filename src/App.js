@@ -1,11 +1,11 @@
 
 import './App.css';
 import Kids from './vinculo/jsfiles/kids';
-import home from './vinculo/jsfiles/header';
+import Home from './vinculo/jsfiles/header';
 function App() {
   return (
     <div>
-      <home/>
+      <Home/>
       <Kids />
     </div>
   );
