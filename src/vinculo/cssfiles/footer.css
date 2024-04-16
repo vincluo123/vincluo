@@ -1,6 +1,8 @@
+/* footer.css */
+
 .footer {
-  background-color: #fbf8be;
-  color: #234E70;
+  background-color: #b7f3b5;
+  color: #216024;
   padding: 20px 0;
 }
 
@@ -9,7 +11,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  max-width: 1400px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -20,16 +22,6 @@
 
 .footer-about .about-us {
   margin-bottom: 20px;
-}
-
-.footer-about .footer-social {
-  display: flex;
-}
-
-.footer-about .footer-social a {
-  margin-right: 10px;
-  color: #234E70;
-  font-size: 20px;
 }
 
 .footer-links {
@@ -47,20 +39,26 @@
 }
 
 .footer-links ul li a {
-  color: #234E70;
+  color: #216024;
   text-decoration: none;
 }
 
 .footer-contact {
   flex: 1 1 30%;
+  justify-content: center;
 }
 
-.map-container {
-  margin-top: 20px;
+.footer-contact .footer-social {
+  display: flex;
 }
 
-.map-container iframe {
-  width: 100%;
+.footer-contact .footer-social a {
+  margin-right: 10px;
+  color: #216024;
+  font-size: 30px;
+}
+.footer-social {
+  color: #216024;
 }
 
 .copyright {
@@ -68,10 +66,51 @@
   margin-top: 20px;
 }
 
-.copyright p {
-  color: #234E70;
-  font-size: 14px;
+.secure-payment-app {
+  display: flex;
+  flex-direction: column; /* Display the content vertically by default */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  margin-top: 20px;
 }
-h3,h2{
+
+.secure-payment-text {
+  font-weight: bold;
+  margin-top: 10px; /* Adjust spacing between text and icons */
+}
+
+.payment-icons {
+  display: flex;
+  justify-content: center; /* Center the icons horizontally */
+  align-items: center; /* Center the icons vertically */
+}
+
+.footer-social img{
+  width: 30px;
+  height: 30px;
+}
+
+.payment-icons img {
+  width: 50px; /* Adjust image size as needed */
+  margin: 0 10px; /* Adjust spacing between icons */
+}
+h2,h3{
   text-decoration: underline;
+}
+/* Media query for mobile view */
+@media screen and (max-width: 700px) {
+  
+
+  .secure-payment-text {
+    margin-top: 0; /* Reset margin top for text */
+    margin-left: 10px; /* Adjust spacing between text and icons */
+  }
+
+  .payment-icons {
+    margin-top: 10px; /* Add space between icons and text */
+  }
+
+  .payment-icons img {
+    margin: 0 5px; /* Adjust spacing between icons */
+  }
 }
