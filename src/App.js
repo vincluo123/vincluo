@@ -1,7 +1,7 @@
 
 import './App.css';
 import Kids from './vinculo/jsfiles/kids';
-import Home from './vinculo/jsfiles/header';
+import Home from './vinculo/jsfiles/homepage';
 function App() {
   return (
     <div>
