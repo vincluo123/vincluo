@@ -1,0 +1,156 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(243, 239, 239);
+    height: 100vh;
+}
+
+
+.account{
+    display: flex;
+    gap: 20px;
+}
+
+.navbar{
+    background-color: white;
+    height: 100vh;
+    width: 210px;
+}
+
+.navigation{
+    background-color: white;
+    width: 150px;
+    height:500px;
+    margin-top: 0;
+    list-style: none;
+    text-align: start;
+    padding: 50px 30px;
+}
+
+.navigation li{
+    margin-bottom: 20px;
+}
+
+.navigation li a{
+    text-decoration: none;
+    color: #234e70;
+    font-size: 18px;
+}
+
+.setting{
+    text-align: start;
+    color: #234e70;
+    font-size: 18px;
+    padding-left: 30px;
+    margin-top: 90px;
+    border-top: 1px solid lightgray;
+}
+
+.profile-details{
+    background-color: white;
+    color: #234e70;
+    width: 300px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.username{
+    margin-top: 0;
+}
+
+.details{
+    border-bottom: 1px solid lightgray;
+
+}
+
+h3{
+    margin: 0;
+    margin-top: 10px;
+}
+
+p{
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.setting-icon{
+    margin-top: 10px;
+}
+
+.tags{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.tagheader{
+    margin-bottom: 0;
+}
+
+.tags p{
+    background-color: rgb(202, 223, 243);
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+    
+.profile-image{
+    text-align: center;
+}
+
+
+.profile-image img{
+    width: 100px;
+    height: 100px;
+}
+
+.main-section{
+    display: flex;
+    gap: 30px;
+}
+
+.review-section{
+    background-color: white;
+    width: 350px;
+    height: 200px;
+    text-align: start;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: #234e70;
+    font-size: 18px;
+}
+
+.review-section h3{
+    font-size: 30px;
+}
+
+.review-section p{
+    margin-bottom: 10px;
+}
+
+.review-section a{
+    color: #234e70;
+}
+
+.order-details{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.order-details img {
+    width: 200px;
+    height: 200px;
+}
+
+.order-details button{
+    width: 100px;
+    height: 30px;
+    background-color: #fbf8be;
+    color: #234e70;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+}
