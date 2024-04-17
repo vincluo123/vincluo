@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaUser , FaShoppingCart } from 'react-icons/fa';
+import { FaUser , FaShoppingCart ,FaHeart ,FaPhone} from 'react-icons/fa';
 import '../cssfiles/header.css';
 
 const Header = () => {
@@ -13,6 +13,9 @@ const Header = () => {
         <ul className="nav-menu">
         <li className="nav-item">
             <a href="/about">About</a>
+          </li>
+          <li className="nav-item">
+            <a href="/contact">New Arrivals</a>
           </li>
           {/* Dropdown for Home */}
           <li className="nav-item dropdown">
@@ -35,12 +38,8 @@ const Header = () => {
           <li className="nav-item">
             <a href="/contact">Deals</a>
           </li>
-          <li className="nav-item">
-            <a href="/contact">WishList</a>
-          </li>
-          <li className="nav-item">
-            <a href="/contact">Contact</a>
-          </li>
+          
+        
         </ul>
       </nav>
 
@@ -50,20 +49,35 @@ const Header = () => {
         <input type="text" placeholder="Search..." />
         <button type="submit">Search</button>
       </div>
-
+{/*  
       <div className="account-links">
         <a href="/login">Login</a>
         <a href="/register">Register</a>
-      </div>
+      </div> */}
 
-      <div className="User">
-        <a href="/cart">
+      <div className="User dropdown">
+        <a href="/cart" className="dropdown-toggle">
           <FaUser />
+        </a>
+        <ul className="dropdown-menu">
+              <li><a href="#" className="dropdown-item">Login</a></li>
+              <li><a href="#" className="dropdown-item">Register</a></li>
+             
+            </ul>
+      </div>
+      <div className="heart">
+        <a href="/cart">
+          <FaHeart />
         </a>
       </div>
       <div className="shopping-cart">
         <a href="/cart">
           <FaShoppingCart />
+        </a>
+      </div>
+      <div className="Phone">
+        <a href="/cart">
+          <FaPhone />
         </a>
       </div>
       <div className="language-selector">

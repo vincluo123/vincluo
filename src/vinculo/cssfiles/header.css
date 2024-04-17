@@ -103,6 +103,19 @@
   color: #f0f0f0;
 }
 
+.User .dropdown-menu li a{
+  color: #102C57;
+}
+
+.User .dropdown-menu li a:hover{
+  color: #fabd10;
+}
+.heart a{
+  color: #f0f0f0;
+}
+.Phone a{
+  color: #f0f0f0;
+}
 
 .language-selector select {
   padding: 10px;
