@@ -119,23 +119,54 @@
   .round{
     border-radius: 50%;
   }
+
+
+  @media only screen and (min-width: 0px) and (max-width: 480px) {
+    .carousel1 {
+      width: 100%; /* Ensure the container takes up the full width */
+    }
+  
+    .carousel1 img {
+      width: 100%; /* Set each image to take up the full width of the container */
+      height: auto; /* Let the height adjust automatically based on the aspect ratio */
+      display: block; /* Ensure images are displayed as block elements */
+      margin: 0 auto; /* Center align the images */
+    }
+    .circle {
+      width: calc(25% - 10px); /* Set the width of each circle */
+      height: 100px; /* Set the height to 100px */
+      margin: 0 5px; /* Adjust the margin */
+      display: inline-block; /* Ensure circles are displayed in a row */
+      box-sizing: border-box;
+    }
+  }
+
+
  
 
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 480px) and (max-width: 487px) {
   .carousel1 {
     width: 100%; /* Ensure the container takes up the full width */
   }
 
   .carousel1 img {
-    width: 25%; /* Set each image to take up 25% of the container width */
+    width: 100%; /* Set each image to take up the full width of the container */
     height: auto; /* Let the height adjust automatically based on the aspect ratio */
-    float: left; /* Ensure images are displayed in a row */
+    display: block; /* Ensure images are displayed as block elements */
+    margin: 0 auto; /* Center align the images */
+  }
+  .circle {
+    width: calc(25% - 10px); /* Set the width of each circle */
+    height: 100px; /* Set the height to 100px */
+    margin: 0 5px; /* Adjust the margin */
+    display: inline-block; /* Ensure circles are displayed in a row */
+    box-sizing: border-box;
   }
 }
 
 
 /* For desktop devices with a minimum width of 768px */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 488px) and (max-width: 575px) {
   .carousel1 {
     width: 100%; /* Ensure the container takes up the full width */
   }
@@ -145,5 +176,103 @@
     height: auto; /* Let the height adjust automatically based on the aspect ratio */
     float: left; /* Ensure images are displayed in a row */
   }
+  .circle {
+    width: 100px; /* Set the width to 100px */
+    height: 100px; /* Set the height to 100px */
+    margin: 0 5px; /* Adjust the margin */
+  }
+  .product {
+    width: calc(100% - 20px); /* Set the width to fill the container with some margin */
+    margin: 10px auto; /* Center the product cards and adjust the margin */
+    padding: 10px; /* Adjust the padding */
+    max-width: none; /* Remove the maximum width */
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .carousel1 {
+    width: 100%; /* Ensure the container takes up the full width */
+  }
+
+  .carousel1 img {
+    width: 25%; /* Set each image to take up 25% of the container width */
+    height: auto; /* Let the height adjust automatically based on the aspect ratio */
+    float: left; /* Ensure images are displayed in a row */
+  }
+  .circle {
+    width: 100px; /* Set the width to 100px */
+    height: 100px; /* Set the height to 100px */
+    margin: 0 5px; /* Adjust the margin */
+  }
+  .product {
+    width: 100%; /* Set the width to 100% to fill the container */
+    margin: 10px; /* Adjust the margin */
+    padding: 10px; /* Adjust the padding */
+    
+
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .carousel1 {
+    width: 100%; /* Ensure the container takes up the full width */
+  }
+
+  .carousel1 img {
+    width: 25%; /* Set each image to take up 25% of the container width */
+    height: auto; /* Let the height adjust automatically based on the aspect ratio */
+    float: left; /* Ensure images are displayed in a row */
+  }
+  .circle {
+    width: 150px; /* Set the width to 150px */
+    height: 150px; /* Set the height to 150px */
+    margin: 0 15px; /* Adjust the margin */
+    border-radius: 50%; /* Ensure the circle maintains its aspect ratio */
+    display: inline-block; /* Ensure circles are displayed in a row */
+  }
+  .product {
+    width: 150px; /* Set the width to 150px */
+    margin: 10px; /* Adjust the margin */
+    padding: 10px; /* Adjust the padding */
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .carousel1 {
+    width: 100%; /* Ensure the container takes up the full width */
+  }
+
+  .carousel1 img {
+    width: 25%; /* Set each image to take up 25% of the container width */
+    height: auto; /* Let the height adjust automatically based on the aspect ratio */
+    float: left; /* Ensure images are displayed in a row */
+  }
+  .circle {
+    width: 200px; /* Set the width to 200px */
+    height: 200px; /* Set the height to 200px */
+    margin: 0 20px; /* Adjust the margin */
+  }
+  .product {
+    width: 200px; /* Set the width to 200px */
+    margin: 10px; /* Adjust the margin */
+    padding: 15px; /* Adjust the padding */
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+  .carousel1 {
+    width: 100%; /* Ensure the container takes up the full width */
+  }
+
+  .carousel1 img {
+    width: 25%; /* Set each image to take up 25% of the container width */
+    height: auto; /* Let the height adjust automatically based on the aspect ratio */
+    float: left; /* Ensure images are displayed in a row */
+  }
+  .circle {
+    width: 200px; /* Set the width to 200px */
+    height: 200px; /* Set the height to 200px */
+    margin: 0 20px; /* Adjust the margin */
+  } 
 }
 
