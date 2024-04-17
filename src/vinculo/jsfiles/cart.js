@@ -1,39 +1,48 @@
+import '../cssfiles/cart.css';
 import React, { useState } from 'react';
 
+
 const CartPage = () => {
-  const [cart, setCart] = useState([]);
+  const [cartItems, setCartItems] = useState([
+    { id: 1, name: 'Product 1', price: 10, quantity: 1 },
+    { id: 2, name: 'Product 2', price: 15, quantity: 1 },
+    { id: 3, name: 'Product 3', price: 20, quantity: 1 },
+  ]);
 
-  // Function to add an item to the cart
-  const addToCart = (item) => {
-    setCart([...cart, item]);
+  const handleQuantityChange = (id, newQuantity) => {
+    const updatedCart = cartItems.map(item =>
+      item.id === id ? { ...item, quantity: newQuantity } : item
+    );
+    setCartItems(updatedCart);
   };
 
-  // Function to remove an item from the cart
-  const removeFromCart = (index) => {
-    const newCart = [...cart];
-    newCart.splice(index, 1);
-    setCart(newCart);
-  };
-
-  // Function to calculate the total price of items in the cart
   const calculateTotal = () => {
-    return cart.reduce((total, item) => total + item.price, 0);
+    return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
   };
 
   return (
     <div className="cart-page">
-      <h2>Shopping Cart</h2>
-      <div className="cart-items">
-        {cart.map((item, index) => (
-          <div key={index} className="cart-item">
-            <p>{item.name}</p>
-            <p>${item.price}</p>
-            <button onClick={() => removeFromCart(index)}>Remove</button>
+      <h1>Shopping Cart</h1>
+      {cartItems.map(item => (
+        <div key={item.id} className="cart-item">
+          <div className="item-info">
+            <h2>{item.name}</h2>
+            <p>Price: ${item.price}</p>
           </div>
-        ))}
-      </div>
-      <div className="cart-total">
-        <h3>Total: ${calculateTotal()}</h3>
+          <div className="quantity">
+            <label htmlFor={`quantity-${item.id}`}>Quantity:</label>
+            <input
+              type="number"
+              id={`quantity-${item.id}`}
+              min="1"
+              value={item.quantity}
+              onChange={(e) => handleQuantityChange(item.id, parseInt(e.target.value))}
+            />
+          </div>
+        </div>
+      ))}
+      <div className="total">
+        <h2>Total: ${calculateTotal()}</h2>
       </div>
     </div>
   );
