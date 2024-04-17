@@ -33,9 +33,12 @@ function UncontrolledExample() {
     </Carousel>
     </div>
     
-  );
-}
+  
+
+
 </div>
     </div>
 
+  )
+}
 export default UncontrolledExample;
