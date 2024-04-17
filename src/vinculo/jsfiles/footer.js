@@ -1,6 +1,15 @@
 import React from 'react';
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 import '../cssfiles/footer.css';
+import paytmIcon from '../footer images/paytm.svg';
+import gpayIcon from '../footer images/google-pay.svg';
+import phonepeIcon from '../footer images/phonepe.svg';
+import codIcon from '../footer images/cod.svg';
+import amzIcon from '../footer images/amazon-pay.svg';
+import facebook from '../footer images/facebook.svg';
+import whatsapp from '../footer images/whatsapp.svg';
+import twitter from '../footer images/twitter.svg';
+import instagram from '../footer images/instagram.svg';
 
 const Footer = () => {
   return (
@@ -9,15 +18,9 @@ const Footer = () => {
         <div className="footer-about">
           <div className="about-us">
             <h3>About Us</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec nisi auctor, ultrices mauris vel,
-              vestibulum velit. Nullam lobortis libero at justo elementum fermentum.
+            <p style={{textAlign:'justify'}}>
+              In our company we are selling first quality tshirts for both men and women.
             </p>
-          </div>
-          <div className="footer-social">
-            <a href="https://facebook.com"><FaFacebook /></a>
-            <a href="https://twitter.com"><FaTwitter /></a>
-            <a href="https://instagram.com"><FaInstagram /></a>
           </div>
         </div>
         <div className="footer-links">
@@ -39,18 +42,29 @@ const Footer = () => {
           <h2>Contact us</h2>
           <p>123 Street Name, City, Country</p>
           <p>Phone: +1234567890</p>
+          <div className="footer-social">
+            <a href="https://instagram.com"><img src={instagram}></img></a>
+            <a href="https://whatsapp.com"><img src={whatsapp}></img></a>
+            <a href="https://facebook.com"><img src={facebook}></img></a>
+            <a href="https://twitter.com"><img src={twitter}></img></a>
+          </div>
         </div>
       </div>
-      <div className="map-container">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.502358107225!2dLongitude!3dLatitude!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDI5JzQwLjYiTiAxMjnCsDAwJzA3LjMiRQ!5e0!3m2!1sen!2sus!4v1618415943286!5m2!1sen!2sus"
-          width="600"
-          height="450"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-        ></iframe>
+      
+      <div className="secure-payment-app">
+      <div className="secure-payment-text">100% Secure Payment</div>
+        <div className="payment-icons">
+          
+          <img src={paytmIcon} alt="Paytm" />
+          <img src={gpayIcon} alt="GPay" />
+          <img src={phonepeIcon} alt="PhonePe" />
+          <img src={amzIcon} alt="Amazon Pay" />
+          <img src={codIcon} alt="Cash on Delivery" />
+        </div>
+        
       </div>
+
+      
       <div className="copyright">
         <p>&copy; 2024 Your Company Name. All rights reserved.</p>
       </div>

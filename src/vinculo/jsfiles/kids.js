@@ -3,9 +3,8 @@ import React from 'react';
 import '../cssfiles/kids.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { Carousel } from 'react-bootstrap'; // Import Carousel component from react-bootstrap
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 function Kids() {
-
     const products = [
         {
             id: 1,
@@ -62,7 +61,7 @@ function Kids() {
             <Carousel>
                 <Carousel.Item>
                     <img
-                        className="carousel "
+                        className="carousel"
                         src="carousel1.webp"
                         alt="First slide"
                     />
