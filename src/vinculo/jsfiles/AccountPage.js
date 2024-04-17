@@ -192,7 +192,7 @@ export const AccountPage = () => {
                         Get the Latest Updates from here!
                     </h3>
                     <p>Get all the Notification of the latest products
-                        from us turn on the Notification!
+                        from us!!
 
                     </p>
 
