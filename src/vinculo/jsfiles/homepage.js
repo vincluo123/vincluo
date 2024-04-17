@@ -113,7 +113,7 @@ function Home() {
           </div>
             <div className="container">
                 <h1 className='catagories-header'>Categories</h1>
-                <div className="circle-container">
+                <div className="circle-container card-container d-flex flex-row">
                     <div className="circle">
                         <img src="tshirt1.avif" alt="Category 1" />
                         <p>T-shirts</p>
