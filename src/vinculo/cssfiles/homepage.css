@@ -119,3 +119,31 @@
   .round{
     border-radius: 50%;
   }
+ 
+
+@media only screen and (max-width: 767px) {
+  .carousel1 {
+    width: 100%; /* Ensure the container takes up the full width */
+  }
+
+  .carousel1 img {
+    width: 25%; /* Set each image to take up 25% of the container width */
+    height: auto; /* Let the height adjust automatically based on the aspect ratio */
+    float: left; /* Ensure images are displayed in a row */
+  }
+}
+
+
+/* For desktop devices with a minimum width of 768px */
+@media only screen and (min-width: 768px) {
+  .carousel1 {
+    width: 100%; /* Ensure the container takes up the full width */
+  }
+
+  .carousel1 img {
+    width: 25%; /* Set each image to take up 25% of the container width */
+    height: auto; /* Let the height adjust automatically based on the aspect ratio */
+    float: left; /* Ensure images are displayed in a row */
+  }
+}
+
