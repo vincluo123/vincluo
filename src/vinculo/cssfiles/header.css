@@ -1,44 +1,70 @@
+.header {
+  background-color: #ffffff;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #234e70;
-    color: #fff;
-    padding: 20px;
-  }
-  
-  .logo img {
-    width: 100px;
-    height: auto;
-  }
-  
-  .nav {
-    font-size: 18px;
-  }
-  
-  .nav__list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-  }
-  
-  .nav__item {
-    margin-right: 20px;
-  }
-  
-  .nav__item a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 20px;
-  }
-  
-  .nav__item a:hover {
-    color: #ffd700;
-  }
-  
-  .icon{
-    font-size: 40px;
-  }
+.logo img {
+  height: 40px;
+}
+
+.nav-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+  color: #6d6df0a8;
+}
+
+.search-bar input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.search-bar button {
+  background-color: #6d6df0a8;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+
+.account-links a {
+  text-decoration: none;
+  color: #333;
+  margin-right: 20px;
+}
+
+.shopping-cart {
+  margin-right: 20px;
+}
+
+.language-selector select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
