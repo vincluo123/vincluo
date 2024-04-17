@@ -1,4 +1,6 @@
 import React from 'react';
+import { FaUser, FaCartArrowDown} from 'react-icons/fa';
+import "../cssfiles/header.css"
 
 const Header = () => {
   return (
@@ -10,8 +12,10 @@ const Header = () => {
         <ul className="nav__list">
           <li className="nav__item"><a href="/">Home</a></li>
           <li className="nav__item"><a href="/products">Products</a></li>
-          <li className="nav__item"><a href="/cart">Cart</a></li>
-          <li className="nav__item"><a href="/login">Login</a></li>
+         
+          
+          <li className="nav__item">  <a href="http" className='icon'><FaUser /></a></li>
+          <li className="nav__item">  <a href="https://instagram.com" className='icon'><FaCartArrowDown /></a></li>
         </ul>
       </nav>
     </header>
