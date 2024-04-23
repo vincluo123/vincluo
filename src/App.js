@@ -7,6 +7,7 @@ import Home from './vinculo/jsfiles/homepageDesktop';
 
 
 
+
 function App() {
   return (
     <>
@@ -14,6 +15,7 @@ function App() {
       <Header/>
       <Home/>
       <CartPage/>
+     
       <Footer/>
     </>
   );
