@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../cssfiles/footer.css';
+import '../cssfiles/footerDesktop.css';
 import paytmIcon from '../footer images/paytm.svg';
 import gpayIcon from '../footer images/google-pay.svg';
 import phonepeIcon from '../footer images/phonepe.svg';
