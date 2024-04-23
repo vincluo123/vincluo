@@ -30,7 +30,10 @@ function Home() {
             name: "Tshirts",
             price: 12.99,
             image: "tshirt7.jpg"
-        },
+        }
+    ];
+
+    const products1 = [
         {
             id: 5,
             name: "Tshirts",
@@ -54,103 +57,119 @@ function Home() {
             name: "Tshirts",
             price: 12.99,
             image: "tshirt11.jpg"
-        },
-
-    ];
+        }
+    ]
+        
+    
     return (
-      <div className='container'>
-       <div className='row'>
-        <div className="App">
-          <div className='carouseldiv'> 
-            <Carousel className='round'>
-                <Carousel.Item>
-                    <img
-                        className="carousel "
-                        src="car1.jpg"
-                        alt="First slide"
+        <div className='container'>
+            <div className='row'>
+                <div className="App">
+                    <div className='carouseldiv'>
+                        <Carousel className='round'>
+                            <Carousel.Item>
+                                <img
+                                    className="carousel "
+                                    src="car1.jpg"
+                                    alt="First slide"
+
+                                />
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <img
+                                    className="carousel "
+                                    src="car2.jpeg"
+                                    alt="Second slide"
+                                />
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <img
+                                    className="carousel"
+                                    src="car3.jpg"
+                                    alt="Third slide"
+                                />
+                            </Carousel.Item>
+                        </Carousel>
+                        <Carousel className='round'>
+                            <Carousel.Item>
+                                <img
+                                    className="carousel1 "
+                                    src="car1.jpg"
+                                    alt="First slide"
+
+                                />
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <img
+                                    className="carousel1 "
+                                    src="car2.jpeg"
+                                    alt="Second slide"
+                                />
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <img
+                                    className="carousel1"
+                                    src="car3.jpg"
+                                    alt="Third slide"
+                                />
+                            </Carousel.Item>
+                        </Carousel>
+                    </div>
+                    <div className="container">
+                        <h1 className='catagories-header'>Categories</h1>
+                        <div className="circle-container card-container d-flex flex-row">
+                            <div className="circle">
+                                <img src="tshirt1.avif" alt="Category 1" />
+                                <p>T-shirts</p>
+                            </div>
+                            <div className="circle">
+                                <img src="tshiet2.avif" alt="Category 2" />
+                                <p>T-shirts</p>
+                            </div>
+                            <div className="circle">
+                                <img src="tshirt3.avif" alt="Category 3" />
+                                <p>T-shirts</p>
+                            </div>
+                            <div className="circle">
+                                <img src="tshirt4.avif" alt="Category 4" />
+                                <p>T-shirts</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="new-arrival-container">
+                        <h1 className='new-arrival'>New Arrivals</h1>
+                        <div className="container container-row">
+                            {products.map(product => (
+                                <div className="product" key={product.id}>
+                                    <img src={product.image} alt={product.name} />
+                                    <h3>{product.name}</h3>
+                                    <p>${product.price.toFixed(2)}</p>
+                                    <button className="btn" id='cart-btn' style={{ backgroundColor: '#d9d9d9' }}>Add to Cart</button>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                     
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="carousel "
-                        src="car2.jpeg"
-                        alt="Second slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="carousel"
-                        src="car3.jpg"
-                        alt="Third slide"
-                    />
-                </Carousel.Item>
-            </Carousel>
-            <Carousel className='round'>
-                <Carousel.Item>
-                    <img
-                        className="carousel1 "
-                        src="car1.jpg"
-                        alt="First slide"
-                    
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="carousel1 "
-                        src="car2.jpeg"
-                        alt="Second slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="carousel1"
-                        src="car3.jpg"
-                        alt="Third slide"
-                    />
-                </Carousel.Item>
-            </Carousel>
-          </div>
-            <div className="container">
-                <h1 className='catagories-header'>Categories</h1>
-                <div className="circle-container card-container d-flex flex-row">
-                    <div className="circle">
-                        <img src="tshirt1.avif" alt="Category 1" />
-                        <p>T-shirts</p>
-                    </div>
-                    <div className="circle">
-                        <img src="tshiet2.avif" alt="Category 2" />
-                        <p>T-shirts</p>
-                    </div>
-                    <div className="circle">
-                        <img src="tshirt3.avif" alt="Category 3" />
-                        <p>T-shirts</p>
-                    </div>
-                    <div className="circle">
-                        <img src="tshirt4.avif" alt="Category 4" />
-                        <p>T-shirts</p>
+                    <div className="new-arrival-container">
+                        <h1 className='new-arrival'>Top Sellings</h1>
+                        <div className="container container-row">
+                            {products1.map(product => (
+                                <div className="product" key={product.id}>
+                                    <img src={product.image} alt={product.name} />
+                                    <h3>{product.name}</h3>
+                                    <p>${product.price.toFixed(2)}</p>
+                                    <button className="btn" id='cart-btn' style={{ backgroundColor: '#d9d9d9' }}>Add to Cart</button>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
-
-
-            <div className="container">
-
-                {products.map(product => (
-                    <div className="product" key={product.id}>
-                        <img src={product.image} alt={product.name} />
-                        <h3>{product.name}</h3>
-                        <p>${product.price.toFixed(2)}</p>
-                        <button className="btn" style={{ backgroundColor: '#FBF8BE' }}>Add to Cart</button>
-                    </div>
-                ))}
-            </div>
         </div>
-       </div>
-      </div>
     );
 
 
 }
 
-export default Home;
+export default Home;
