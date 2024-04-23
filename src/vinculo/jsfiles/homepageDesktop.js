@@ -1,6 +1,6 @@
 // App.js
 import React from 'react';
-import '../cssfiles/homepage.css';
+import '../cssfiles/homepageDesktop.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { Carousel } from 'react-bootstrap'; // Import Carousel component from react-bootstrap
 
@@ -172,4 +172,4 @@ function Home() {
 
 }
 
-export default Home;
+export default Home;
