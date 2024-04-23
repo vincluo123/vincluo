@@ -1,9 +1,7 @@
-/* footer.css */
-
 .footer {
-  background-color: #b7f3b5;
-  color: #216024;
-  padding: 20px 0;
+  background-color:#002147 !important;
+  color: #ffffff;
+  padding: 20px 20px;
 }
 
 .footer-container {
@@ -17,16 +15,30 @@
 }
 
 .footer-about {
-  flex: 1 1 30%;
+  flex: 1 1 45%;
+}
+
+.footer-about h3,
+.footer-contact h2 {
+  text-decoration: underline;
+  color: #ffffff;
 }
 
 .footer-about .about-us {
   margin-bottom: 20px;
 }
 
+.footer-about p{
+  color: #ffffff;
+}
+
 .footer-links {
-  margin-left: 90px;
-  flex: 1 1 30%;
+  flex: 1 1 45%;
+}
+
+.footer-links h3 {
+  text-decoration: underline;
+  color: #ffffff;
 }
 
 .footer-links ul {
@@ -34,18 +46,31 @@
   padding: 0;
 }
 
-.footer-links ul li {
+.company-columns {
+  display: flex;
+}
+
+.company-column {
+  flex: 1;
+}
+
+.company-column ul li {
   margin-bottom: 10px;
 }
 
-.footer-links ul li a {
-  color: #216024;
+.company-column ul li a {
+  color: #ffffff;
   text-decoration: none;
 }
 
 .footer-contact {
-  flex: 1 1 30%;
-  justify-content: center;
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+.footer-contact p {
+  margin: 5px 0;
+  color: #ffffff;
 }
 
 .footer-contact .footer-social {
@@ -54,63 +79,92 @@
 
 .footer-contact .footer-social a {
   margin-right: 10px;
-  color: #216024;
+  color: #ffffff;
   font-size: 30px;
 }
-.footer-social {
-  color: #216024;
-}
 
-.copyright {
-  text-align: center;
-  margin-top: 20px;
+.footer-social {
+  color: #ffffff;
 }
 
 .secure-payment-app {
   display: flex;
-  flex-direction: column; /* Display the content vertically by default */
-  justify-content: center; /* Center the content horizontally */
-  align-items: center; /* Center the content vertically */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
 }
 
-.secure-payment-text {
-  font-weight: bold;
-  margin-top: 10px; /* Adjust spacing between text and icons */
+.secure-payment-text,
+.payment-icons,
+.copyright p {
+  text-align: center;
+  color: #ffffff;
 }
 
 .payment-icons {
   display: flex;
-  justify-content: center; /* Center the icons horizontally */
-  align-items: center; /* Center the icons vertically */
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
-.footer-social img{
+.footer-social img {
   width: 30px;
   height: 30px;
 }
 
 .payment-icons img {
-  width: 50px; /* Adjust image size as needed */
-  margin: 0 10px; /* Adjust spacing between icons */
+  width: 50px;
+  margin: 0 10px;
 }
-h2,h3{
-  text-decoration: underline;
-}
+
 /* Media query for mobile view */
 @media screen and (max-width: 700px) {
-  
+  .footer-toggle {
+    flex: 1 1 100%;
+  }
 
-  .secure-payment-text {
-    margin-top: 0; /* Reset margin top for text */
-    margin-left: 10px; /* Adjust spacing between text and icons */
+  .footer-about,
+  .footer-links,
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-toggle h3 {
+    text-align: center;
+  }
+
+  .footer-toggle {
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .footer-contact {
+    margin-top: 20px;
+  }
+
+  .footer-contact p {
+    margin: 5px 0;
+  }
+
+  .footer-social {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-social a {
+    margin-right: 10px;
+    color: #ffffff;
+    font-size: 30px;
   }
 
   .payment-icons {
-    margin-top: 10px; /* Add space between icons and text */
+    margin-top: 20px;
   }
 
   .payment-icons img {
-    margin: 0 5px; /* Adjust spacing between icons */
+    margin: 0 5px;
   }
 }
