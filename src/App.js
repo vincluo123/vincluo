@@ -13,12 +13,12 @@ function App() {
   return (
     <>
    
-      <Header/>
+      {/* <Header/>
       <Home/>
       <CartPage/>
      
-      <Footer/>
-      {/* <ProductDetails/> */}
+      <Footer/> */}
+      <ProductDetails/>
     </>
   );
 }
