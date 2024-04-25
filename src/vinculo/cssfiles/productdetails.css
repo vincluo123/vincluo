@@ -1,3 +1,5 @@
+/* productdetails.css */
+
 .product-details {
   display: flex;
   margin: 20px;
@@ -8,18 +10,9 @@
   overflow: hidden;
   max-width: 100%;
 }
-.product-details .details,.price,.deliver-address,.ratings{
-  padding: 20px;
-}
 
 .product-image-container {
   width: 50%;
-  padding: 20px;
-  border-right: 1px solid #ddd;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
 }
 
 .product-image {
@@ -71,11 +64,12 @@
 }
 
 .price-ratings {
-  display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
 }
 
+.product-details .details,.price-ratings,.deliver-address {
+  padding: 20px;
+}
 .price {
   flex: 0 0 60%;
 }
@@ -136,38 +130,12 @@
 /* Mobile Styles */
 @media (max-width: 768px) {
   .product-details {
-    padding: 20px;
-    margin: 10px;
     flex-direction: column;
   }
-  
+
   .product-image-container {
-    padding: 20px;
     width: 100%;
-    border-right: none;
-  }
-
-  .product-image {
-    max-width: 100%;
-  }
-
-  .price-ratings {
-    flex-direction: column;
-  }
-
-  
-
-  .color-box {
-    width: 15px;
-    height: 15px;
-  }
-
-  .size {
-    padding: 3px 6px;
-    font-size: 12px;
-  }
-
-  .apply-button {
-    padding: 6px 12px;
+    order: -1; /* Placing the image carousel at the top */
+    margin-bottom: 20px;
   }
 }

@@ -1,26 +1,22 @@
+// ProductDetails.js
+
 import React, { useState } from 'react';
-import '../cssfiles/productdetails.css'; 
+import '../cssfiles/productdetails.css';
 import tshirt1 from '../product images/tshirt1.jpg';
 import tshirt2 from '../product images/tshirt2.jpeg';
 import tshirt3 from '../product images/tshirt3.jpeg';
+import tshirt4 from '../product images/tshirt1.jpg';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import { Accordion } from 'react-bootstrap';
 
 const ProductDetails = () => {
-  const [productDetailsAccordion, setProductDetailsAccordion] = useState(false);
-  const [manufacturerAccordion, setManufacturerAccordion] = useState(false);
   const [selectedColor, setSelectedColor] = useState('');
   const [selectedSize, setSelectedSize] = useState('');
   const [selectedPrice, setSelectedPrice] = useState(379);
-
-  const handleProductDetailsAccordion = () => {
-    setProductDetailsAccordion(!productDetailsAccordion);
-    setManufacturerAccordion(false); // Close Manufacturer accordion
-  };
-
-  const handleManufacturerAccordion = () => {
-    setManufacturerAccordion(!manufacturerAccordion);
-    setProductDetailsAccordion(false); // Close Product Details accordion
-  };
+  const [productDetailsAccordion, setProductDetailsAccordion] = useState(false);
+  const [manufacturerAccordion, setManufacturerAccordion] = useState(false);
 
   const handleColorChange = (color) => {
     setSelectedColor(color);
@@ -31,8 +27,7 @@ const ProductDetails = () => {
   };
 
   const handleApply = () => {
-    // Here you can set the price according to the color.
-    switch(selectedColor) {
+    switch (selectedColor) {
       case 'blue':
         setSelectedPrice(379);
         break;
@@ -50,16 +45,38 @@ const ProductDetails = () => {
     }
   };
 
-  const images = {
-    tshirt1,
-    tshirt2,
-    tshirt3
+  const images = [tshirt1, tshirt2, tshirt3, tshirt4];
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000
+  };
+
+  const handleProductDetailsAccordion = () => {
+    setProductDetailsAccordion(!productDetailsAccordion);
+    setManufacturerAccordion(false); // Close Manufacturer accordion
+  };
+
+  const handleManufacturerAccordion = () => {
+    setManufacturerAccordion(!manufacturerAccordion);
+    setProductDetailsAccordion(false); // Close Product Details accordion
   };
 
   return (
     <div className="product-details">
       <div className="product-image-container">
-        <img src={images[selectedColor ? selectedColor : 'tshirt1']} alt="T-Shirt" className="product-image" />
+        <Slider {...settings}>
+          {images.map((image, index) => (
+            <div key={index}>
+              <img src={image} alt={`T-Shirt ${index + 1}`} className="product-image" />
+            </div>
+          ))}
+        </Slider>
       </div>
       <div className="product-info">
         <div className="price-ratings">
