@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body {
-  background-image: url('/vinculo/public/lgbg.jpg');
+  background-image: url(/public/loginimage.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
