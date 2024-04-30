@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../cssfiles/orderConfirmationPage.css';
 import tshirt1 from '../product images/tshirt1.jpg';
 import tshirt2 from '../product images/tshirt2.jpeg';
@@ -22,6 +22,32 @@ const OrderConfirmation = () => {
   // Calculate total amount
   const totalAmount = orderSummaryData.reduce((total, item) => total + item.quantity * item.price, 0);
 
+  // State for storing order date and expected delivery date
+  const [orderDate, setOrderDate] = useState(new Date());
+  const [deliveryDate, setDeliveryDate] = useState(new Date());
+
+  // Function to send order details via email
+  const sendOrderDetails = () => {
+    // Implement sending order details via email logic here
+    alert("Order details sent successfully via email!");
+  };
+
+  // Function to cancel the order
+  const cancelOrder = () => {
+    // Implement cancel order logic here
+    alert("Order canceled successfully!");
+  };
+
+  useEffect(() => {
+    // Update order date
+    setOrderDate(new Date());
+
+    // Calculate expected delivery date (5 days from the order date)
+    const calculatedDeliveryDate = new Date(orderDate);
+    calculatedDeliveryDate.setDate(calculatedDeliveryDate.getDate() + 5); // Assuming 5 days delivery period
+    setDeliveryDate(calculatedDeliveryDate);
+  }, []);
+
   return (
     <div className="order-confirmation-container">
       <div className="confirmation-header">
@@ -32,9 +58,10 @@ const OrderConfirmation = () => {
         <p>Your order has been confirmed. Below are the details:</p>
         <ul>
           <li>Order Number: 123456789</li>
-          <li>Order Date: April 25, 2024</li>
+          <li>Order Date: {orderDate.toDateString()}</li>
           <li>Delivery Address: 123 Street, City, Country</li>
           <li>Total Amount: ${totalAmount.toFixed(2)}</li>
+          <li>Expected Delivery Date: {deliveryDate.toDateString()}</li>
         </ul>
       </div>
       <div className="order-summary">
@@ -49,7 +76,7 @@ const OrderConfirmation = () => {
         </ul>
       </div>
       <div className="recommended-products">
-        <h3>Recommended Products</h3>
+        <h3>You may also like....</h3>
         <ul>
           {recommendedProductsData.map(product => (
             <li key={product.id}>
@@ -59,6 +86,16 @@ const OrderConfirmation = () => {
           ))}
         </ul>
       </div>
+      <div className="additional-options">
+        <div className="button-row">
+          <button onClick={sendOrderDetails}>Send Order Details </button>
+          <a href="/track-manage-order">Track and Manage Your Order</a>
+        </div>
+        <div className="button-row">
+          <button onClick={() => window.location.href = "/shopping"}>Continue Shopping</button>
+          <button onClick={cancelOrder}>Cancel Order</button>
+        </div>
+      </div>
       <div className="customer-support">
         <h3>Customer Support</h3>
         <p>For any inquiries regarding your order, please contact our customer support.</p>
@@ -66,6 +103,7 @@ const OrderConfirmation = () => {
         <p>Thank you for shopping with us!</p>
         <p>Have a fantastic day!</p>
       </div>
+      
     </div>
   );
 };
