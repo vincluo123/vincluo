@@ -9,30 +9,30 @@ import ProductDetails from './vinculo/jsfiles/productdetails';
 // import ProductDetails from './vinculo/jsfiles/productdetails';
 //import Login from './Login';
 //import Whilelist from './vinculo/jsfiles/wishlist';
-import Infantboys from './vinculo/jsfiles/Infantboys';
+//import Infantboys from './vinculo/jsfiles/Infantboys';
 
 
 function App() {
   return (
     <>
-<<<<<<< HEAD
-    <Infantboys/>
+
+   
    {/* <Whilelist/> */}
-      {/* <Header/> */}
-      {/* <Home/> */}
+      <Header/>
+      <Home/>
       {/* <CartPage/> */}
      
-      {/* <Footer/> */}
+      <Footer/>
       {/* <ProductDetails/> */}
-=======
+
    
       {/* <Header/>
       <Home/>
       <CartPage/> */}
      {/* <OrderConfirmation/> */}
       {/* <Footer/> */}
-      <ProductDetails/>
->>>>>>> 44da0537d1aed68489f3950f1b0039fe966f04dd
+      {/* <ProductDetails/> */}
+
     </>
   );
 }
