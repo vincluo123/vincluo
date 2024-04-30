@@ -1,0 +1,102 @@
+/* orderConfirmationPage.css */
+
+.order-confirmation-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.confirmation-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.order-details,
+.order-summary,
+.recommended-products,
+.customer-support,
+.additional-options {
+  margin-bottom: 20px;
+}
+
+.order-details ul,
+.order-summary ul,
+.recommended-products ul {
+  list-style: none;
+  padding: 0;
+}
+
+.order-details li,
+.order-summary li,
+.recommended-products li {
+  margin-bottom: 10px;
+}
+
+.order-details li:last-child,
+.order-summary li:last-child,
+.recommended-products li:last-child {
+  margin-bottom: 0;
+}
+
+.order-summary img,
+.recommended-products img {
+  margin-right: 10px;
+}
+
+.additional-options {
+  text-align: center;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.additional-options button,
+.additional-options a {
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.additional-options button:hover,
+.additional-options a:hover {
+  background-color: #0056b3;
+}
+
+.additional-options button:focus,
+.additional-options a:focus {
+  outline: none;
+}
+
+.additional-options button:last-child,
+.additional-options a:last-child {
+  margin-right: 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .order-confirmation-container {
+    padding: 10px;
+  }
+
+  .button-row {
+    flex-direction: column;
+  }
+
+  .additional-options button,
+  .additional-options a {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
