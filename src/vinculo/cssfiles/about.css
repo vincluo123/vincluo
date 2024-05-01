@@ -76,10 +76,7 @@ img {
 
 .about-me-flex-container {
   margin-top: -25px;
-  margin-left: 150px;
-  left: 100px;
-  display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
 }
 @media (max-width: 960px) {
   .about-me-flex-container {
@@ -99,6 +96,9 @@ img {
   position: relative;
   width: 400px;
   height: 400px;
+  margin-top: 30px;
+  margin-left: 30%;
+  
 }
 @media (max-width: 500px) {
   .about-me-flex-container .about-me-image {
@@ -111,8 +111,8 @@ img {
   bottom: 0;
   z-index: -3;
   background-color: #013747;
-  width: 80%;
-  height: 80%;
+  width: 60%;
+  height: 60%;
 }
 .about-me-flex-container .about-me-image .black-image {
   z-index: -2;
@@ -136,7 +136,7 @@ img {
 }
 .about-me-flex-container .about-me-image .main-image:hover {
   transform-origin: top center;
-  transform: scale(1.5);
+  transform: scale(1.05);
   border-radius: 25px;
 }
 .about-me-flex-container .about-me-image .main-image img {
@@ -153,7 +153,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  gap: 10px;
   flex: 0 0 40%;
 }
 @media (max-width: 960px) {
@@ -176,6 +176,7 @@ img {
   color: #87A4B6;
   font-weight: 600;
   font-size: 18px;
+  margin-top: 30px;
 }
 @media (max-width: 500px) {
   .about-me-flex-container .about-me-content .text {

@@ -18,8 +18,7 @@ function AboutUs() {
             </div>
             <div className="about-me-content">
 
-              <div className="logo"><img src="https://raw.githubusercontent.com/Smit-Prajapati/prajapatismit/20391be8bf1ed24ef0e5da066bf68a5f6ee78fa1/images/logo.svg" alt="smit" /></div>
-
+             
               <div className="text">
               Welcome to our online clothing store based in Dindigul, where style meets comfort! We specialize in offering a diverse range of trendy T-shirts for both boys and girls, crafted to elevate your wardrobe with effortless style.<br></br>
 
@@ -34,9 +33,7 @@ Thank you for choosing us to be a part of your style journey. Let's redefine fas
             </div>
           </div>
 
-          <div className="mail-button mail-button2">
-            <a href="mailto:prajapatismit2906@gmail.com"><img src="https://raw.githubusercontent.com/Smit-Prajapati/prajapatismit/20391be8bf1ed24ef0e5da066bf68a5f6ee78fa1/images/mail.svg" alt="mail" /></a>
-          </div>
+        
 
         </div>
 

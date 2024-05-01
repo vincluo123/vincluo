@@ -10,24 +10,23 @@ import About from './vinculo/jsfiles/about';
 //import OrderConfirmation from './vinculo/jsfiles/orderConfirmationPage';
 // import ProductDetails from './vinculo/jsfiles/productdetails';
 //import Login from './Login';
-import Wishlist from './vinculo/jsfiles/wishlist';
+//import Wishlist from './vinculo/jsfiles/wishlist';
 //import Infantboys from './vinculo/jsfiles/Infantboys';
-import Login from './Login';
+//import Login from './Login';
 
 function App() {
   return (
     <>
 
-   <Login/>
-   {/* <Whilelist/> */}
-      {/* <Header/> */}
-      {/* <Home/> */}
+   { /* <Login/> */}
+    <Header/>
+       <Home/>
       {/* <CartPage/> */}
      
       {/* <Footer/> */}
      {/*<Wishlist /> */}
-     <Girls />
-     <About/>
+    
+     {/* <About/>*/}
       <Footer/>
       {/* <ProductDetails/> */}
 
