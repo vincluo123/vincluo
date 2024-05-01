@@ -10,19 +10,19 @@ import ProductDetails from './vinculo/jsfiles/productdetails';
 //import Login from './Login';
 //import Whilelist from './vinculo/jsfiles/wishlist';
 //import Infantboys from './vinculo/jsfiles/Infantboys';
-
+import Login from './Login';
 
 function App() {
   return (
     <>
 
-   
+   <Login/>
    {/* <Whilelist/> */}
-      <Header/>
-      <Home/>
+      {/* <Header/> */}
+      {/* <Home/> */}
       {/* <CartPage/> */}
      
-      <Footer/>
+      {/* <Footer/> */}
       {/* <ProductDetails/> */}
 
    
