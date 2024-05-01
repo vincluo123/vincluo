@@ -8,7 +8,7 @@ import ProductDetails from './vinculo/jsfiles/productdetails';
 //import OrderConfirmation from './vinculo/jsfiles/orderConfirmationPage';
 // import ProductDetails from './vinculo/jsfiles/productdetails';
 //import Login from './Login';
-//import Whilelist from './vinculo/jsfiles/wishlist';
+import Wishlist from './vinculo/jsfiles/wishlist';
 //import Infantboys from './vinculo/jsfiles/Infantboys';
 
 
@@ -21,7 +21,7 @@ function App() {
       <Header/>
       <Home/>
       {/* <CartPage/> */}
-     
+     <Wishlist />
       <Footer/>
       {/* <ProductDetails/> */}
 
