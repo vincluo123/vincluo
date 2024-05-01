@@ -104,16 +104,18 @@ function Kids() {
 
             <h1>For you</h1>
 
-            <div className="container">
+            <div className="new-arrival-container">
 
-                {products.map(product => (
-                    <div className="product" key={product.id}>
-                        <img src={product.image} alt={product.name} />
-                        <h3>{product.name}</h3>
-                        <p>${product.price.toFixed(2)}</p>
-                        <button className="btn" style={{ backgroundColor: '#FBF8BE' }}>Add to Cart</button>
-                    </div>
-                ))}
+                <div className="container container-row">
+                    {products.map(product => (
+                        <div className="product" key={product.id}>
+                            <img src={product.image} alt={product.name} />
+                            <h3>{product.name}</h3>
+                            <p>${product.price.toFixed(2)}</p>
+                            <button className="btn" id='cart-btn' style={{ backgroundColor: '#d9d9d9' }}>Add to Cart</button>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );
