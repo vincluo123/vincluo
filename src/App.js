@@ -12,18 +12,20 @@ import About from './vinculo/jsfiles/about';
 //import Login from './Login';
 import Wishlist from './vinculo/jsfiles/wishlist';
 //import Infantboys from './vinculo/jsfiles/Infantboys';
-
+import Login from './Login';
 
 function App() {
   return (
     <>
 
-   
+   <Login/>
    {/* <Whilelist/> */}
-      <Header/>
-      <Home/>
+      {/* <Header/> */}
+      {/* <Home/> */}
       {/* <CartPage/> */}
-     <Wishlist /> 
+     
+      {/* <Footer/> */}
+     {/*<Wishlist /> */}
      <Girls />
      <About/>
       <Footer/>
