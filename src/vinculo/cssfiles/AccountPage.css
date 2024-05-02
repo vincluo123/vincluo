@@ -11,14 +11,14 @@ body{
     gap: 20px;
 }
 
-.navbar{
+.side-navbar{
     background-color: white;
     height: 100%;
-    width: 210px;
+    width: 200px;
+    position: fixed;
 }
 
 .navigation{
-    background-color: white;
     width: 150px;
     height:500px;
     margin-top: 0;
@@ -31,13 +31,15 @@ body{
     margin-bottom: 20px;
 }
 
-.navigation li a{
+.navigation li a,
+.setting a{
     text-decoration: none;
     color: #234e70;
     font-size: 18px;
 }
 
 .setting{
+    width: 170px;
     text-align: start;
     color: #234e70;
     font-size: 18px;
@@ -47,12 +49,24 @@ body{
     margin-bottom: 20px;
 }
 
+.content-section{
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    left: 220px;
+}
+
 .profile-details{
     background-color: white;
     color: #234e70;
-    width: 300px;
+    width: 30%;
+    height: 80%;
     padding: 20px;
     margin-top: 20px;
+}
+
+.profile-details h2{
+    font-size: 20px;
 }
 
 .username{
@@ -64,12 +78,12 @@ body{
 
 }
 
-h3{
+.details h3{
     margin: 0;
     margin-top: 10px;
 }
 
-p{
+.details p{
     margin-bottom: 0;
     margin-top: 10px;
 }
@@ -82,7 +96,7 @@ p{
     width: 70%;
     display: flex;
     justify-content: space-around;
-    
+    cursor: pointer;
 }
 
 .tagheader{
@@ -108,12 +122,13 @@ p{
 .main-section{
     display: flex;
     gap: 30px;
+    
 }
 
 .review-section{
     background-color: white;
-    width: 350px;
-    height: 200px;
+    width: 40%;
+    /* height: 200px; */
     text-align: start;
     padding: 15px;
     border-radius: 10px;
@@ -123,7 +138,7 @@ p{
 }
 
 .review-section h3{
-    font-size: 30px;
+    font-size: 24px;
 }
 
 .review-section p{
@@ -154,4 +169,64 @@ p{
     font-size: 16px;
     border-radius: 5px;
     border: none;
+}
+
+@media(max-width:540px){
+    .side-navbar{
+        width: 60px;
+        position: fixed;
+    }
+
+    .navigation{
+        padding: 20px;
+    }
+
+    .navigation li a,
+    .setting a{
+        display: none;
+    }
+
+    .setting{
+        width: 30px;
+        padding-left: 20px;
+    }
+
+    .content-section{
+        width: 85%;
+        flex-direction: column;
+        position: relative;
+        left: 70px;
+        padding-right: 10px;
+    }
+
+    .profile-details{   
+        width: 85%;
+        background-color: white;
+        height: 680px;
+    }
+
+    .section{
+        padding-right: 20px;
+    }
+
+    .details h3{
+        font-size: 16px;
+    }
+    
+    .main-section{
+        width: 100%;
+        gap: 20px;
+    }
+
+    .review-section{
+        width: 40%;
+    }
+
+    .review-section h3{
+        font-size: 16px;
+    }
+
+    .review-section p{
+        font-size: 12px;
+    }
 }
