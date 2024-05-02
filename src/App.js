@@ -13,6 +13,7 @@ import Girls from './vinculo/jsfiles/8-16girls';
 //import Infantboys from './vinculo/jsfiles/Infantboys';
 import Login from './Login';
 
+
 function App() {
   return (
     <>
@@ -22,14 +23,14 @@ function App() {
       {/* <Header/> */}
       {/* <Home/> */}
       {/* <CartPage/> */}
-     
+
       {/* <Footer/> */}
      {/*<Wishlist /> */}
      <Girls />
       <Footer/>
       {/* <ProductDetails/> */}
 
-   
+
       {/* <Header/>
       <Home/>
       <CartPage/> */}
