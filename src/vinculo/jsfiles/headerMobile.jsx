@@ -3,9 +3,12 @@ import React from 'react';
 import '../cssfiles/headermobile.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { Carousel } from 'react-bootstrap'; // Import Carousel component from react-bootstrap
+import Navbar from './searchheader';
 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 
+
 function HeaderMobile() {
+    
     const products = [
         {
             id: 1,
@@ -94,6 +97,7 @@ function HeaderMobile() {
 
     ];
     return (
+      
         <div className="App">
             <Carousel>
                 <Carousel.Item>
@@ -146,12 +150,38 @@ function HeaderMobile() {
                         <p>${product.price.toFixed(2)}</p>
                        
                     </div>
+                    
                 ))}
             </div>
+            <div className="container">
+
+                       {products.map(product => (
+                         <div className="product" key={product.id}>
+                            <img src={product.image} alt={product.name} />
+                            <h3>{product.name}</h3>
+                            {/* <h6>{product.cname}</h6> */}
+                            <p>${product.price.toFixed(2)}</p>
+       
+                  </div>
+            ))}
+            </div>
+            <div className="container">
+
+                       {products.map(product => (
+                         <div className="product" key={product.id}>
+                            <img src={product.image} alt={product.name} />
+                            <h3>{product.name}</h3>
+                            {/* <h6>{product.cname}</h6> */}
+                            <p>${product.price.toFixed(2)}</p>
+       
+                  </div>
+            ))}
+            </div>
+            
         </div>
-
+       
     );
-
+   
 
 }
 
