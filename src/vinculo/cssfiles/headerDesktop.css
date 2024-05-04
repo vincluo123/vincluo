@@ -1,29 +1,17 @@
-<<<<<<< HEAD
-=======
-/* header.css */
->>>>>>> 3110cd7275db3fec76b5d9dbea6ea28437d3ee3b
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #102C57;
-<<<<<<< HEAD
     padding: 20px ;
     
-=======
-    padding: 20px;
->>>>>>> 3110cd7275db3fec76b5d9dbea6ea28437d3ee3b
   }
   
   .logo img {
     height: 40px;
   }
   
-<<<<<<< HEAD
-  .nav-menu {
-=======
   .nav-menu, .dropdown-menu {
->>>>>>> 3110cd7275db3fec76b5d9dbea6ea28437d3ee3b
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -37,19 +25,11 @@
   .nav-item a {
     text-decoration: none;
     color: #ffffff;
-<<<<<<< HEAD
     font-weight:400px;
     transition: color 0.3s ease;
   }
   
   .nav-item  a:hover {
-=======
-    font-weight: 400;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-item a:hover {
->>>>>>> 3110cd7275db3fec76b5d9dbea6ea28437d3ee3b
     color: #fabd10;
   }
   
@@ -77,17 +57,10 @@
   .dropdown-menu {
     display: none;
     position: absolute;
-<<<<<<< HEAD
     top: 100%;
     left: 0;
     background-color: #fff;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-=======
-    top: calc(100% + 5px);
-    left: 0;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
->>>>>>> 3110cd7275db3fec76b5d9dbea6ea28437d3ee3b
     z-index: 1000;
   }
   
@@ -96,24 +69,12 @@
     display: block;
   }
   
-<<<<<<< HEAD
-  .dropdown-item a{
-=======
   .dropdown-item a {
->>>>>>> 3110cd7275db3fec76b5d9dbea6ea28437d3ee3b
     padding: 10px;
     text-decoration: none;
     color: black;
     display: block;
   }
-<<<<<<< HEAD
-   .dropdown-menu a {
-    text-decoration: none;
-    color: black;
-    font-weight:400px;
-    transition: color 0.3s ease;
-  }
-=======
   
   .dropdown-menu a {
     text-decoration: none;
@@ -122,12 +83,10 @@
     transition: color 0.3s ease;
   }
   
->>>>>>> 3110cd7275db3fec76b5d9dbea6ea28437d3ee3b
   .dropdown-item:hover {
     background-color: #f0f0f0;
   }
   
-<<<<<<< HEAD
   
   .account-links a {
     text-decoration: none;
@@ -203,7 +162,6 @@
   .cart-dropdown a:hover {
     background-color: #f5f5f5;
   }
-=======
   .icons {
     display: flex;
   }
@@ -228,4 +186,3 @@
     color: #fabd10;
   }
   
->>>>>>> 3110cd7275db3fec76b5d9dbea6ea28437d3ee3b
