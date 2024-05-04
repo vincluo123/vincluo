@@ -1,43 +1,59 @@
 
-import './App.css';
-import Header from './vinculo/jsfiles/headerDesktop';
-import CartPage from './vinculo/jsfiles/cart';
-import Footer from './vinculo/jsfiles/footerDesktop';
-import Home from './vinculo/jsfiles/homepageDesktop';
-import Girls from './vinculo/jsfiles/8-16girls';
-import About from './vinculo/jsfiles/about';
-//import ProductDetails from './vinculo/jsfiles/productdetails';
+// import './App.css';
+// import Header from './vinculo/jsfiles/headerDesktop';
+// import CartPage from './vinculo/jsfiles/cart';
+// import Footer from './vinculo/jsfiles/footerDesktop';
+// import Home from './vinculo/jsfiles/homepageDesktop';
+// import ProductDetails from './vinculo/jsfiles/productdetails';
+// import Kids from './vinculo/jsfiles/kids';
+// import AccountPage from './vinculo/jsfiles/AccountPage';
 //import OrderConfirmation from './vinculo/jsfiles/orderConfirmationPage';
 // import ProductDetails from './vinculo/jsfiles/productdetails';
 //import Login from './Login';
-//import Wishlist from './vinculo/jsfiles/wishlist';
-//import Infantboys from './vinculo/jsfiles/Infantboys';
-//import Login from './Login';
+
+import HeaderMobile from "./vinculo/jsfiles/headerMobile";
+
+import Brandnameheader from './vinculo/jsfiles/brandnameheader';
+
+
+
+
 
 function App() {
   return (
     <>
+      <Brandnameheader/>
+
+
+      {/* <Home /> */}
 
    { /* <Login/> */}
-    <Header/>
-       <Home/>
+    {/* <Header/> */}
+       {/* <Home/> */}
       {/* <CartPage/> */}
-     
+
       {/* <Footer/> */}
      {/*<Wishlist /> */}
     
      {/* <About/>*/}
-      <Footer/>
-      {/* <ProductDetails/> */}
-
-   
-      {/* <Header/>
-      <Home/>
-      <CartPage/> */}
-     {/* <OrderConfirmation/> */}
       {/* <Footer/> */}
       {/* <ProductDetails/> */}
 
+
+
+
+   
+
+
+      {/* <Header/>
+      <CartPage/> */}
+      {/* <OrderConfirmation/> */}
+      {/* <Footer/> */}
+      {/* <ProductDetails/> */}
+
+      {/* <Kids/> */}
+      {/* <AccountPage/> */}
+      <HeaderMobile />
     </>
   );
 }
