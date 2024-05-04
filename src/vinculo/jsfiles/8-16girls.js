@@ -1,62 +1,92 @@
-
-
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import '../cssfiles/girlsSection.css'; // Import your CSS file for styling
 
-
-const ProductPage = () => {
-  const [selectedSize, setSelectedSize] = useState('S');
-  const [selectedPrice, setSelectedPrice] = useState(10);
-  const [selectedQty, setSelectedQty] = useState(1);
-  const [totalPrice, setTotalPrice] = useState(selectedPrice * selectedQty);
-
-  const handleSizeChange = (e) => {
-    setSelectedSize(e.target.value);
-    if (e.target.value === 'S') {
-      setSelectedPrice(10);
-    } else if (e.target.value === 'M') {
-      setSelectedPrice(15);
-    } else if (e.target.value === 'L') {
-      setSelectedPrice(20);
-    }
-  };
-
-  const handleQtyChange = (e) => {
-    setSelectedQty(e.target.value);
-  };
-
-  useEffect(() => {
-    setTotalPrice(selectedPrice * selectedQty);
-  }, [selectedPrice, selectedQty]);
+function Girls(){
 
   return (
-    <div className="product-page">
-      <div className="product-image-container">
-        <img src="tshirt10.jpg" alt="Product Image" />
-       
-      </div>
-      <div className="product-details">
-        <h1>Product Name</h1>
-        <p>Price: ${selectedPrice}</p>
-        <label htmlFor="size-select">Size:</label>
-        <select id="size-select" value={selectedSize} onChange={handleSizeChange}>
-          <option value="S">Small</option>
-          <option value="M">Medium</option>
-          <option value="L">Large</option>
-        </select>
-        <label htmlFor="qty-select">Quantity:</label>
-        <select id="qty-select" value={selectedQty} onChange={handleQtyChange}>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <p>Total Price: ${totalPrice}</p>
-        <button>Add to Cart</button>
-      </div>
-    </div>
+    <div class="section">
+		
+			<div class="container">
+		
+				<div class="row">
+				
+					<div class="col-md-3 col-xs-6">
+						<div class="shop">
+							<div class="shop-img">
+								<img src="./img/shop01.png" alt="">
+							</div>
+							<div class="shop-body">
+								<h3>Women<br>Collection</h3>
+								<a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
+							</div>
+						</div>
+					</div>
+					
+
+				
+					<div class="col-md-3 col-xs-6">
+						<div class="shop">
+							<div class="shop-img">
+								<img src="./img/shop02.png" alt="">
+							</div>
+							<div class="shop-body">
+								<h3>Men<br>Collection</h3>
+								<a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
+							</div>
+						</div>
+					</div>
+			
+
+			
+					<div class="col-md-3 col-xs-6">
+						<div class="shop">
+							<div class="shop-img">
+								<img src="./img/shop03.png" alt="">
+							</div>
+							<div class="shop-body">
+								<h3>Kids<br>Collection</h3>
+								<a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-xs-6">
+						<div class="shop">
+							<div class="shop-img">
+								<img src="./img/shop04.png" alt="">
+							</div>
+							<div class="shop-body">
+								<h3>Apparels<br>Collection</h3>
+								<a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
+							</div>
+						</div>
+					</div>
+
+				
+					  
+
+					
+					
+					<div class="col-md-3 col-xs-6">
+						<div class="box">
+							<div class="imgBox">
+								<img src="img/shop01.png" alt="">
+							</div>
+							<div class="content">
+								<h2>Karan Singh</br>
+								<span>Graphic Designer</span></h2>
+							</div>
+						</div>
+					</div>
+
+					
+				
+
+				</div>
+				
+			</div>
+			
+		</div>
   );
 };
 
-export default ProductPage;
+export default Girls;
