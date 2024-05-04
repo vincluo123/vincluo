@@ -11,6 +11,7 @@
 // import ProductDetails from './vinculo/jsfiles/productdetails';
 //import Login from './Login';
 
+
 import HeaderMobile from "./vinculo/jsfiles/headerMobile";
 
 import Brandnameheader from './vinculo/jsfiles/brandnameheader';
