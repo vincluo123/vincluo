@@ -18,7 +18,7 @@ function App() {
       {/* <Header/>
       <Home/>
       <CartPage/> */}
-     {/* <OrderConfirmation/> */}
+      {/*<OrderConfirmation/> */}
       {/* <Footer/> */}
       <ProductDetails/>
     </>
