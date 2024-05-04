@@ -1,99 +1,103 @@
 // App.js
 import React from 'react';
-import '../cssfiles/kids.css';
+import '../cssfiles/headermobile.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { Carousel } from 'react-bootstrap'; // Import Carousel component from react-bootstrap
+import Navbar from './searchheader';
 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 
-function Kids() {
+
+function HeaderMobile() {
+    
     const products = [
         {
             id: 1,
             name: "T-shirt",
-            cname:"vinculo",
+            cname: "vinculo",
             price: 300,
             image: "boys2_shirt.jpg"
         },
         {
             id: 2,
             name: "T-shirt",
-            cname:"vinculo",
+            cname: "vinculo",
             price: 300,
             image: "boys1_shirt.jpg"
         },
         {
             id: 3,
             name: "T-shirt",
-            cname:"vinculo",
+            cname: "vinculo",
             price: 300,
             image: "boys3_shirt.jpg"
         },
         {
             id: 4,
             name: "T-shirt",
-            cname:"vinculo",
+            cname: "vinculo",
             price: 300,
             image: "BOYS-4_page-0001.jpg"
         },
         {
             id: 5,
             name: "T-shirt",
-            cname:"vinculo",
+            cname: "vinculo",
             price: 300,
             image: "BOYS-5_page-0001.jpg"
         },
         {
             id: 6,
             name: "T-shirt",
-            cname:"vinculo",
+            cname: "vinculo",
             price: 300,
             image: "BOYS-6_page-0001.jpg"
         },
         {
             id: 7,
             name: "T-shirt",
-            cname:"vinculo",
+            cname: "vinculo",
             price: 300,
             image: "BOYS-7_page-0001.jpg"
         },
         {
             id: 8,
             name: "T-shirt",
-            cname:"vinculo",
+            cname: "vinculo",
             price: 300,
             image: "BOYS-8_page-0001.jpg"
         },
         {
             id: 8,
             name: "T-shirt",
-            cname:"vinculo",
+            cname: "vinculo",
             price: 12.99,
             image: "BOYS-12_page-0001.jpg"
         },
         {
             id: 8,
             name: "T-shirt",
-            cname:"vinculo",
+            cname: "vinculo",
             price: 300,
             image: "BOYS-9_page-0001.jpg"
         },
         {
             id: 8,
             name: "T-shirt",
-            cname:"vinculo",
+            cname: "vinculo",
             price: 300,
             image: "BOYS-10_page-0001.jpg"
         },
         {
             id: 8,
             name: "T-shirt",
-            cname:"vinculo",
+            cname: "vinculo",
             price: 300,
             image: "BOYS-11_page-0001.jpg"
         },
 
     ];
     return (
+      
         <div className="App">
             <Carousel>
                 <Carousel.Item>
@@ -120,26 +124,21 @@ function Kids() {
             </Carousel>
 
             <h1 className='catagories-header'>Categories</h1>
-            <div className="circle-container">
-                <div className="circle">
-                    <img src="shirt.jpg" alt="Category 1" />
-                    <p>Shirts</p>
+            <div class="categories-div">
+                <div class='categories-element'>
+                    <img src="" class='categories-img' alt="omg"></img>
+                    <h3 class="txt">Boys</h3>
                 </div>
-                <div className="circle">
-                    <img src="pant.jpg" alt="Category 2" />
-                    <p>Pants</p>
+                <div class='categories-element'>
+                    <img src="" class='categories-img' alt="omg"></img>
+                    <h3 class="txt">Girls</h3>
                 </div>
-                <div className="circle">
-                    <img src="tshirt.jpg" alt="Category 3" />
-                    <p>T-shirts</p>
-                </div>
-                <div className="circle">
-                    <img src="pant 2.jpg" alt="Category 4" />
-                    <p>Track Pants</p>
+                <div class='categories-element'>
+                    <img src="" class='categories-img' alt="omg"></img>
+                    <h3 class="txt">Infants</h3>
                 </div>
             </div>
-
-            <h1>KIDS</h1>
+            <h1 className='catagories-header'>KIDS</h1>
 
             <div className="container">
 
@@ -147,17 +146,43 @@ function Kids() {
                     <div className="product" key={product.id}>
                         <img src={product.image} alt={product.name} />
                         <h3>{product.name}</h3>
-                        <h6>{product.cname}</h6>
+                        {/* <h6>{product.cname}</h6> */}
                         <p>${product.price.toFixed(2)}</p>
-                        <button className="btn" style={{ backgroundColor: '#FFFF00' }}>Add to Cart</button>
+                       
                     </div>
+                    
                 ))}
             </div>
-        </div>
-        
-    );
+            <div className="container">
 
+                       {products.map(product => (
+                         <div className="product" key={product.id}>
+                            <img src={product.image} alt={product.name} />
+                            <h3>{product.name}</h3>
+                            {/* <h6>{product.cname}</h6> */}
+                            <p>${product.price.toFixed(2)}</p>
+       
+                  </div>
+            ))}
+            </div>
+            <div className="container">
+
+                       {products.map(product => (
+                         <div className="product" key={product.id}>
+                            <img src={product.image} alt={product.name} />
+                            <h3>{product.name}</h3>
+                            {/* <h6>{product.cname}</h6> */}
+                            <p>${product.price.toFixed(2)}</p>
+       
+                  </div>
+            ))}
+            </div>
+            
+        </div>
+       
+    );
+   
 
 }
 
-export default Kids;
+export default HeaderMobile;
