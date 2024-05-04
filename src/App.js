@@ -15,14 +15,14 @@ function App() {
   return (
     <>
 
-      <Header />
+      {/* <Header />
       <Home />
       <CartPage />
       <OrderConfirmation />
       <ProductDetails />
       <Kids />
       <AccountPage />
-      <Footer />
+      <Footer /> */}
       <Boys />
     </>
   );
