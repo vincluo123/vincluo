@@ -23,15 +23,6 @@ import Brandnameheader from './vinculo/jsfiles/brandnameheader';
 function App() {
   return (
     <>
-      <Brandnameheader/>
-
-
-      {/* <Home /> */}
-
-   { /* <Login/> */}
-    {/* <Header/> */}
-       {/* <Home/> */}
-      {/* <CartPage/> */}
 
       {/* <Footer/> */}
      {/*<Wishlist /> */}
@@ -48,7 +39,7 @@ function App() {
 
       {/* <Header/>
       <CartPage/> */}
-      {/* <OrderConfirmation/> */}
+      {/* <OrderConfirmation/>  */}
       {/* <Footer/> */}
       {/* <ProductDetails/> */}
 
