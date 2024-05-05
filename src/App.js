@@ -4,7 +4,7 @@
 // import Footer from './vinculo/jsfiles/footerDesktop';
 // import Home from './vinculo/jsfiles/homepageDesktop';
 // import ProductDetails from './vinculo/jsfiles/productdetails';
-// import Kids from './vinculo/jsfiles/kids';
+import Kids from './vinculo/jsfiles/kids';
 // import AccountPage from './vinculo/jsfiles/AccountPage';
 //import OrderConfirmation from './vinculo/jsfiles/orderConfirmationPage';
 // import ProductDetails from './vinculo/jsfiles/productdetails';
@@ -24,25 +24,25 @@ function App() {
     <>
 
       {/* <Footer/> */}
-     <Wishlist /> 
-    {/*<Faq /> */}
-     {/* <About/>*/}
+      {/* <Wishlist />  */}
+      {/*<Faq /> */}
+      {/* <About/>*/}
       {/* <Footer/> */}
       {/* <ProductDetails/> */}
 
 
 
 
-   
+
 
 
       {/* <Header/>
       <CartPage/> */}
-     {/* <OrderConfirmation/>  */}
+      {/* <OrderConfirmation/>  */}
       {/* <Footer/> */}
       {/* <ProductDetails/> */}
 
-      {/* <Kids/> */}
+      <Kids />
       {/* <AccountPage/> */}
       {/*<HeaderMobile /> */}
     </>

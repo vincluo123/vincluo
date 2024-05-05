@@ -10,84 +10,84 @@ function Kids() {
         {
             id: 1,
             name: "T-shirt",
-            cname:"vinculo",
+            cname: "vinculo",
             price: 300,
             image: "boys2_shirt.jpg"
         },
         {
             id: 2,
             name: "T-shirt",
-            cname:"vinculo",
+            cname: "vinculo",
             price: 300,
             image: "boys1_shirt.jpg"
         },
         {
             id: 3,
             name: "T-shirt",
-            cname:"vinculo",
+            cname: "vinculo",
             price: 300,
             image: "boys3_shirt.jpg"
         },
         {
             id: 4,
             name: "T-shirt",
-            cname:"vinculo",
+            cname: "vinculo",
             price: 300,
             image: "BOYS-4_page-0001.jpg"
         },
         {
             id: 5,
             name: "T-shirt",
-            cname:"vinculo",
+            cname: "vinculo",
             price: 300,
             image: "BOYS-5_page-0001.jpg"
         },
         {
             id: 6,
             name: "T-shirt",
-            cname:"vinculo",
+            cname: "vinculo",
             price: 300,
             image: "BOYS-6_page-0001.jpg"
         },
         {
             id: 7,
             name: "T-shirt",
-            cname:"vinculo",
+            cname: "vinculo",
             price: 300,
             image: "BOYS-7_page-0001.jpg"
         },
         {
             id: 8,
             name: "T-shirt",
-            cname:"vinculo",
+            cname: "vinculo",
             price: 300,
             image: "BOYS-8_page-0001.jpg"
         },
         {
             id: 8,
             name: "T-shirt",
-            cname:"vinculo",
+            cname: "vinculo",
             price: 12.99,
             image: "BOYS-12_page-0001.jpg"
         },
         {
             id: 8,
             name: "T-shirt",
-            cname:"vinculo",
+            cname: "vinculo",
             price: 300,
             image: "BOYS-9_page-0001.jpg"
         },
         {
             id: 8,
             name: "T-shirt",
-            cname:"vinculo",
+            cname: "vinculo",
             price: 300,
             image: "BOYS-10_page-0001.jpg"
         },
         {
             id: 8,
             name: "T-shirt",
-            cname:"vinculo",
+            cname: "vinculo",
             price: 300,
             image: "BOYS-11_page-0001.jpg"
         },
@@ -149,12 +149,12 @@ function Kids() {
                         <h3>{product.name}</h3>
                         <h6>{product.cname}</h6>
                         <p>${product.price.toFixed(2)}</p>
-                        <button className="btn" style={{ backgroundColor: '#FFFF00' }}>Add to Cart</button>
+                        <button className="btn-cart" >Add to Cart</button>
                     </div>
                 ))}
             </div>
         </div>
-        
+
     );
 
 
