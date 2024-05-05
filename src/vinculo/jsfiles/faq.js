@@ -7,7 +7,7 @@ function Faq() {
         <h1>Frequently Asked Questions</h1>
       <input id='faq-a' type='checkbox' />
       <label htmlFor='faq-a'>
-        <p className="faq-heading">What sizes are available for boys' T-shirts?</p>
+        <p className="faq-heading">What sizes are available for boys ?</p>
         <div className='faq-arrow'></div>
         <p className="faq-text">We offer boys' T-shirts in sizes ranging from XS to XL.</p>
       </label>

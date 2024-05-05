@@ -39,7 +39,7 @@ body {
 }
 
 .wishlist-card {
-    width: calc(25% - 30px); /* Adjust card width */
+    width: calc(20%); /* Adjust card width */
     margin-bottom: 20px;
     border: none;
     border-radius: 10px;

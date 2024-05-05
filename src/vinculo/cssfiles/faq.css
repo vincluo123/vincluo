@@ -13,9 +13,9 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     color: #585656;
-    width: 95%;
-    padding-left: 20px;
-    margin-bottom: 30px;
+    width:95%;
+    padding-left:20px;
+    margin-bottom:30px;
 }
 
 .faq {
@@ -26,11 +26,12 @@
     position: relative;
     border: 1px solid #E1E1E1;
     margin-top: 20px;
-    padding-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .faq h1 {
     text-align: center;
+    padding-bottom: 20px;
 }
 
 .faq label {
@@ -39,7 +40,8 @@
     overflow: hidden;
     cursor: pointer;
     height: 56px;
-    padding-top: 1px;
+    padding-top:1px;
+   
     background-color: #FAFAFA;
     border-bottom: 1px solid #E1E1E1;
 }
@@ -76,9 +78,9 @@
 
 .faq input[type="checkbox"]:checked + label {
     display: block;
-    background: rgba(255, 255, 255, 255) !important;
+    background: rgba(255,255,255,255) !important;
     color: #4f7351;
-    height: fit-content;
+    height: 100px;
     transition: height 0.8s;
     -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -86,7 +88,7 @@
 .faq input[type='checkbox']:not(:checked) + label {
     display: block;
     transition: height 0.8s;
-    height: 70px;
+    height: 50px;
     -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
@@ -102,27 +104,33 @@
     }
 
     .faq-heading {
-        font-size: 13px;
-        
+        font-size: 16px;
     }
 
     .faq label {
-        height: 50px;
-        
+        height: auto;
+        font-size: 14px;
     }
- .faq-text {
-    font-size: 12px;
-}
+
+    .faq .faq-text {
+        width: 90%;
+    }
+
     .faq .faq-arrow {
-        top: -20px;
+        top: -30px;
         right: 20px;
     }
 
     .faq input[type="checkbox"]:checked + label {
-        height: 80px;
+        height: auto;
     }
 
     .faq input[type='checkbox']:not(:checked) + label {
-        height: 50px;
+        height: auto;
+    }
+}
+@media screen and (max-width: 768px) {
+    .faq input[type="checkbox"]:checked + label .faq-text {
+        display: none; /* Hide the answer text by default on smaller screens */
     }
 }
