@@ -24,11 +24,11 @@ function Faq() {
         <p className="faq-text">Yes, you can return any T-shirt within 30 days of purchase if it doesn't fit. Please refer to our return policy for more details.</p>
       </label>
       <input id='faq-d' type='checkbox' />
-      <label htmlFor='faq-d'>
+      {/*<label htmlFor='faq-d'>
         <p className="faq-heading">Are your T-shirts made from sustainable materials?</p>
         <div className='faq-arrow'></div>
         <p className="faq-text">Yes, we are committed to sustainability and use eco-friendly materials in the production of our T-shirts whenever possible.</p>
-      </label>
+  </label>*/}
       <input id='faq-e' type='checkbox' />
       <label htmlFor='faq-e'>
         <p className="faq-heading">Do you have a size chart?</p>

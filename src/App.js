@@ -9,9 +9,9 @@
 //import OrderConfirmation from './vinculo/jsfiles/orderConfirmationPage';
 // import ProductDetails from './vinculo/jsfiles/productdetails';
 //import Login from './Login';
-import Wishlist from './vinculo/jsfiles/wishlist';
-import Faq from './vinculo/jsfiles/faq';
-//import HeaderMobile from "./vinculo/jsfiles/headerMobile";
+//import Wishlist from './vinculo/jsfiles/wishlist';
+//import Faq from './vinculo/jsfiles/faq';
+import HeaderMobile from "./vinculo/jsfiles/headerMobile";
 
 //import Brandnameheader from './vinculo/jsfiles/brandnameheader';
 
@@ -24,7 +24,7 @@ function App() {
     <>
 
       {/* <Footer/> */}
-     <Wishlist /> 
+    {/*} <Wishlist /> */}
     {/*<Faq /> */}
      {/* <About/>*/}
       {/* <Footer/> */}
@@ -44,7 +44,7 @@ function App() {
 
       {/* <Kids/> */}
       {/* <AccountPage/> */}
-      {/*<HeaderMobile /> */}
+      <HeaderMobile /> 
     </>
   );
 }
