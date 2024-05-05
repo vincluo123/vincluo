@@ -17,7 +17,7 @@ function Boys() {
             price: 19.99,
             size: "M",
             color: "Red",
-            image: "shirt.jpg"
+            image: "BOYS-4_page-0001.jpg"
         },
         {
             id: 2,
@@ -25,7 +25,7 @@ function Boys() {
             price: 12.99,
             size: "L",
             color: "Blue",
-            image: "tshirt 2.jpg"
+            image: "BOYS-5_page-0001.jpg"
         },
         {
             id: 3,
@@ -33,47 +33,47 @@ function Boys() {
             price: 50.99,
             size: "XL",
             color: "Black",
-            image: "pant.jpg"
+            image: "BOYS-6_page-0001.jpg"
         },
         {
             id: 3,
-            name: "T-Shirt 3",
+            name: "T-Shirt 4",
             price: 19.99,
             size: "XL",
             color: "Black",
-            image: "tshirt.jpg"
+            image: "BOYS-7_page-0001.jpg"
         },
         {
             id: 3,
-            name: "T-Shirt 3",
+            name: "T-Shirt 5",
             price: 19.99,
             size: "XL",
             color: "Black",
-            image: "tshirt.jpg"
+            image: "BOYS-8_page-0001.jpg"
         },
         {
             id: 3,
-            name: "T-Shirt 3",
+            name: "T-Shirt 6",
             price: 19.99,
             size: "XL",
             color: "Black",
-            image: "tshirt.jpg"
+            image: "BOYS-9_page-0001.jpg"
         },
         {
             id: 3,
-            name: "T-Shirt 3",
+            name: "T-Shirt 7",
             price: 19.99,
             size: "XL",
             color: "Black",
-            image: "tshirt.jpg"
+            image: "BOYS-10_page-0001.jpg"
         },
         {
             id: 3,
-            name: "T-Shirt 3",
+            name: "T-Shirt 8",
             price: 19.99,
             size: "XL",
             color: "Black",
-            image: "tshirt.jpg"
+            image: "BOYS-11_page-0001.jpg"
         },
 
     ];

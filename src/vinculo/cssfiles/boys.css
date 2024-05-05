@@ -70,7 +70,7 @@ h3 {
 
 @media (max-width: 767px) {
     .sidebar {
-        width: 30%;
+        width: 20%;
         height: 100vh;
         position: fixed;
         top: 0;
@@ -82,19 +82,21 @@ h3 {
     }
 
     .Boys-dress {
-        width: 100%;
+        width: 90%;
         padding-left: 10px;
     }
 
     .container {
         flex-direction: column;
+        margin-left: 40px;
     }
 
     .product {
-        width: 100%;
-        padding: 10px 0;
+        width: 80%;
+        padding: 10px 10px;
         box-sizing: border-box;
         text-align: center;
+        margin-left: 10px;
     }
 
     .product img {
@@ -106,12 +108,39 @@ h3 {
 @media (min-width: 768px) and (max-width: 991px) {
     .sidebar {
         width: 20%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        overflow-y: auto;
+        z-index: 1000;
+
     }
 
     .Boys-dress {
-        width: 80%;
+        width: 90%;
         padding-left: 10px;
     }
+
+    .container {
+        flex-direction: column;
+        margin-left: 40px;
+    }
+
+    .product {
+        width: 80%;
+        padding: 10px 10px;
+        box-sizing: border-box;
+        text-align: center;
+        margin-left: 10px;
+    }
+
+    .product img {
+        width: 30%;
+        height: auto;
+    }
+
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
