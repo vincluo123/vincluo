@@ -11,11 +11,12 @@ import OrderConfirmation from './vinculo/jsfiles/orderConfirmationPage';
 import AccountPage from './vinculo/jsfiles/AccountPage';
 import Kids from './vinculo/jsfiles/kids';
 import Boys from './vinculo/jsfiles/boys';
+import Faq from './vinculo/jsfiles/faq';
 function App() {
   return (
     <>
 
-      <Header />
+      {/* <Header /> */}
       {/* <Home />
       <CartPage />
       <OrderConfirmation />
@@ -23,8 +24,9 @@ function App() {
       <Kids />
       <AccountPage />
       <Boys /> */}
-      <Home />
-      <Footer />
+      {/* <Home />
+      <Footer /> */}
+      <Faq />
     </>
   );
 }
