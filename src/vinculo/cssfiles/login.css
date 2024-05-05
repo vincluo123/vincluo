@@ -1,154 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700;800;900&dsplay=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    color: #adacac;
-}
-
 body {
-    background-color: #212534;
-    min-height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
-.container {
-    position: relative;
-    background-color: #1b1212;
-    width: 450px;
-    height: 620px;
-    overflow: hidden;
-}
-
-.container::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 450px;
-    height: 620px;
-    background: linear-gradient(30deg, transparent, #08f7fe, #08f7fe);
-    transform-origin: bottom right;
-    animation: animate 8s linear infinite;
-}
-
-.container::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 450px;
-    height: 620px;
-    background: linear-gradient(30deg, transparent, #08f7fe, #08f7fe);
-    transform-origin: bottom right;
-    animation: animate 8s linear infinite;
-    animation-delay: -4s;
-}
-
-@keyframes animate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-.box {
-    position: absolute;
-    background-color: #191c29;
-    z-index: 10;
-    inset: 5px;
-    padding: 25px 50px;
+.background-image {
+    background-image: url('D:\\VINCULO\\vinculo\\public\\signup.png');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    width: 330px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
 }
 
-.form-header h2 {
+.signup-container {
+    background-color: #505e74;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 0 40px rgba(0.8, 0.8, 0.8, 0.8);
+    opacity: 0.7;
+}
+
+h3 {
     text-align: center;
-    font-size: 2em;
-    font-weight: 600;
-}
-
-.form-body div {
-    position: relative;
-    margin-top: 25px;
-}
-
-.form-body div label {
-    cursor: pointer;
-}
-
-.form-body div input {
-    width: 100%;
-    padding: 8px 10px;
-    margin-block: 3px;
-    font-size: 16px;
-    font-weight: 400;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    background: transparent;
-    box-shadow: 0px 0px 0px 1px #6d6a6a;
-    color: #08f7fe;
-}
-
-.form-body div input:focus {
-    outline: none;
-    box-shadow: 0px 0px 0px 2px #08f7fe;
-    animation: anim-shadow 0.2s forwards;
-}
-
-@keyframes anim-shadow {
-    99% {
-        box-shadow: 0px 0px 20px 2px;
-        opacity: 1;
-    }
-}
-
-.form-body div span {
-    position: absolute;
-    top: 65px;
-    right: 0px;
-    color: #ff1818;
-    font-size: 0.9rem;
-}
-
-.form-body div i {
-    position: absolute;
-    top: 30px;
-    right: 10px;
-    color: #ff1818;
-    font-size: 1.2rem;
-}
-
-.form-body div input[type="submit"] {
-    width: 100px;
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: 600;
-    background-color: #08f7fe;
-    color: #1b1212;
-    border: none;
-    cursor: pointer;
-}
-
-.form-footer p {
-    text-align: center;
+    color: #e9edf9;
     font-weight: 500;
-    margin-top: 20px;
 }
 
-.form-footer p a {
-    text-decoration: none;
+.form-group {
+    margin-bottom: 40px;
 }
 
-.form-footer p a:hover {
-    text-decoration: underline 2px;
-    color: #08f7fe;
-    text-underline-offset: 3px;
+
+button[type="submit"] {
+    width: 100%;
+    border-radius: 20px;
+    color: #000000;
+    background-color: white;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+.input {
+    margin-bottom: 18px;
 }
