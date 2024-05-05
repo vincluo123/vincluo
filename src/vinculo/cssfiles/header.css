@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1); 
+    
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  .logo span {
+    font-size: 17px;
+    font-family: 'Oxygen Mono', monospace;
+  }
+  .icons {
+    display: flex;
+  }
+  
+  .icon {
+    font-size: 24px;
+    margin-left: 10px; /* Adjust the margin as needed */
+    color: #000000;
+    margin-right: 10px;
+  }
