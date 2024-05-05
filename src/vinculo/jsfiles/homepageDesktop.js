@@ -3,7 +3,7 @@ import React from 'react';
 import '../cssfiles/homepageDesktop.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { Carousel } from 'react-bootstrap'; // Import Carousel component from react-bootstrap
-
+import { FaHeart } from 'react-icons/fa';
 function Home() {
 
     const products = [
@@ -116,10 +116,12 @@ function Home() {
                         <div className="container container-row">
                             {products.map(product => (
                                 <div className="product" key={product.id}>
+
                                     <img src={product.image} alt={product.name} />
                                     <h3>{product.name}</h3>
                                     <p>${product.price.toFixed(2)}</p>
                                     <button className="btn" id='cart-btn' style={{ backgroundColor: '#d9d9d9' }}>Add to Cart</button>
+                                    <FaHeart className="heart-icon" />
                                 </div>
                             ))}
                         </div>
@@ -134,6 +136,7 @@ function Home() {
                                     <h3>{product.name}</h3>
                                     <p>${product.price.toFixed(2)}</p>
                                     <button className="btn" id='cart-btn' style={{ backgroundColor: '#d9d9d9' }}>Add to Cart</button>
+                                    <FaHeart className="heart-icon" />
                                 </div>
                             ))}
                         </div>

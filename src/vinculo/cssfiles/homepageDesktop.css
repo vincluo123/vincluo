@@ -76,6 +76,14 @@
   background-color: #0056b3;
 }
 
+.heart-icon {
+  top: 100px;
+  right: 100px;
+  font-size: 20px;
+
+  margin-left: 10px;
+}
+
 .carouseldiv {
   display: flex;
 }

@@ -4,7 +4,7 @@ header {
     justify-content: space-around;
     align-items: center;
     height: 90px;
-    background-color: rgb(31, 19, 65);
+    background-color: rgb(30, 29, 76);
 }
 
 .nav-items {
@@ -33,7 +33,7 @@ header {
 }
 
 .search-bar {
-    width: 250px;
+    width: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,8 +54,14 @@ header {
     right: 10px;
 }
 
+.search-bar button {
+    color: black;
+    border-radius: 5px;
+    margin-left: 6px;
+}
+
 .login-button {
-    background-color: blue;
+    background-color: rgb(255, 255, 255);
     color: white;
     padding: 0px 20px;
     border-radius: 5px;
@@ -66,5 +72,12 @@ header {
 
 .login-button:hover {
     background-color: white;
-    color: blue;
+    color: rgb(255, 255, 255);
+}
+
+.heart svg,
+.shopping-cart svg,
+.Phone svg,
+.User svg {
+    color: rgb(255, 255, 255);
 }
