@@ -59,8 +59,8 @@ function Home() {
             image: "tshirt11.jpg"
         }
     ]
-        
-    
+
+
     return (
         <div className='container'>
             <div className='row'>
@@ -90,30 +90,7 @@ function Home() {
                                 />
                             </Carousel.Item>
                         </Carousel>
-                        <Carousel className='round'>
-                            <Carousel.Item>
-                                <img
-                                    className="carousel1 "
-                                    src="car1.jpg"
-                                    alt="First slide"
 
-                                />
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img
-                                    className="carousel1 "
-                                    src="car2.jpeg"
-                                    alt="Second slide"
-                                />
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img
-                                    className="carousel1"
-                                    src="car3.jpg"
-                                    alt="Third slide"
-                                />
-                            </Carousel.Item>
-                        </Carousel>
                     </div>
                     <div className="container">
                         <h1 className='catagories-header'>Categories</h1>
@@ -130,10 +107,7 @@ function Home() {
                                 <img src="tshirt3.avif" alt="Category 3" />
                                 <p>T-shirts</p>
                             </div>
-                            <div className="circle">
-                                <img src="tshirt4.avif" alt="Category 4" />
-                                <p>T-shirts</p>
-                            </div>
+
                         </div>
                     </div>
 
@@ -150,7 +124,7 @@ function Home() {
                             ))}
                         </div>
                     </div>
-                    
+
                     <div className="new-arrival-container">
                         <h1 className='new-arrival'>Top Sellings</h1>
                         <div className="container container-row">
@@ -172,4 +146,4 @@ function Home() {
 
 }
 
-export default Home;
+export default Home;
