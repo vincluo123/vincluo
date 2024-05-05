@@ -38,7 +38,7 @@ function App() {
 
       {/* <Header/>
       <CartPage/> */}
-      {/* <OrderConfirmation/>  */}
+     {/* <OrderConfirmation/>  */}
       {/* <Footer/> */}
       {/* <ProductDetails/> */}
 

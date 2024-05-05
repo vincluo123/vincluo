@@ -1,20 +1,19 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import '../cssfiles/orderConfirmationPage.css';
-import tshirt1 from '../product images/tshirt1.jpg';
-import tshirt2 from '../product images/tshirt2.jpeg';
-import tshirt3 from '../product images/tshirt3.jpeg';
+const ordersGifUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCzrZExpuV21yLjxwqFTtezR5PCsqAZ8zcSsApuNeKyg&s";
+
 
 // Sample order summary data with images
 const orderSummaryData = [
-  { id: 1, name: "Product 1", quantity: 2, price: 25.00, image: tshirt1 },
-  { id: 2, name: "Product 2", quantity: 1, price: 50.00, image: tshirt2 },
+  { id: 1, name: "Product 1", quantity: 2, price: 25.00, image: "boys1_shirt.jpg"},
+  { id: 2, name: "Product 2", quantity: 1, price: 50.00, image: "boys2_shirt.jpg" },
   // Add more items as needed
 ];
 
 // Sample recommended products data with images
 const recommendedProductsData = [
-  { id: 101, name: "sample 1", price: 30.00, image: tshirt3 },
-  { id: 102, name: "sample 2", price: 35.00, image: tshirt2 },
+  { id: 101, name: "sample 1", price: 30.00, image: "BOYS-4_page-0001.jpg" },
+  { id: 102, name: "sample 2", price: 35.00, image: "boys3_shirt.jpg" },
   // Add more recommended products as needed
 ];
 
@@ -41,7 +40,8 @@ const OrderConfirmation = () => {
     <>
       <div className="order-confirmation-container">
         <div className="confirmation-header">
-          <h2>Order Confirmation</h2>
+        <img src={ordersGifUrl} alt="My Orders GIF" /> {/* GIF imported */}
+          <h2>My Orders</h2>
         </div>
 
         <div className="order-summary">
