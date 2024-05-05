@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../cssfiles/wishlist.css';
 import { FaHeart, FaTrash, FaShoppingCart } from 'react-icons/fa';
+import '../cssfiles/wishlist.css';
 
 const WishlistPage = () => {
   const [wishlist, setWishlist] = useState([

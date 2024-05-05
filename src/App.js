@@ -14,7 +14,7 @@
 //import HeaderMobile from "./vinculo/jsfiles/headerMobile";
 
 //import Brandnameheader from './vinculo/jsfiles/brandnameheader';
-
+import Wishlist from './vinculo/jsfiles/wishlist';
 import Faq from './vinculo/jsfiles/faq';
 
 
@@ -24,14 +24,14 @@ function App() {
     <>
 
      
-     {/*<Wishlist /> */}
+     <Wishlist /> 
     
      {/* <About/>*/}
       {/* <Footer/> */}
       {/* <ProductDetails/> */}
 
 
-<Faq />
+{/*<Faq />*/}
 
    
   <Footer/> 
