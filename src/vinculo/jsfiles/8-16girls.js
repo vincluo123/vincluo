@@ -1,62 +1,54 @@
+import React from 'react';
+import { Carousel } from 'react-bootstrap';
+import { FaHeart, FaTrash, FaShoppingCart } from 'react-icons/fa';
+import '../cssfiles/girlsSection.css'; // Import CSS file for girls section
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 
-
-import React, { useState, useEffect } from 'react';
-import '../cssfiles/girlsSection.css'; // Import your CSS file for styling
-
-
-const ProductPage = () => {
-  const [selectedSize, setSelectedSize] = useState('S');
-  const [selectedPrice, setSelectedPrice] = useState(10);
-  const [selectedQty, setSelectedQty] = useState(1);
-  const [totalPrice, setTotalPrice] = useState(selectedPrice * selectedQty);
-
-  const handleSizeChange = (e) => {
-    setSelectedSize(e.target.value);
-    if (e.target.value === 'S') {
-      setSelectedPrice(10);
-    } else if (e.target.value === 'M') {
-      setSelectedPrice(15);
-    } else if (e.target.value === 'L') {
-      setSelectedPrice(20);
-    }
-  };
-
-  const handleQtyChange = (e) => {
-    setSelectedQty(e.target.value);
-  };
-
-  useEffect(() => {
-    setTotalPrice(selectedPrice * selectedQty);
-  }, [selectedPrice, selectedQty]);
-
+const Girls = () => {
   return (
-    <div className="product-page">
-      <div className="product-image-container">
-        <img src="tshirt10.jpg" alt="Product Image" />
-       
-      </div>
-      <div className="product-details">
-        <h1>Product Name</h1>
-        <p>Price: ${selectedPrice}</p>
-        <label htmlFor="size-select">Size:</label>
-        <select id="size-select" value={selectedSize} onChange={handleSizeChange}>
-          <option value="S">Small</option>
-          <option value="M">Medium</option>
-          <option value="L">Large</option>
-        </select>
-        <label htmlFor="qty-select">Quantity:</label>
-        <select id="qty-select" value={selectedQty} onChange={handleQtyChange}>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <p>Total Price: ${totalPrice}</p>
-        <button>Add to Cart</button>
-      </div>
-    </div>
+    <><h1 className="girls-title">
+      <span className="girls-title-text">Girls Section</span>
+    </h1>
+    <div className="girls-page">
+        <Carousel>
+          <Carousel.Item>
+            <img
+              className="carousel-img"
+              src="girlsbanner1.jpg"
+              alt="First slide" />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="carousel-img"
+              src="girlsbanner2.jpg"
+              alt="Second slide" />
+          </Carousel.Item>
+        </Carousel>
+
+        {/* Replace the wishlist logic with Girls content */}
+        <div className="girls-items">
+          <div className="girls-card">
+            <img src="girl1.jpg" alt="Cotton T-shirt (Black)" className="girls-card-image" />
+            <div className="girls-card-details">
+              <h3 className="girls-card-name">Cotton T-shirt (Black)</h3>
+              <p className="girls-card-price">$20</p>
+            </div>
+            <div className="girls-card-buttons">
+              <button className="girls-card-remove" onClick={() => console.log("Remove")}>
+                <FaTrash className="girls-button-icon" />
+                Remove
+              </button>
+              <button className="girls-card-add-to-cart" onClick={() => console.log("Add to Cart")}>
+                <FaShoppingCart className="girls-button-icon" />
+                Add to Cart
+              </button>
+            </div>
+          </div>
+          {/* Add more girl items as needed */}
+        </div>
+        
+      </div></>
   );
 };
 
-export default ProductPage;
+export default Girls;
