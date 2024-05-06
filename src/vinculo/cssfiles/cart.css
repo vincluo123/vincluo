@@ -59,7 +59,7 @@ h1 {
 
 .buttons button {
   margin-right: 10px;
-  background-color: #007bff;
+  background-color: #102c57;
   color: #fff;
   border: none;
   border-radius: 3px;
@@ -81,7 +81,7 @@ h1 {
 }
 
 .total button {
-  background-color: #007bff;
+  background-color: #102c57;
   color: #fff;
   border: none;
   border-radius: 3px;
@@ -144,7 +144,7 @@ h1 {
 
 .discount-coupon button {
   margin-right: 10px;
-  background-color: #007bff;
+  background-color: #102c57;
   color: #fff;
   border: none;
   border-radius: 3px;
@@ -164,7 +164,7 @@ h1 {
 
 .buy-now button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #102c57;
   color: #fff;
   border: none;
   border-radius: 3px;
