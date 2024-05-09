@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import '../cssfiles/cart.css';
-import tshirt from '../cart images/tshirt.jpeg'; 
-import tshirt1 from '../cart images/tshirt1.jpg';
-import tshirt2 from '../cart images/tshirt2.jpeg';
+
 
 const CartPage = () => {
   const [cartItems, setCartItems] = useState([
-    { id: 1, name: 'Product 1', price: 10, quantity: 1, image: tshirt },
-    { id: 2, name: 'Product 2', price: 15, quantity: 1, image: tshirt1 },
-    { id: 3, name: 'Product 3', price: 20, quantity: 1, image: tshirt2 },
+    { id: 1, name: 'Product 1', price: 10, quantity: 1, image: "boys1_shirt.jpg" },
+    { id: 2, name: 'Product 2', price: 15, quantity: 1, image: "boys2_shirt.jpg" },
+    { id: 3, name: 'Product 3', price: 20, quantity: 1, image: "BOYS-4_page-0001.jpg" },
   ]);
   const [buyLaterItems, setBuyLaterItems] = useState([]);
   const [shippingInfo, setShippingInfo] = useState({});
