@@ -153,6 +153,7 @@ function HeaderMobile() {
                     
                 ))}
             </div>
+            <h1 className='catagories-header'>New Arrivals</h1>
             <div className="container">
 
                        {products.map(product => (
@@ -165,6 +166,7 @@ function HeaderMobile() {
                   </div>
             ))}
             </div>
+            <h1 className='catagories-header'>Top Sales</h1>
             <div className="container">
 
                        {products.map(product => (
