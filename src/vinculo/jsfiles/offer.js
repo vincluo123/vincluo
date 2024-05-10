@@ -14,14 +14,14 @@ function Offer() {
             name: "T-shirt",
             cname: "combo of 3",
             price: 999,
-            image: "boys2_shirt.jpg"
+            image: "offer/combo1.jpg"
         },
         {
             id: 2,
             name: "T-shirt",
             cname: "combo of 2",
             price: 689,
-            image: "boys1_shirt.jpg"
+            image: "offer/combo 2.jpeg"
         },
         {
             id: 3,
@@ -76,45 +76,28 @@ function Offer() {
                 <h2>Exclusive Offer!</h2>
                 <p>Get flat 30% off on all kids' clothing. Hurry, limited time offer!</p>
             </div>
-            
             <Carousel>
-                {/* Carousel items */}
                 <Carousel.Item>
                     <img
-                        className="d-block w-100"
-                        src="carousel1.webp"
+                        className="carousel"
+                        src="slide 11.gif"
                         alt="First slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block w-100"
-                        src="carousel2.webp"
+                        className="carousel "
+                        src="slide 12.gif"
                         alt="Second slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block w-100"
-                        src="carousel3.webp"
-                        alt="Second slide"
+                        className="carousel"
+                        src="slide 11.gif"
+                        alt="Third slide"
                     />
                 </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src="carousel1.webp"
-                        alt="Second slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src="carousel2.webp"
-                        alt="Second slide"
-                    />
-                </Carousel.Item>
-                {/* Add more Carousel items as needed */}
             </Carousel>
 
             {/* Categories */}
@@ -132,7 +115,7 @@ function Offer() {
                             <h6>{product.cname}</h6>
                             <p>${product.price.toFixed(2)}</p>
                         </div>
-                        <button className="btn" style={{ backgroundColor: 'blue' }}>Add to Cart</button>
+                        <button className="btn" style={{ backgroundColor: 'skyblue' }}>Add to Cart</button>
                     </div>
                 ))}
             </div>

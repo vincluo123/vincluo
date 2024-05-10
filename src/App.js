@@ -5,16 +5,16 @@
 
 // import Home from './vinculo/jsfiles/homepageDesktop';
 // import ProductDetails from './vinculo/jsfiles/productdetails';
-import Kids from './vinculo/jsfiles/kids';
+
 
 //import CartPage from './vinculo/jsfiles/cart';
 // import Footer from './vinculo/jsfiles/footerDesktop';
 // import CartPage from './vinculo/jsfiles/cart';
- import Footer from './vinculo/jsfiles/footerDesktop';
+//  import Footer from './vinculo/jsfiles/footerDesktop';
 // import Home from './vinculo/jsfiles/homepageDesktop';
 // import ProductDetails from './vinculo/jsfiles/productdetails';
-import Kids from './vinculo/jsfiles/kids';
-// import Offer from './vinculo/jsfiles/offer';
+// import Kids from './vinculo/jsfiles/kids';
+import Offer from './vinculo/jsfiles/offer';
 
 //import OrderConfirmation from './vinculo/jsfiles/orderConfirmationPage';
 // import ProductDetails from './vinculo/jsfiles/productdetails';
@@ -59,7 +59,7 @@ function App() {
       {/* <Footer/> */}
       {/* <ProductDetails/> */}
     {/* <Faq /> */}
-    {/* <Offer/> */}
+     <Offer/> 
 
 
 
