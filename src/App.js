@@ -5,12 +5,12 @@
 
 // import Home from './vinculo/jsfiles/homepageDesktop';
 // import ProductDetails from './vinculo/jsfiles/productdetails';
-import Kids from './vinculo/jsfiles/kids';
+
 
 //import CartPage from './vinculo/jsfiles/cart';
 // import Footer from './vinculo/jsfiles/footerDesktop';
 // import CartPage from './vinculo/jsfiles/cart';
- import Footer from './vinculo/jsfiles/footerDesktop';
+//  import Footer from './vinculo/jsfiles/footerDesktop';
 // import Home from './vinculo/jsfiles/homepageDesktop';
 // import ProductDetails from './vinculo/jsfiles/productdetails';
 import Kids from './vinculo/jsfiles/kids';
@@ -28,7 +28,7 @@ import Kids from './vinculo/jsfiles/kids';
 //import AboutUs from "./vinculo/jsfiles/about";
 
 //import HeaderMobile from "./vinculo/jsfiles/headerMobile";
-import Footer from './vinculo/jsfiles/footerDesktop';
+// import Footer from './vinculo/jsfiles/footerDesktop';
 
 //import Brandnameheader from './vinculo/jsfiles/brandnameheader';
 
@@ -39,8 +39,6 @@ import Footer from './vinculo/jsfiles/footerDesktop';
 function App() {
   return (
     <>
-
-
     
      {/* <Wishlist />  */}
 
@@ -51,7 +49,7 @@ function App() {
     {/*<Faq /> */}
      {/* <About/>*/}
     {/*<Wishlist /> */}
-    
+    <Kids/>
      {/* <AboutUs/> */} 
       {/* <Wishlist />  */}
       {/*<Faq /> */}
@@ -80,11 +78,11 @@ function App() {
 
 
       
-
+    
       {/* <AccountPage/> */}
       {/*<HeaderMobile /> */}
       {/*<OrderConfirmation /> */}
-      <Footer/> 
+      {/* <Footer/>  */}
     </>
   );
 }

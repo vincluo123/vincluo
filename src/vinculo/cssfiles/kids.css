@@ -17,25 +17,26 @@
   height: 5px;
 }
 
-.container {
+.container1 {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  overflow-x: auto;
   margin-top: 20px;
+
+  padding: 10px;
 }
 
 .product {
-<<<<<<< HEAD
-  background-color: #AD88C6;
-=======
   background-color: #b3bed8;
->>>>>>> 3c21d3728f63c71b01f6bc163552756c4e557f22
   border: 1px solid #ddd;
   border-radius: 25px;
   padding: 35px;
-  margin: 15px;
+  margin: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 275px;
+  width: 300px;
   color: #122121;
 }
 
@@ -88,9 +89,9 @@ h1 {
   margin-bottom: 20px;
 }
 
-.container {
+/* .container {
   text-align: center;
-}
+} */
 
 .circle-container {
   display: flex;
@@ -111,7 +112,9 @@ h1 {
 .btn-cart {
   color: black;
   background-color: #fafafa;
-  border-radius: 6px;
+  border-radius: 10px;
+padding: 10px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .circle img {
@@ -151,10 +154,11 @@ h1 {
 
 @media (min-width:320px) and (max-width: 425px) {
   .product {
-    padding: 10px;
-    width: 118px;
+    padding: 15px;
+    width: 150px;
     height: auto;
-    margin: 20px;
+    /* margin: 20px; */
+    border-radius: 8px;
   }
 
   .product img {
@@ -163,12 +167,17 @@ h1 {
     border-radius: 2px;
   }
 
+  .btn-cart{
+    padding: 5px;
+    font-size: 14px;
+  }
 
 }
 
 @media (min-width: 2560px) {
   .product {
-    background-color: #000080;
+  background-color: #b3bed8;
+  background-color: ;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 45px;
