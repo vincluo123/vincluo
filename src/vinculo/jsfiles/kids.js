@@ -19,6 +19,9 @@ function Kids() {
             ...prevState,
             [productId]: !prevState[productId] // Toggle the clicked state for the product
         }));
+
+        console.log(productId);
+
     };
 const products = [
         {
@@ -78,33 +81,34 @@ const products = [
             image: "BOYS-8_page-0001.jpg"
         },
         {
-            id: 8,
+            id: 9,
             name: "T-shirt",
             cname: "vinculo",
             price: 12.99,
             image: "BOYS-12_page-0001.jpg"
         },
         {
-            id: 8,
+            id: 10,
             name: "T-shirt",
             cname: "vinculo",
             price: 300,
             image: "BOYS-9_page-0001.jpg"
         },
         {
-            id: 8,
+            id: 11,
             name: "T-shirt",
             cname: "vinculo",
             price: 300,
             image: "BOYS-10_page-0001.jpg"
         },
         {
-            id: 8,
+            id: 12,
             name: "T-shirt",
             cname: "vinculo",
             price: 300,
             image: "BOYS-11_page-0001.jpg"
         },
+        
 
 
     ];
