@@ -1,90 +1,141 @@
+// App.js
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Carousel from 'react-bootstrap/Carousel';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import "../cssfiles/infant.css";
+import '../cssfiles/infantboys.css';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import { Carousel } from 'react-bootstrap'; // Import Carousel component from react-bootstrap
 
-const ImageGallery = () => {
-  return (
-    <Container>
-      <Row>
-        <Col xs={6} sm={4} md={2}>
-          <img src="image1.jpg" alt="Image 1" />
-        </Col>
-        <Col xs={6} sm={4} md={2}>
-          <img src="image2.jpg" alt="Image 2" />
-        </Col>
-        {/* Repeat this structure for each image */}
-      </Row>
-    </Container>
-  );
-};
 
-function CollapsibleExample() {
-  return (
-    <>
-      <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
-        <Container>
-          <Navbar.Brand href="#home">vinculo</Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="#features">Infant</Nav.Link>
-              <Nav.Link href="#pricing">Girls</Nav.Link>
-              <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Boys</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-            <Nav>
-              <Nav.Link href="#deets">More deets</Nav.Link>
-              <Nav.Link eventKey={2} href="#memes">
-                Dank memes
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 
-      <Carousel>
-        <Carousel.Item>
-          <img src="shirt.jpg" alt="Category 1" />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img src="shirt.jpg" alt="Category 1" />
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img src="shirt.jpg" alt="Category 1" />
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
+function Infantboys() {
+    const products = [
+        {
+            id: 1,
+            name: "T-shirt",
+            cname: "combo of 3",
+            price: 999,
+            image: "offer/combo1.jpg"
+        },
+        {
+            id: 2,
+            name: "T-shirt",
+            cname: "combo of 2",
+            price: 689,
+            image: "offer/combo 2.jpeg"
+        },
+        {
+            id: 3,
+            name: "T-shirt",
+            cname:"pack of 3",
+            price: 759,
+            image: "boys3_shirt.jpg"
+        },
+        {
+            id: 4,
+            name: "T-shirt",
+            cname:"combo of 4",
+            price: 899,
+            image: "BOYS-4_page-0001.jpg"
+        },
+        {
+            id: 5,
+            name: "T-shirt",
+            cname:"combo of 2",
+            price: 500,
+            image: "BOYS-5_page-0001.jpg"
+        },
+        {
+            id: 6,
+            name: "T-shirt",
+            cname:"combo of 5",
+            price: 1200,
+            image: "BOYS-6_page-0001.jpg"
+        },
+        {
+            id: 7,
+            name: "T-shirt",
+            cname:"pack of 3",
+            price:600,
+            image: "BOYS-7_page-0001.jpg"
+        },
+        {
+            id: 8,
+            name: "T-shirt",
+            cname:"pack of 6",
+            price: 1000,
+            image: "BOYS-8_page-0001.jpg"
+        },
+   
 
-      {/* Place ImageGallery component here */}
-      <ImageGallery />
-    </>
-  );
+    ];
+
+    return (
+        <div className="App">
+
+            <Carousel>
+                <Carousel.Item>
+                    <img
+                        className="carousel"
+                        src="slide 11.gif"
+                        alt="First slide"
+                    />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="carousel "
+                        src="slide 12.gif"
+                        alt="Second slide"
+                    />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="carousel"
+                        src="slide 11.gif"
+                        alt="Third slide"
+                    />
+                </Carousel.Item>
+            </Carousel>
+
+            {/* Categories */}
+
+            {/* Category circles */}
+            
+            {/* Combo Offers */}
+            <h1>Infant Boys</h1>
+            <div className="combo-container">
+                {products.map(product => (
+                    <div className="combo-card" key={product.id}>
+                        <img src={product.image} alt={product.name} />
+                        <div className="combo-details">
+                            <h3>{product.name}</h3>
+                            <h6>{product.cname}</h6>
+                            <p>${product.price.toFixed(2)}</p>
+                        </div>
+                        <button className="btn" style={{ backgroundColor: 'skyblue' }}>Add to Cart</button>
+                    </div>
+                ))}
+            </div>
+            <div className="combo-container">
+                {products.map(product => (
+                    <div className="combo-card" key={product.id}>
+                        <img src={product.image} alt={product.name} />
+                        <div className="combo-details">
+                            <h3>{product.name}</h3>
+                            <h6>{product.cname}</h6>
+                            <p>${product.price.toFixed(2)}</p>
+                        </div>
+                        <button className="btn" style={{ backgroundColor: 'skyblue' }}>Add to Cart</button>
+                    </div>
+                ))}
+            </div>
+            
+
+        </div>
+    );
 }
 
-export default CollapsibleExample;
+export default Infantboys;
+
+
+
+
