@@ -17,18 +17,18 @@ function App() {
   return (
     <>
 
-      {/* <Header /> */}
-      {/* <Home />
+      <Header />
+      <Home />
       <CartPage />
       <OrderConfirmation />
       <ProductDetails />
       <Kids />
-      <AccountPage /> */}
+      <AccountPage />
       <Boys />
-      {/* <Home />
-      <Footer /> */}
-      {/* <Faq /> */}
-      {/* <SignupPage /> */}
+      <Home />
+      <Footer />
+      <Faq />
+      <SignupPage />
     </>
   );
 }
