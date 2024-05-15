@@ -5,6 +5,7 @@
   font-style: normal;
 }
 
+
 .App {
   text-align: center;
 
@@ -20,14 +21,14 @@
 .container1 {
   /* width: 100%; */
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   overflow-x: auto;
   margin-top: 20px;
 
   padding: 10px;
-  overflow-x: auto;
+  
 }
 
 .product {

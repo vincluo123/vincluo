@@ -13,7 +13,7 @@
 //  import Footer from './vinculo/jsfiles/footerDesktop';
 // import Home from './vinculo/jsfiles/homepageDesktop';
 // import ProductDetails from './vinculo/jsfiles/productdetails';
-// import Kids from './vinculo/jsfiles/kids';
+import Kids from './vinculo/jsfiles/kids';
 //import Offer from './vinculo/jsfiles/offer';
 
 //import OrderConfirmation from './vinculo/jsfiles/orderConfirmationPage';
@@ -48,7 +48,7 @@ function App() {
     {/*<Faq /> */}
      {/* <About/>*/}
     {/*<Wishlist /> */}
-    {/* <Kids/> */}
+    <Kids/>
      {/* <AboutUs/> */} 
       {/* <Wishlist />  */}
       {/*<Faq /> */}
