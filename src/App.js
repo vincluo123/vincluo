@@ -17,12 +17,13 @@
 import Offer from './vinculo/jsfiles/offer';
 
 import './App.css';
-import Header from './vinculo/jsfiles/headerDesktop';
-import CartPage from './vinculo/jsfiles/cart';
-import Footer from './vinculo/jsfiles/footerDesktop';
-import Home from './vinculo/jsfiles/homepageDesktop';
-import ProductDetails from './vinculo/jsfiles/productdetails';
-import OrderConfirmation from './vinculo/jsfiles/orderConfirmationPage';
+import AccountPage from './vinculo/jsfiles/AccountPage';
+// import Header from './vinculo/jsfiles/headerDesktop';
+// import CartPage from './vinculo/jsfiles/cart';
+// import Footer from './vinculo/jsfiles/footerDesktop';
+// import Home from './vinculo/jsfiles/homepageDesktop';
+// import ProductDetails from './vinculo/jsfiles/productdetails';
+//import OrderConfirmation from './vinculo/jsfiles/orderConfirmationPage';
 // import ProductDetails from './vinculo/jsfiles/productdetails';
 // import Login from './Login';
 import AccountPage from './vinculo/jsfiles/AccountPage';
@@ -39,46 +40,8 @@ function App() {
       {/* <Wishlist />  */}
 
       {/* <Footer/> */}
-
-      {/*<CartPage/> */}
-
-      {/*<Faq /> */}
-      {/* <About/>*/}
-      {/*<Wishlist /> */}
-
-      {/* <AboutUs/> */}
-      {/* <Wishlist />  */}
-      {/*<Faq /> */}
-      {/* <About/>*/}
-      {/* <Footer/> */}
       {/* <ProductDetails/> */}
-      {/* <Faq /> */}
-      <Offer />
-
-
-
-
-
-
-
-      {/* <Header/>*/}
-
-
-      {/* <Footer/> */}
-      {/* <Header/>
-      <CartPage/> */}
-      {/* <OrderConfirmation/>  */}
-
-      {/* <ProductDetails/> */}
-
-
-
-
-
-      {/* <AccountPage/> */}
-      {/*<HeaderMobile /> */}
-      {/*<OrderConfirmation /> */}
-      <Footer />
+      <AccountPage />
     </>
   );
 }
