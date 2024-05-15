@@ -1,6 +1,8 @@
 //import './App.css';
 // import Header from './vinculo/jsfiles/headerDesktop';
 
+import HeaderMobile from "./vinculo/mobilehome/headerMobile";
+
 // import CartPage from './vinculo/jsfiles/cart';
 
 // import Home from './vinculo/jsfiles/homepageDesktop';
@@ -13,13 +15,10 @@
 //  import Footer from './vinculo/jsfiles/footerDesktop';
 // import Home from './vinculo/jsfiles/homepageDesktop';
 // import ProductDetails from './vinculo/jsfiles/productdetails';
-<<<<<<< HEAD
-import Kids from './vinculo/jsfiles/kids';
-//import Offer from './vinculo/jsfiles/offer';
-=======
 // import Kids from './vinculo/jsfiles/kids';
-import Offer from './vinculo/jsfiles/offer';
->>>>>>> 64313bf3b977053d82cd152b4c26c57398dd4959
+//import Offer from './vinculo/jsfiles/offer';
+// import Kids from './vinculo/jsfiles/kids';
+// import Offer from './vinculo/jsfiles/offer';
 
 //import OrderConfirmation from './vinculo/jsfiles/orderConfirmationPage';
 // import ProductDetails from './vinculo/jsfiles/productdetails';
@@ -43,25 +42,25 @@ import Offer from './vinculo/jsfiles/offer';
 function App() {
   return (
     <>
-    
-     {/* <Wishlist />  */}
+
+      {/* <Wishlist />  */}
 
       {/* <Footer/> */}
-      
-     {/*<CartPage/> */}
 
-    {/*<Faq /> */}
-     {/* <About/>*/}
-    {/*<Wishlist /> */}
-    <Kids/>
-     {/* <AboutUs/> */} 
+      {/*<CartPage/> */}
+
+      {/*<Faq /> */}
+      {/* <About/>*/}
+      {/*<Wishlist /> */}
+      {/* <Kids/> */}
+      {/* <AboutUs/> */}
       {/* <Wishlist />  */}
       {/*<Faq /> */}
       {/* <About/>*/}
       {/* <Footer/> */}
       {/* <ProductDetails/> */}
-    {/* <Faq /> */}
-     <Offer/> 
+      {/* <Faq /> */}
+      {/* <Offer/>  */}
 
 
 
@@ -69,21 +68,21 @@ function App() {
 
 
 
-      {/* <Header/>*/ }
-      
-      
+      {/* <Header/>*/}
+
+
       {/* <Footer/> */}
       {/* <Header/>
       <CartPage/> */}
       {/* <OrderConfirmation/>  */}
-       
+
       {/* <ProductDetails/> */}
-
-
-
       
-    
+        
+        <HeaderMobile />
+        
       
+
       {/*<HeaderMobile /> */}
       {/*<OrderConfirmation /> */}
       {/* <Footer/>  */}

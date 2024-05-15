@@ -4,6 +4,7 @@ import '../cssfiles/headermobile.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { Carousel } from 'react-bootstrap'; // Import Carousel component from react-bootstrap
 import Navbar from './brandnameheader';
+import Footermobile from '../jsfiles/footerMobile';
 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 
 
@@ -99,28 +100,28 @@ function HeaderMobile() {
     ];
     return (
         <>
-        <Navbar/>
-      
+         <Navbar/>
+       
         <div className="App">
             <Carousel>
                 <Carousel.Item>
                     <img
                         className="carousel"
-                        src="carousel1.webp"
+                        src="/assets/carousel1.webp"
                         alt="First slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="carousel "
-                        src="carousel2.webp"
+                        src="/assets/carousel2.webp"
                         alt="Second slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="carousel"
-                        src="carousel3.webp"
+                        src="/assets/carousel3.webp"
                         alt="Third slide"
                     />
                 </Carousel.Item>
@@ -184,7 +185,8 @@ function HeaderMobile() {
             </div>
             
         </div>
-      
+            
+        <Footermobile />
 
         </>
        
