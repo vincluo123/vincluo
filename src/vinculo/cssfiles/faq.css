@@ -1,3 +1,5 @@
+/* Existing styles */
+
 .faq-heading {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
@@ -29,6 +31,7 @@
 
 .faq h1 {
     text-align: center;
+    padding-bottom: 20px;
 }
 
 .faq label {
@@ -85,10 +88,51 @@
 .faq input[type='checkbox']:not(:checked)+label {
     display: block;
     transition: height 0.8s;
-    height: 60px;
+    height: 50px;
     -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+    .faq {
+        width: 90%;
+        max-width: 600px;
+    }
+
+    .faq-heading {
+        font-size: 16px;
+    }
+
+    .faq label {
+        height: auto;
+        font-size: 14px;
+    }
+
+    .faq .faq-text {
+        width: 90%;
+    }
+
+    .faq .faq-arrow {
+        top: -30px;
+        right: 20px;
+    }
+
+    .faq input[type="checkbox"]:checked+label {
+        height: auto;
+    }
+
+    .faq input[type='checkbox']:not(:checked)+label {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .faq input[type="checkbox"]:checked+label .faq-text {
+        display: none;
+        /* Hide the answer text by default on smaller screens */
+    }
 }
