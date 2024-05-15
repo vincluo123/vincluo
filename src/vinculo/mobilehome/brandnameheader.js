@@ -10,9 +10,10 @@ const Header = () => {
     <>
     <div>
     <header className="header">
-      <div className="logo">
+      <div className="logo m-0.2 name">
       <span>Vinculo</span>
       </div>
+      <input type="text" placeholder="Search..."  className='search'/>
       <div className="icons">
         <FaHeart className="icon" />
         <FaShoppingBag className="icon" />

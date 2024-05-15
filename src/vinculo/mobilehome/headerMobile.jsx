@@ -3,8 +3,9 @@ import React from 'react';
 import '../cssfiles/headermobile.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { Carousel } from 'react-bootstrap'; // Import Carousel component from react-bootstrap
-import Navbar from './searchheader';
+import Navbar from './brandnameheader';
 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+
 
 
 function HeaderMobile() {
@@ -97,6 +98,8 @@ function HeaderMobile() {
 
     ];
     return (
+        <>
+        <Navbar/>
       
         <div className="App">
             <Carousel>
@@ -153,6 +156,7 @@ function HeaderMobile() {
                     
                 ))}
             </div>
+            <h1 className='catagories-header'>New Arrivals</h1>
             <div className="container">
 
                        {products.map(product => (
@@ -165,6 +169,7 @@ function HeaderMobile() {
                   </div>
             ))}
             </div>
+            <h1 className='catagories-header'>Top Sales</h1>
             <div className="container">
 
                        {products.map(product => (
@@ -179,6 +184,9 @@ function HeaderMobile() {
             </div>
             
         </div>
+      
+
+        </>
        
     );
    
