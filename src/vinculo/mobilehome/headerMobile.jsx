@@ -4,6 +4,10 @@ import '../cssfiles/headermobile.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { Carousel } from 'react-bootstrap'; // Import Carousel component from react-bootstrap
 import Navbar from './searchheader';
+import Header from './brandnameheader';
+import '../cssfiles/header.css';
+import '../cssfiles/navheader.css';
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 
 
@@ -99,6 +103,7 @@ function HeaderMobile() {
     return (
       
         <div className="App">
+            <Header/>
             <Carousel>
                 <Carousel.Item>
                     <img

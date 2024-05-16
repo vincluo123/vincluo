@@ -1,6 +1,7 @@
-
 import React, { useState } from 'react';
-import '../cssfiles/AddressForm.css';function AddressForm() {
+import '../cssfiles/NewAddressForm.css';
+
+function NewAddressForm() {
   const [address, setAddress] = useState({
     name: '',
     pincode: '',
@@ -26,17 +27,33 @@ import '../cssfiles/AddressForm.css';function AddressForm() {
   };
 
   return (
-    <div className="address-form-container">
-      <h2>Manage Addresses</h2>
-      <button className="new-address-btn">ADD A NEW ADDRESS</button>
-      <button className="location-btn">Use my current location</button>
+    <div className="new-address-form-container">
+      <h2>New Address</h2>
       <form onSubmit={handleSubmit} className="address-form">
-        {/* Input fields for the form */}
         <label>
           Name
           <input type="text" name="name" value={address.name} onChange={handleInputChange} />
         </label>
-        {/* Include other fields like pincode, mobileNumber, etc. */}
+        <label>
+          Mobile Number
+          <input type="text" name="mobileNumber" value={address.mobileNumber} onChange={handleInputChange} />
+        </label>
+        <label>
+          Address
+          <input type="text" name="address" value={address.address} onChange={handleInputChange} />
+        </label>
+        <label>
+          Pincode
+          <input type="text" name="pincode" value={address.pincode} onChange={handleInputChange} />
+        </label>
+        <label>
+          City
+          <input type="text" name="city" value={address.city} onChange={handleInputChange} />
+        </label>
+        <label>
+          State
+          <input type="text" name="state" value={address.state} onChange={handleInputChange} />
+        </label>
         <div className="address-type">
           <label>
             <input
@@ -68,4 +85,4 @@ import '../cssfiles/AddressForm.css';function AddressForm() {
   );
 }
 
-export default AddressForm;
+export default NewAddressForm;
