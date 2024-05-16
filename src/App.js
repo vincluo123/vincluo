@@ -1,7 +1,7 @@
 //import './App.css';
 // import Header from './vinculo/jsfiles/headerDesktop';
 
-import Login from "./vinculo/Authentication/Login";
+// import Login from "./vinculo/Authentication/Login";
 
 // import RegistrationPage from "./vinculo/Authentication/Registration";
 // import Home from "./vinculo/jsfiles/homepageDesktop";
@@ -37,7 +37,6 @@ import Login from "./vinculo/Authentication/Login";
 // import Faq from './vinculo/jsfiles/faq';
 // import About from "./vinculo/jsfiles/about";
 
-//import HeaderMobile from "./vinculo/jsfiles/headerMobile";
 // import Footer from './vinculo/jsfiles/footerDesktop';
 
 //import Brandnameheader from './vinculo/jsfiles/brandnameheader';
@@ -68,7 +67,7 @@ function App() {
       {/* <Faq /> */}
       {/* <Offer/>  */}
 
-      <Login />
+      {/* <Login /> */}
 
       {/* <Home /> */}
 
@@ -90,7 +89,7 @@ function App() {
         
       
 
-      {/*<HeaderMobile /> */}
+      
       {/*<OrderConfirmation /> */}
       {/* <Footer/>  */}
     </>
