@@ -4,9 +4,10 @@ import { FaHeart, FaTrash, FaShoppingCart } from 'react-icons/fa';
 
 const WishlistPage = () => {
   const [wishlist, setWishlist] = useState([
-    { id: 1, name: 'Cotton T-shirt (Black)', price: 20, image: 'tshirt6.jpg' },
-    { id: 2, name: 'Plain T-shirt (Yellow)', price: 30, image: 'tshirt7.jpg' },
-    { id: 3, name: 'Plain T-shirt(White)', price: 25, image: 'tshirt8.jpg' },
+    { id: 1, name: 'Cotton T-shirt (Black)', price: 20, image: 'girl1.jpg' },
+    { id: 2, name: 'Plain T-shirt (Yellow)', price: 30, image: 'girl2.jpg' },
+    { id: 3, name: 'Plain T-shirt(White)', price: 25, image: 'girl3.jpg' },
+    { id: 4, name: 'Plain T-shirt(White)', price: 25, image: 'girl4.jpg' }
   ]);
 
   const removeFromWishlist = (id) => {

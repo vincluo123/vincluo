@@ -1,13 +1,13 @@
 // App.js
 import React from 'react';
-import '../cssfiles/infantboys.css';
+import '../cssfiles/offer.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { Carousel } from 'react-bootstrap'; // Import Carousel component from react-bootstrap
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 
-function Infantboys() {
+function Offer() {
     const products = [
         {
             id: 1,
@@ -71,7 +71,11 @@ function Infantboys() {
 
     return (
         <div className="App">
-
+            {/* Advertisement */}
+            <div className="advertisement">
+                <h2>Exclusive Offer!</h2>
+                <p>Get flat 30% off on all kids' clothing. Hurry, limited time offer!</p>
+            </div>
             <Carousel>
                 <Carousel.Item>
                     <img
@@ -97,24 +101,11 @@ function Infantboys() {
             </Carousel>
 
             {/* Categories */}
-
+            <h1 className='catagories-header'>Categories</h1>
             {/* Category circles */}
             
             {/* Combo Offers */}
-            <h1>Infant Boys</h1>
-            <div className="combo-container">
-                {products.map(product => (
-                    <div className="combo-card" key={product.id}>
-                        <img src={product.image} alt={product.name} />
-                        <div className="combo-details">
-                            <h3>{product.name}</h3>
-                            <h6>{product.cname}</h6>
-                            <p>${product.price.toFixed(2)}</p>
-                        </div>
-                        <button className="btn" style={{ backgroundColor: 'skyblue' }}>Add to Cart</button>
-                    </div>
-                ))}
-            </div>
+            <h1>Combo Offers</h1>
             <div className="combo-container">
                 {products.map(product => (
                     <div className="combo-card" key={product.id}>
@@ -129,12 +120,20 @@ function Infantboys() {
                 ))}
             </div>
             
-
+            <div className="offer-details">
+                {/* Interactive offer details */}
+                <h2>Special Offers</h2>
+                <ul>
+                    <li>Buy 1 get 1 free on all T-shirts!</li>
+                    <li>Flat 20% off on all pants. Use code: PANTS20</li>
+                    <li>Free shipping on orders above $500!</li>
+                </ul>
+            </div>
         </div>
     );
 }
 
-export default Infantboys;
+export default Offer;
 
 
 

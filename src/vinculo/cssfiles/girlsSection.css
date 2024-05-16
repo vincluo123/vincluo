@@ -10,35 +10,37 @@ body {
     margin: 0;
 }
 
-.wishlist-page {
-    padding: 15px 5vw; /* Adjust padding for responsiveness */
-    background-color: #888;
+.girls-page {
+    padding: 10px 5vw; /* Adjust padding for responsiveness */
+    
     padding-bottom: 30px;
 }
 
-.wishlist-title {
+.girls-title {
     font-size: 24px;
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
 }
 
-.wishlist-icon {
+.girls-icon {
     margin-left: 10px;
     color: red;
 }
 
-.wishlist-title-text {
+.girls-title-text {
     font-weight: bold;
+    padding-top: 20px;
 }
 
-.wishlist-items {
+.girls-items {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
-.wishlist-card {
+.girls-card {
     width: calc(20%); /* Adjust card width */
     margin-bottom: 20px;
     border: none;
@@ -54,19 +56,19 @@ body {
 
 /* Adjust card width for tablets */
 @media screen and (max-width: 768px) {
-    .wishlist-card {
+    .girls-card {
         width: calc(50% - 20px);
     }
 }
 
 /* Adjust card width for mobile devices */
 @media screen and (max-width: 480px) {
-    .wishlist-card {
+    .girls-card {
         width: calc(100% - 20px);
     }
 }
 
-.wishlist-card-image {
+.girls-card-image {
     width: 140px;
     height: 160px; /* Adjust image height */
     object-fit: cover;
@@ -75,11 +77,11 @@ body {
     display: block; /* Ensure the image is a block element */
 }
 
-.wishlist-card-details {
+.girls-card-details {
     padding: 10px 0;
 }
 
-.wishlist-card-name {
+.girls-card-name {
     font-size: 16px; /* Adjust font size */
     margin: 0;
     margin-bottom: 5px;
@@ -87,18 +89,18 @@ body {
     font-weight: 600;
 }
 
-.wishlist-card-price {
+.girls-card-price {
     margin: 0;
     color: #888;
 }
 
-.wishlist-card-buttons {
+.girls-card-buttons {
     display: flex;
     justify-content: space-between;
 }
 
-.wishlist-card-remove,
-.wishlist-card-add-to-cart {
+.girls-card-remove,
+.girls-card-add-to-cart {
     background-color: #102c57;
     color: #fff;
     border: none;
@@ -112,18 +114,18 @@ body {
     margin-left: 8px;
 }
 
-.wishlist-card-remove:hover,
-.wishlist-card-add-to-cart:hover {
+.girls-card-remove:hover,
+.girls-card-add-to-cart:hover {
     background-color: #fabd10;
     color: #102c57;
 }
 
-.wishlist-button-icon {
+.girls-button-icon {
     margin-right: 5px;
     font-size: 16px; /* Adjust font size */
 }
 
-.wishlist-empty {
+.girls-empty {
     font-size: 24px;
     font-family: 'Poppins', sans-serif;
     text-align: center;

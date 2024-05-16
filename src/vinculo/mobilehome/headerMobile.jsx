@@ -1,14 +1,19 @@
 // App.js
 import React from 'react';
-import '../cssfiles/kids.css';
-
+import '../cssfiles/headermobile.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { Carousel } from 'react-bootstrap'; // Import Carousel component from react-bootstrap
-import '../jsfiles/footerDesktop.js';
-import '../cssfiles/footerDesktop.css';
+import Navbar from './searchheader';
+import Header from './brandnameheader';
+import '../cssfiles/header.css';
+import '../cssfiles/navheader.css';
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 
-function Kids() {
+
+
+function HeaderMobile() {
+    
     const products = [
         {
             id: 1,
@@ -95,25 +100,25 @@ function Kids() {
             image: "BOYS-11_page-0001.jpg"
         },
 
-
     ];
-
     return (
-
-
+        <>
+        <Navbar/>
+      
         <div className="App">
+            <Header/>
             <Carousel>
                 <Carousel.Item>
                     <img
                         className="carousel"
-                        src="slide 11.gif"
+                        src="carousel1.webp"
                         alt="First slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="carousel "
-                        src="slide 12.gif"
+                        src="carousel2.webp"
                         alt="Second slide"
                     />
                 </Carousel.Item>
@@ -126,30 +131,22 @@ function Kids() {
                 </Carousel.Item>
             </Carousel>
 
-
-            {/* <h1 className='catagories-header'>Categories</h1>
-            <div className="circle-container">
-                <div className="circle">
-                    <img src="shirt.jpg" alt="Category 1" />
-                    <p>Shirts</p>
+            <h1 className='catagories-header'>Categories</h1>
+            <div class="categories-div">
+                <div class='categories-element'>
+                    <img src="" class='categories-img' alt="omg"></img>
+                    <h3 class="txt">Boys</h3>
                 </div>
-                <div className="circle">
-                    <img src="pant.jpg" alt="Category 2" />
-                    <p>Pants</p>
+                <div class='categories-element'>
+                    <img src="" class='categories-img' alt="omg"></img>
+                    <h3 class="txt">Girls</h3>
                 </div>
-                <div className="circle">
-                    <img src="tshirt.jpg" alt="Category 3" />
-                    <p>T-shirts</p>
+                <div class='categories-element'>
+                    <img src="" class='categories-img' alt="omg"></img>
+                    <h3 class="txt">Infants</h3>
                 </div>
-                <div className="circle">
-                    <img src="pant 2.jpg" alt="Category 4" />
-                    <p>Track Pants</p>
-                </div>
-            </div> */}
-
-            <h1>KIDS</h1>
-
-
+            </div>
+            <h1 className='catagories-header'>KIDS</h1>
 
             <div className="container">
 
@@ -157,21 +154,48 @@ function Kids() {
                     <div className="product" key={product.id}>
                         <img src={product.image} alt={product.name} />
                         <h3>{product.name}</h3>
-                        <h6>{product.cname}</h6>
+                        {/* <h6>{product.cname}</h6> */}
                         <p>${product.price.toFixed(2)}</p>
-
-                        <button className="btn" style={{ backgroundColor: '#B4B4B8' }}>Add to Cart</button>
-
-                        <button className="btn-cart" >Add to Cart</button>
-
+                       
                     </div>
+                    
                 ))}
             </div>
+            <h1 className='catagories-header'>New Arrivals</h1>
+            <div className="container">
+
+                       {products.map(product => (
+                         <div className="product" key={product.id}>
+                            <img src={product.image} alt={product.name} />
+                            <h3>{product.name}</h3>
+                            {/* <h6>{product.cname}</h6> */}
+                            <p>${product.price.toFixed(2)}</p>
+       
+                  </div>
+            ))}
+            </div>
+            <h1 className='catagories-header'>Top Sales</h1>
+            <div className="container">
+
+                       {products.map(product => (
+                         <div className="product" key={product.id}>
+                            <img src={product.image} alt={product.name} />
+                            <h3>{product.name}</h3>
+                            {/* <h6>{product.cname}</h6> */}
+                            <p>${product.price.toFixed(2)}</p>
+       
+                  </div>
+            ))}
+            </div>
+            
         </div>
+      
 
+        </>
+       
     );
-
+   
 
 }
 
-export default Kids;
+export default HeaderMobile;
