@@ -2,6 +2,7 @@
 // import Header from './vinculo/jsfiles/headerDesktop';
 
 import RegistrationPage from "./vinculo/Authentication/Registration";
+import Home from "./vinculo/jsfiles/homepageDesktop";
 
 // import Login from "./vinculo/Authentication/Login";
 
@@ -24,7 +25,7 @@ import RegistrationPage from "./vinculo/Authentication/Registration";
 // import Kids from './vinculo/jsfiles/kids';
 // import Offer from './vinculo/jsfiles/offer';
 
-//import OrderConfirmation from './vinculo/jsfiles/orderConfirmationPage';
+// import OrderConfirmation from './vinculo/jsfiles/orderConfirmationPage';
 // import ProductDetails from './vinculo/jsfiles/productdetails';
 //import Login from './Login';
 
@@ -68,6 +69,7 @@ function App() {
 
       {/* <Login /> */}
 
+      <Home />
 
       {/* <RegistrationPage /> */}
 
