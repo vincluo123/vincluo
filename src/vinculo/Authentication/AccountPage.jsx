@@ -1,5 +1,6 @@
 import React from 'react';
-import '../cssfiles/AccountPage.css'
+import './AccountPage.css';
+import { Link } from 'react-router-dom';
 
 
 import { FaHome, FaShoppingCart, FaBox, FaUser, FaBell, FaQuestionCircle, FaCog, FaStar, FaHeart, FaSignOutAlt, FaShoppingBasket } from 'react-icons/fa';
@@ -12,13 +13,17 @@ export const AccountPage = () => {
             <div className="side-navbar">
                 <ul className='navigation'>
                     <li>
-                        <FaHome style={{ color: ' #234e70' }} /> {/* Home icon */}
-                        <a href="#">Home</a>
+                        <Link to="/home" >
+                            <FaHome style={{ color: ' #234e70' }} /> {/* Home icon */}
+                            Home
+                        </Link>
                     </li>
 
                     <li>
-                        <FaShoppingCart style={{ color: ' #234e70' }} /> {/* Orders icon */}
-                        <a href="#">Orders</a>
+                        <Link to="/orders">
+                            <FaShoppingCart style={{ color: ' #234e70' }} /> {/* Orders icon */}
+                            Orders
+                        </Link>
                     </li>
 
                     <li>
@@ -32,17 +37,24 @@ export const AccountPage = () => {
                     </li>
 
                     <li>
-                        <FaHeart style={{ color: ' #234e70' }} /> {/* Wishlist icon */}
-                        <a href="#">Wishlist</a>
+                        <Link to="/wishlist">
+                            <FaHeart style={{ color: ' #234e70' }} /> {/* Wishlist icon */}
+                            Wishlist
+                        </Link>
                     </li>
                     <li>
-                        <FaShoppingBasket style={{ color: ' #234e70' }} /> {/* Different cart icon */}
-                        <a href="#">My Cart</a>
+                        <Link to="/cart">
+                            <FaShoppingBasket style={{ color: ' #234e70' }} /> {/* Different cart icon */}
+                            My Cart
+                        </Link>
                     </li>
 
                     <li>
-                        <FaQuestionCircle style={{ color: ' #234e70' }} /> {/* FAQ icon */}
-                        <a href="#">Faq</a>
+                        <Link to="/faq">
+                            <FaQuestionCircle style={{ color: ' #234e70' }} /> {/* FAQ icon */}
+                            Faq
+                        </Link>
+
                     </li>
 
                     <li>
@@ -66,7 +78,7 @@ export const AccountPage = () => {
         return (<>
             <div className="profile-details">
                 <div className="profile-image">
-                    <img src="profile.png" alt="" />
+                    <img src="./assets/profile.png" alt="" />
                     <h2 className='username'>James</h2>
                 </div>
 
@@ -121,7 +133,7 @@ export const AccountPage = () => {
                         manage reviews you've submitted
                     </p>
                     <p>
-                        <a href="#">Review recent purchases</a>
+                        <Link to="/orders">Review recent purchases</Link>
                     </p>
                 </div>
             </>
