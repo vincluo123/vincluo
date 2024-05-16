@@ -11,6 +11,7 @@ import '../cssfiles/navheader.css';
 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 
 
+
 function HeaderMobile() {
     
     const products = [
@@ -101,6 +102,8 @@ function HeaderMobile() {
 
     ];
     return (
+        <>
+        <Navbar/>
       
         <div className="App">
             <Header/>
@@ -186,6 +189,9 @@ function HeaderMobile() {
             </div>
             
         </div>
+      
+
+        </>
        
     );
    

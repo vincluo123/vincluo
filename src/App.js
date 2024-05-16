@@ -19,7 +19,7 @@
 //import OrderConfirmation from './vinculo/jsfiles/orderConfirmationPage';
 // import ProductDetails from './vinculo/jsfiles/productdetails';
 //import Login from './Login';
-
+import Infantgirls from './vinculo/jsfiles/infantgirls';
 // import Wishlist from './vinculo/jsfiles/wishlist';
 // import Faq from './vinculo/jsfiles/faq';
 
