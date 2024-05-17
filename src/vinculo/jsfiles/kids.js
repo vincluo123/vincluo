@@ -170,15 +170,7 @@ function Kids() {
                         <h3>{product.name}</h3>
                         <h6>{product.cname}</h6>
                         <p>${product.price.toFixed(2)}</p>
-<<<<<<< HEAD
-
-                        <button className="btn" style={{ backgroundColor: '#B4B4B8' }}>Add to Cart</button>
-
                         <button className="btn-cart" >Add to Cart</button>
-
-=======
-                        <button className="btn-cart" >Add to Cart</button>
->>>>>>> f86b93dc321739912029b8524c24b9236c92cf82
                     </div>
                 ))}
             </div>
