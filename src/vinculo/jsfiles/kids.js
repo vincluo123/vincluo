@@ -151,7 +151,18 @@ function Kids() {
 
 
 
-            <div className="container">
+            <div className="new-arrival-container">
+
+                <div className="container container-row">
+                    {products.map(product => (
+                        <div className="product" key={product.id}>
+                            <img src={product.image} alt={product.name} />
+                            <h3>{product.name}</h3>
+                            <p>${product.price.toFixed(2)}</p>
+                            <button className="btn" id='cart-btn' style={{ backgroundColor: '#d9d9d9' }}>Add to Cart</button>
+                        </div>
+                    ))}
+                </div>
 
                 {products.map(product => (
                     <div className="product" key={product.id}>
