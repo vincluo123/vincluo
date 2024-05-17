@@ -1,23 +1,15 @@
-import CartPage from './vinculo/jsfiles/cart';
-import Kids from './vinculo/jsfiles/kids';
+import Header from './vinculo/jsfiles/headerDesktop';
 import Boys from './vinculo/jsfiles/boys';
-import Faq from './vinculo/jsfiles/faq';
-import SignupPage from './vinculo/jsfiles/Loginpage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 function App() {
   return (
-    <>
-
- <HeaderMobile/>
-
-
-   
-
-
-
-
-
-     
-    </>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/boys" element={<Boys />} />
+      </Routes>
+    </Router>
   );
 }
 

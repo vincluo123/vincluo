@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaUser, FaShoppingCart, FaHeart, FaPhone } from 'react-icons/fa';
 import '../cssfiles/headerDesktop.css';
+import {Link} from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -17,7 +18,7 @@ const Header = () => {
           <li className="nav-item dropdown">
             <a href="#">Infant</a>
             <ul className="dropdown-menu">
-              <li><a href="#">Boys</a></li>
+              <li><Link to="/boys">Boys</Link></li>
               <li><a href="#">Girls</a></li>
               <li><a href="#">Submenu 3</a></li>
             </ul>
@@ -25,7 +26,7 @@ const Header = () => {
           <li className="nav-item dropdown">
             <a href="#">Girls</a>
             <ul className="dropdown-menu">
-              <li><a href="#">Submenu 1</a></li>
+              <li><Link to="/girls">8-16 years</Link></li>
               <li><a href="#">Submenu 2</a></li>
               <li><a href="#">Submenu 3</a></li>
             </ul>
