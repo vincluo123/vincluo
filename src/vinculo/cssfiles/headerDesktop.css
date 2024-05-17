@@ -1,26 +1,26 @@
-<<<<<<< HEAD=======
+
 
 /* header.css */
->>>>>>>3110cd7275db3fec76b5d9dbea6ea28437d3ee3b .header {
+ .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #102C57;
-    <<<<<<< HEAD padding: 20px;
+    padding: 20px;
 
-    =======padding: 20px;
-    >>>>>>>3110cd7275db3fec76b5d9dbea6ea28437d3ee3b
+  padding: 20px;
+   
 }
 
 .logo img {
     height: 40px;
 }
 
-<<<<<<< HEAD .nav-menu {
 
-    =======.nav-menu,
+
+
     .dropdown-menu {
-        >>>>>>>3110cd7275db3fec76b5d9dbea6ea28437d3ee3b list-style-type: none;
+        list-style-type: none;
         margin: 0;
         padding: 0;
     }
@@ -33,17 +33,17 @@
     .nav-item a {
         text-decoration: none;
         color: #ffffff;
-        <<<<<<< HEAD font-weight: 400px;
+       font-weight: 400px;
         transition: color 0.3s ease;
     }
 
     .nav-item a:hover {
-        =======font-weight: 400;
+      font-weight: 400;
         transition: color 0.3s ease;
     }
 
     .nav-item a:hover {
-        >>>>>>>3110cd7275db3fec76b5d9dbea6ea28437d3ee3b color: #fabd10;
+        color: #fabd10;
     }
 
     .search-bar input[type="text"] {
