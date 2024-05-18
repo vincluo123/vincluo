@@ -3,7 +3,7 @@ import React from 'react';
 import '../cssfiles/homepageDesktop.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { Carousel } from 'react-bootstrap'; // Import Carousel component from react-bootstrap
-
+import { FaHeart } from 'react-icons/fa';
 function Home() {
 
     const products = [
@@ -59,8 +59,8 @@ function Home() {
             image: "tshirt11.jpg"
         }
     ]
-        
-    
+
+
     return (
         <div className='container'>
             <div className='row'>
@@ -90,30 +90,7 @@ function Home() {
                                 />
                             </Carousel.Item>
                         </Carousel>
-                        <Carousel className='round'>
-                            <Carousel.Item>
-                                <img
-                                    className="carousel1 "
-                                    src="car1.jpg"
-                                    alt="First slide"
 
-                                />
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img
-                                    className="carousel1 "
-                                    src="car2.jpeg"
-                                    alt="Second slide"
-                                />
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img
-                                    className="carousel1"
-                                    src="car3.jpg"
-                                    alt="Third slide"
-                                />
-                            </Carousel.Item>
-                        </Carousel>
                     </div>
                     <div className="container">
                         <h1 className='catagories-header'>Categories</h1>
@@ -130,10 +107,7 @@ function Home() {
                                 <img src="tshirt3.avif" alt="Category 3" />
                                 <p>T-shirts</p>
                             </div>
-                            <div className="circle">
-                                <img src="tshirt4.avif" alt="Category 4" />
-                                <p>T-shirts</p>
-                            </div>
+
                         </div>
                     </div>
 
@@ -142,15 +116,17 @@ function Home() {
                         <div className="container container-row">
                             {products.map(product => (
                                 <div className="product" key={product.id}>
+
                                     <img src={product.image} alt={product.name} />
                                     <h3>{product.name}</h3>
                                     <p>${product.price.toFixed(2)}</p>
                                     <button className="btn" id='cart-btn' style={{ backgroundColor: '#d9d9d9' }}>Add to Cart</button>
+                                    <FaHeart className="heart-icon" />
                                 </div>
                             ))}
                         </div>
                     </div>
-                    
+
                     <div className="new-arrival-container">
                         <h1 className='new-arrival'>Top Sellings</h1>
                         <div className="container container-row">
@@ -160,6 +136,7 @@ function Home() {
                                     <h3>{product.name}</h3>
                                     <p>${product.price.toFixed(2)}</p>
                                     <button className="btn" id='cart-btn' style={{ backgroundColor: '#d9d9d9' }}>Add to Cart</button>
+                                    <FaHeart className="heart-icon" />
                                 </div>
                             ))}
                         </div>
@@ -172,4 +149,4 @@ function Home() {
 
 }
 
-export default Home;
+export default Home;
