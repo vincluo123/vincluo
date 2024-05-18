@@ -24,6 +24,7 @@ import Infantgirls from './vinculo/jsfiles/infantgirls';
 // import Faq from './vinculo/jsfiles/faq';
 import OrderConfirmationPopup from './vinculo/jsfiles/OrderConfirmPopup';
 
+
 //import Wishlist from './vinculo/jsfiles/wishlist';
 //import Faq from './vinculo/jsfiles/faq';
 //import AboutUs from "./vinculo/jsfiles/about";
@@ -58,7 +59,7 @@ function App() {
         <Route path="/new-address" element={<NewAddressForm />} />
       </Routes>
     </Router>*/}
- <HeaderMobile/>
+ {/* <HeaderMobile/> */}
 
 
     
