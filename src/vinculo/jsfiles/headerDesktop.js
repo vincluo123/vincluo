@@ -3,22 +3,23 @@ import { FaUser, FaShoppingCart, FaHeart, FaPhone } from 'react-icons/fa';
 import '../cssfiles/headerDesktop.css';
 import {Link} from 'react-router-dom'
 
+
 const Header = () => {
   return (
     <header className="header">
       <div className="logo">
-        <img src="Hilsa.png" alt="Logo" />
+        <img src="vinculo.png" alt="Logo of the website" />
       </div>
 
       <nav className="navbar">
         <ul className="nav-menu">
           <li className="nav-item">
-            <a href="/new-arrivals">New Arrivals</a>
+            <Link path="/boys">New Arrivals</Link>
           </li>
           <li className="nav-item dropdown">
             <a href="#">Infant</a>
             <ul className="dropdown-menu">
-              <li><Link to="/boys">Boys</Link></li>
+              <li><a href="#">Boys</a></li>
               <li><a href="#">Girls</a></li>
               <li><a href="#">Submenu 3</a></li>
             </ul>
@@ -26,13 +27,14 @@ const Header = () => {
           <li className="nav-item dropdown">
             <a href="#">Girls</a>
             <ul className="dropdown-menu">
-              <li><Link to="/girls">8-16 years</Link></li>
+              <li><a href="#">Submenu 1</a></li>
               <li><a href="#">Submenu 2</a></li>
               <li><a href="#">Submenu 3</a></li>
             </ul>
           </li>
+          {/* Dropdown for Shop */}
           <li className="nav-item dropdown">
-            <a href="#">Boys</a>
+            <Link path="/boys">Boys</Link>
             <ul className="dropdown-menu">
               <li><a href="#">Category 1</a></li>
               <li><a href="#">Category 2</a></li>
@@ -40,7 +42,7 @@ const Header = () => {
             </ul>
           </li>
           <li className="nav-item">
-            <a href="/deals">Deals</a>
+            <a href="/contact">Deals</a>
           </li>
         </ul>
       </nav>
@@ -52,7 +54,7 @@ const Header = () => {
 
       <div className="icons">
         <div className="icon">
-          <a href="/favorites">
+          <a href="/cart">
             <FaHeart />
           </a>
         </div>
@@ -61,18 +63,14 @@ const Header = () => {
             <FaShoppingCart />
           </a>
         </div>
-        <div className="icon">
-          <a href="/contact">
-            <FaPhone />
-          </a>
-        </div>
+      
         <div className="icon dropdown">
-          <a href="/profile" className="dropdown-toggle">
+          <a href="/cart">
             <FaUser />
           </a>
           <ul className="dropdown-menu">
-            <li><a href="/login" className="dropdown-item">Login</a></li>
-            <li><a href="/register" className="dropdown-item">Register</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Register</a></li>
           </ul>
         </div>
       </div>
