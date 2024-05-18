@@ -22,6 +22,7 @@
 import Infantgirls from './vinculo/jsfiles/infantgirls';
 // import Wishlist from './vinculo/jsfiles/wishlist';
 // import Faq from './vinculo/jsfiles/faq';
+import OrderConfirmationPopup from './vinculo/jsfiles/OrderConfirmPopup';
 
 //import Wishlist from './vinculo/jsfiles/wishlist';
 //import Faq from './vinculo/jsfiles/faq';
@@ -100,6 +101,7 @@ function App() {
 
 
 
+      <OrderConfirmationPopup/>
       
 
       {/* <AccountPage/> */}
