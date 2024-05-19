@@ -71,6 +71,9 @@ function Offer() {
 
     return (
         <div className="App">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+            <meta name="description" content="Explore exclusive combo offers on boys' clothing. Get the best deals on T-shirts with our affordable bundle packs. Shop now for amazing discounts and limited-time offers!"></meta>
+            <meta name="keywords" content="boys clothing, boys T-shirt combos, T-shirt deals, kids clothing discounts, affordable kids clothing, T-shirt bundle offers, exclusive boys clothing offers, boys combo deals, discounted kids wear, T-shirt pack deals"></meta>
             {/* Advertisement */}
             <div className="advertisement">
                 <h2>Exclusive Offer!</h2>
