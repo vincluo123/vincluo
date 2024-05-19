@@ -10,7 +10,23 @@ const OrderConfirmationPopup = () => {
       setVisible(false);
     }, 5000);
 
-    return () => clearTimeout(timer);
+    // Manipulate document object to add meta tags
+    const descriptionMetaTag = document.createElement('meta');
+    descriptionMetaTag.name = 'description';
+    descriptionMetaTag.content = 'Order confirmation popup for successful order placement.';
+    document.head.appendChild(descriptionMetaTag);
+
+    const keywordsMetaTag = document.createElement('meta');
+    keywordsMetaTag.name = 'keywords';
+    keywordsMetaTag.content = 'order confirmation, order placed, successful order';
+    document.head.appendChild(keywordsMetaTag);
+
+    // Clean up function to remove added meta tags
+    return () => {
+      document.head.removeChild(descriptionMetaTag);
+      document.head.removeChild(keywordsMetaTag);
+      clearTimeout(timer);
+    };
   }, []);
 
   if (!visible) return null;
