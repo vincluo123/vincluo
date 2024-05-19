@@ -241,7 +241,7 @@ function Offer() {
                             <h6>{product.cname}</h6>
                             <p>${product.price.toFixed(2)}</p>
                         </div>
-                        <button className="btn" style={{ backgroundColor: 'skyblue' }}>Add to Cart</button>
+                        <button className="btn" style={{ backgroundColor: '#D4AF37' }}>Add to Cart</button>
                     </div>
                 ))}
             </div>
@@ -255,7 +255,7 @@ function Offer() {
                             <h6>{product.cname}</h6>
                             <p>${product.price.toFixed(2)}</p>
                         </div>
-                        <button className="btn" style={{ backgroundColor: 'skyblue' }}>Add to Cart</button>
+                        <button className="btn" style={{ backgroundColor: '#D4AF37' }}>Add to Cart</button>
                     </div>
                 ))}
             </div>
@@ -269,7 +269,7 @@ function Offer() {
                             <h6>{product.cname}</h6>
                             <p>${product.price.toFixed(2)}</p>
                         </div>
-                        <button className="btn" style={{ backgroundColor: 'skyblue' }}>Add to Cart</button>
+                        <button className="btn" style={{ backgroundColor: '#D4AF37' }}>Add to Cart</button>
                     </div>
                 ))}
             </div>

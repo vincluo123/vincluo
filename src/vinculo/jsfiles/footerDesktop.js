@@ -58,10 +58,10 @@ const Footer = () => {
         </div>
 
         <div className="footer-about">
-          <h3>About Us</h3>
+          <h3>About us</h3>
           <div className="about-us">
             <p style={{ textAlign: 'justify' }}>
-              In our company, we sell high-quality t-shirts for both men and women. Our t-shirts are known for their superior quality and stylish designs, making them a popular choice for fashion enthusiasts.
+              In our company, We sell high-quality T-shirts for both men and women. Our T-shirts are known for their superior quality and stylish designs, making them a popular choice for fashion enthusiasts.
             </p>
           </div>
           <div className="footer-contact">
