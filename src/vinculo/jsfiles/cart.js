@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../cssfiles/cart.css';
-
 
 const CartPage = () => {
   const [cartItems, setCartItems] = useState([
@@ -12,6 +11,31 @@ const CartPage = () => {
   const [shippingInfo, setShippingInfo] = useState({});
   const [couponCode, setCouponCode] = useState('');
   const [paymentMethod, setPaymentMethod] = useState('');
+
+  useEffect(() => {
+    document.title = "Shopping Cart";
+
+    const metaDescription = document.createElement('meta');
+    metaDescription.name = "description";
+    metaDescription.content = "Your online shopping cart page for managing products, viewing order summary, applying discount codes, and checking out.";
+    document.head.appendChild(metaDescription);
+
+    const metaKeywords = document.createElement('meta');
+    metaKeywords.name = "keywords";
+    metaKeywords.content = "shopping cart, online shopping, e-commerce, discount codes, checkout, order summary, buy later";
+    document.head.appendChild(metaKeywords);
+
+    const viewportMeta = document.createElement('meta');
+    viewportMeta.name = "viewport";
+    viewportMeta.content = "width=device-width, initial-scale=1.0";
+    document.head.appendChild(viewportMeta);
+
+    return () => {
+      document.head.removeChild(metaDescription);
+      document.head.removeChild(metaKeywords);
+      document.head.removeChild(viewportMeta);
+    };
+  }, []);
 
   const handleRemoveItem = (id) => {
     const updatedCartItems = cartItems.filter(item => item.id !== id);

@@ -2,7 +2,6 @@ import React, { useEffect, useState, useMemo } from 'react';
 import '../cssfiles/orderConfirmationPage.css';
 const ordersGifUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCzrZExpuV21yLjxwqFTtezR5PCsqAZ8zcSsApuNeKyg&s";
 
-
 // Sample order summary data with images
 const orderSummaryData = [
   { id: 1, name: "Product 1", quantity: 2, price: 25.00, image: "boys1_shirt.jpg"},
@@ -20,6 +19,25 @@ const recommendedProductsData = [
 const OrderConfirmation = () => {
   const [orderDate, setOrderDate] = useState(new Date());
   const [deliveryDate, setDeliveryDate] = useState(new Date());
+
+  useEffect(() => {
+    // Manipulate document object to add meta tags
+    const descriptionMetaTag = document.createElement('meta');
+    descriptionMetaTag.name = 'description';
+    descriptionMetaTag.content = 'Order confirmation details for your recent purchase.';
+    document.head.appendChild(descriptionMetaTag);
+
+    const keywordsMetaTag = document.createElement('meta');
+    keywordsMetaTag.name = 'keywords';
+    keywordsMetaTag.content = 'order confirmation, purchase details, recommended products';
+    document.head.appendChild(keywordsMetaTag);
+
+    // Clean up function to remove added meta tags
+    return () => {
+      document.head.removeChild(descriptionMetaTag);
+      document.head.removeChild(keywordsMetaTag);
+    };
+  }, []);
 
   useEffect(() => {
     setOrderDate(new Date());
@@ -40,7 +58,7 @@ const OrderConfirmation = () => {
     <>
       <div className="order-confirmation-container">
         <div className="confirmation-header">
-        <img src={ordersGifUrl} alt="My Orders GIF" /> {/* GIF imported */}
+          <img src={ordersGifUrl} alt="My Orders GIF" /> {/* GIF imported */}
           <h2>My Orders</h2>
         </div>
 

@@ -16,7 +16,7 @@
 //import Kids from './vinculo/jsfiles/kids';
 //import Offer from './vinculo/jsfiles/offer';
 
-//import OrderConfirmation from './vinculo/jsfiles/orderConfirmationPage';
+import OrderConfirmation from './vinculo/jsfiles/orderConfirmationPage';
 // import ProductDetails from './vinculo/jsfiles/productdetails';
 //import Login from './Login';
 import Infantgirls from './vinculo/jsfiles/infantgirls';
@@ -69,7 +69,7 @@ function App() {
  {/*<AddressForm/> */}
       {/* <Footer/> */}
       
-     {/*<CartPage/> */}
+     <CartPage/> 
 
       {/*<Faq /> */}
      {/* <About/>*/}
@@ -107,7 +107,7 @@ function App() {
 
       {/* <AccountPage/> */}
       {/*<HeaderMobile /> */}
-      {/*<OrderConfirmation /> */}
+      <OrderConfirmation /> 
      {/* <Footer/> */}
     </>
   );
