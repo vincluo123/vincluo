@@ -1,5 +1,5 @@
 /* Google Font Import */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* Global Styles */
 * {
@@ -52,7 +52,7 @@ body {
 
 .product h3 {
     margin-top: 10px;
-    font-family: fantasy;
+    font-family: "Lato", sans-serif; /* Use Lato font here */
 }
 
 .product p {
@@ -60,7 +60,7 @@ body {
 }
 
 .product h6 {
-    font-family: serif;
+    font-family: "Lato", serif; /* Use Lato font here */
 }
 
 .btn {
@@ -87,6 +87,8 @@ body {
 .catagories-header {
     margin-top: 50px;
     margin-bottom: 20px;
+    font-family: "Poppins", "Lato"; /* Use Lato font here */
+    font-weight: 600;
 }
 
 .circle-container {
@@ -215,11 +217,11 @@ body {
 
 .combo-details h3 {
     margin-top: 10px;
-    font-family: fantasy;
+    font-family: "Lato", sans-serif; /* Use Lato font here */
 }
 
 .combo-details h6 {
-    font-family: serif;
+    font-family: "Lato", serif; /* Use Lato font here */
 }
 
 .combo-details p {
@@ -239,6 +241,7 @@ body {
 
 .offer-details h2 {
     color: #333;
+    font-family: "Lato", sans-serif; /* Use Lato font here */
 }
 
 .offer-details ul {
@@ -259,4 +262,5 @@ body {
     padding: 20px;
     margin-bottom: 20px;
     text-align: center;
+    font-family: "Lato", sans-serif; /* Use Lato font here */
 }
