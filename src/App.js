@@ -98,7 +98,7 @@ function App() {
 
     <Router>
       <>
-        <div>
+        <>
           {/* Render the AccountPage component if showAccountPage is true */}
           {showAccountPage && (
             <Routes>
@@ -116,7 +116,7 @@ function App() {
             <Route path="/cart" element={<CartPage hideAccountPage={hideAccountPage} />} />
             <Route path="/faq" element={<Faq hideAccountPage={hideAccountPage} />} />
           </Routes>
-        </div>
+        </>
       </>
     </Router>
 
