@@ -35,10 +35,7 @@ function App() {
   return (
     <>
 
-
-
       {/* <Wishlist />  */}
-
       {/* <Footer/> */}
       {/* <ProductDetails/> */}
       {/* <AccountPage /> */}
