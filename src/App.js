@@ -23,8 +23,7 @@ import WishlistPage from './vinculo/jsfiles/wishlist';
 //import NewAddressForm from './vinculo/jsfiles/NewAddressForm';
 //import Brandnameheader from './vinculo/jsfiles/brandnameheader';
 //import AddressForm from './vinculo/jsfiles/AddressForm';]
-
-import Account from './vinculo/Authentication/AccountPage';
+import AccountPage from './vinculo/Authentication/AccountPage'
 
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 
@@ -86,7 +85,7 @@ function App() {
 
 
 
-z
+
     //       {/* <Header/>*/}
 
 
@@ -94,7 +93,7 @@ z
     //       {/* <ProductDetails/> */}
 
     //     </>
-    
+
     <Router>
       <Header />
       <>
