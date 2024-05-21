@@ -103,6 +103,7 @@ function HeaderMobile() {
          <Navbar/>
        
         <div className="App">
+            <Header/>
             <Carousel>
                 <Carousel.Item>
                     <img

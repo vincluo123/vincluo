@@ -12,7 +12,7 @@
 
 // import CartPage from './vinculo/jsfiles/cart';
 
-// import Home from './vinculo/jsfiles/homepageDesktop';
+ //import Home from './vinculo/jsfiles/homepageDesktop';
 // import ProductDetails from './vinculo/jsfiles/productdetails';
 
 
@@ -20,7 +20,7 @@
 // import Footer from './vinculo/jsfiles/footerDesktop';
 // import CartPage from './vinculo/jsfiles/cart';
 //  import Footer from './vinculo/jsfiles/footerDesktop';
-// import Home from './vinculo/jsfiles/homepageDesktop';
+ import Home from './vinculo/jsfiles/homepageDesktop';
 // import ProductDetails from './vinculo/jsfiles/productdetails';
 // import Kids from './vinculo/jsfiles/kids';
 //import Offer from './vinculo/jsfiles/offer';
@@ -60,10 +60,15 @@ function App() {
       {/* <Kids/> */}
       {/* <AboutUs/> */}
       {/* <Wishlist />  */}
+       {/*<Faq /> */}
+      {/* <About/>*/}
+       {/*<Footer/> */}
       {/* <Faq /> */}
       {/* <About/> */}
       {/* <Footer/> */}
       {/* <ProductDetails/> */}
+    {/* <Faq /> */}
+     {/*<Offer/> */}
       {/* <Faq /> */}
       {/* <Offer/>  */}
 
@@ -78,8 +83,8 @@ function App() {
 
 
       {/* <Footer/> */}
-      {/* <Header/>
-      <CartPage/> */}
+      {/* <Header/>*/}
+      {/*<CartPage/> */}
       {/* <OrderConfirmation/>  */}
 
       {/* <ProductDetails/> */}
