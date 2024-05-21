@@ -1,4 +1,3 @@
-// App.js
 import React from 'react';
 import '../cssfiles/headermobile.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
@@ -10,8 +9,6 @@ import '../cssfiles/navheader.css';
 import Footermobile from '../jsfiles/footerMobile';
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-
-
 
 function HeaderMobile() {
     
@@ -148,7 +145,7 @@ function HeaderMobile() {
             </div>
             <h1 className='catagories-header'>KIDS</h1>
 
-            <div className="container">
+            <div className="container desktop-hidden">
 
                 {products.map(product => (
                     <div className="product" key={product.id}>
@@ -159,10 +156,11 @@ function HeaderMobile() {
                        
                     </div>
                     
+                    
                 ))}
             </div>
             <h1 className='catagories-header'>New Arrivals</h1>
-            <div className="container">
+            <div className="container desktop-hidden">
 
                        {products.map(product => (
                          <div className="product" key={product.id}>
@@ -172,10 +170,11 @@ function HeaderMobile() {
                             <p>${product.price.toFixed(2)}</p>
        
                   </div>
+
             ))}
             </div>
             <h1 className='catagories-header'>Top Sales</h1>
-            <div className="container">
+            <div className="container desktop-hidden">
 
                        {products.map(product => (
                          <div className="product" key={product.id}>
@@ -189,9 +188,10 @@ function HeaderMobile() {
             ))}
             
             </div>
-            <Footermobile/>
+           
             
         </div>
+        <Footermobile/>
        
         </>
        
@@ -200,4 +200,4 @@ function HeaderMobile() {
 
 }
 
-export default HeaderMobile;
+export default HeaderMobile;  

@@ -34,3 +34,8 @@
   .name{
     font-size:8px;
   }
+  @media (min-width: 768px) {
+    .header{
+      display: none;
+    }
+  }

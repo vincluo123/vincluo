@@ -3,29 +3,17 @@ import { FaUser, FaShoppingCart, FaHeart, FaPhone } from 'react-icons/fa';
 import '../cssfiles/headerDesktop.css';
 import {Link} from 'react-router-dom'
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 1e62644ae847bb524294e1e563c71315ef9db2c8
 const Header = () => {
   return (
     <header className="header">
       <div className="logo">
-<<<<<<< HEAD
         <img src="Hilsa.png" alt="Logo" />
-=======
-        <img src="vinculo.png" alt="Logo of the website" />
->>>>>>> 1e62644ae847bb524294e1e563c71315ef9db2c8
       </div>
 
       <nav className="navbar">
         <ul className="nav-menu">
           <li className="nav-item">
-<<<<<<< HEAD
             <a href="/new-arrivals">New Arrivals</a>
-=======
-            <Link path="/boys">New Arrivals</Link>
->>>>>>> 1e62644ae847bb524294e1e563c71315ef9db2c8
           </li>
           <li className="nav-item dropdown">
             <a href="#">Infant</a>
@@ -44,11 +32,7 @@ const Header = () => {
             </ul>
           </li>
           <li className="nav-item dropdown">
-<<<<<<< HEAD
-            <a href="#">Boys</a>
-=======
             <Link path="/boys">Boys</Link>
->>>>>>> 1e62644ae847bb524294e1e563c71315ef9db2c8
             <ul className="dropdown-menu">
               <li><a href="#">Category 1</a></li>
               <li><a href="#">Category 2</a></li>

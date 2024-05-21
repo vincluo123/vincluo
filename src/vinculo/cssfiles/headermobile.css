@@ -167,3 +167,18 @@ h1 {
         height: 180px;
     }
 }
+@media (min-width: 768px) {
+    .desktop-hidden {
+      display: none;
+    }
+    .catagories-header{
+        display: none;
+    }
+    .carousel{
+        display: none;
+    }
+    .categories-div{
+        display: none;
+    }
+  }
+  
