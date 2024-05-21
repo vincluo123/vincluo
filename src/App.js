@@ -4,7 +4,7 @@
 // import CartPage from './vinculo/jsfiles/cart';
 
 // import Home from './vinculo/jsfiles/homepageDesktop';
-// import ProductDetails from './vinculo/jsfiles/productdetails';
+import ProductDetails from './vinculo/jsfiles/productdetails';
 
 
 //import CartPage from './vinculo/jsfiles/cart';
@@ -98,7 +98,7 @@ function App() {
       {/*<CartPage/> */}
       {/* <OrderConfirmation/>  */}
        
-      {/* <ProductDetails/> */}
+      <ProductDetails/>
 
 
 
