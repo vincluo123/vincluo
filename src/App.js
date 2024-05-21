@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-// import Header from './vinculo/jsfiles/headerDesktop';
+import Header from './vinculo/jsfiles/headerDesktop';
 import CartPage from './vinculo/jsfiles/cart';
 // import Footer from './vinculo/jsfiles/footerDesktop';
 import Home from './vinculo/jsfiles/homepageDesktop';
@@ -95,8 +95,9 @@ function App() {
     //       {/* <ProductDetails/> */}
 
     //     </>
-
+    
     <Router>
+      <Header />
       <>
         <>
           {/* Render the AccountPage component if showAccountPage is true */}
