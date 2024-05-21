@@ -9,7 +9,7 @@ export const AccountPage = () => {
 
     const Navigation = () => {
         return (<>
-            <div className="navbar">
+            <div className="side-navbar">
                 <ul className='navigation'>
                     <li>
                         <FaHome style={{ color: ' #234e70' }} /> {/* Home icon */}
@@ -54,7 +54,7 @@ export const AccountPage = () => {
                 </div>
                 <p className='setting'>
                     <FaCog className='setting-icon' /> {/* Settings icon */}
-                    Settings
+                    <a href='#'>Settings</a>
                 </p>
             </div>
         </>
@@ -116,10 +116,13 @@ export const AccountPage = () => {
                         <FaStar />
                         My reviews
                     </h3>
-                    <p>Rate and review your recent purchases and
+                    <p>
+                        Rate and review your recent purchases and
                         manage reviews you've submitted
                     </p>
-                    <a href="#">Review recent purchases</a>
+                    <p>
+                        <a href="#">Review recent purchases</a>
+                    </p>
                 </div>
             </>
         )
@@ -136,7 +139,9 @@ export const AccountPage = () => {
                     <p>Update your personal details,passwords & Manage your payment cards</p>
 
                     <p><a href="#">Edit My Details</a></p>
-                    <a href="#">Edit Address </a>
+                    <p>
+                        <a href="#">Edit Address </a>
+                    </p>
                 </div>
             </>
         )
@@ -155,33 +160,13 @@ export const AccountPage = () => {
                     </p>
 
                     <p><a href="#">Call with Us</a></p>
-                    <a href="#">Chat with Us </a>
+                    <p>
+                        <a href="#">Chat with Us </a>
+                    </p>
                 </div>
             </>
         )
     }
-
-    // const OrderSection = () => {
-    //     return (
-    //         <>
-    //             <h2>My Orders</h2>
-
-
-    //             <div className="order-details">
-    //                 <img src="tshirt.jpg" alt="" />
-    //                 <button>view order</button>
-    //             </div>
-    //             <div className="order-details">
-    //                 <img src="tshirt1.jpg" alt="" />
-    //                 <button>view order</button>
-    //             </div>
-    //             <div className="order-details">
-    //                 <img src="tshirt2.jpg" alt="" />
-    //                 <button>view order</button>
-    //             </div>
-    //         </>
-    //     )
-    // }
 
     const Notification = () => {
         return (
@@ -193,7 +178,6 @@ export const AccountPage = () => {
                     </h3>
                     <p>Get all the Notification of the latest products
                         from us!!
-
                     </p>
 
                     <p><a href="#">click here to get Notification</a></p>
@@ -206,18 +190,25 @@ export const AccountPage = () => {
     return (
         <div className='account'>
             <Navigation />
-            <Profile />
 
-            <div>
-                <div className='main-section'>
-                    <ProfileSection />
-                    <Section />
-                </div>
-                <div className='main-section'>
-                    <ContactSection />
-                    <Notification />
+            <div className='content-section'>
+                <Profile />
+                <div className='section'>
+                    <div className='main-section'>
+                        <ProfileSection />
+                        <Section />
+                    </div>
+                    <div className='main-section'>
+                        <ContactSection />
+                        <Notification />
+                    </div>
+                    <div className='main-section'>
+                        <ContactSection />
+                        <Notification />
+                    </div>
                 </div>
             </div>
+
 
 
         </div>
