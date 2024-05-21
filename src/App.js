@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 //import './App.css';
 // import Header from './vinculo/jsfiles/headerDesktop';
 
@@ -9,91 +8,62 @@
 
 
 //import CartPage from './vinculo/jsfiles/cart';
-import Footer from './vinculo/jsfiles/footerDesktop';
-//  import CartPage from './vinculo/jsfiles/cart';
+// import Footer from './vinculo/jsfiles/footerDesktop';
+// import CartPage from './vinculo/jsfiles/cart';
 //  import Footer from './vinculo/jsfiles/footerDesktop';
 // import Home from './vinculo/jsfiles/homepageDesktop';
 // import ProductDetails from './vinculo/jsfiles/productdetails';
-//import Kids from './vinculo/jsfiles/kids';
-import Offer from './vinculo/jsfiles/offer';
-
-import './App.css';
-// import AccountPage from './vinculo/jsfiles/AccountPage';
-// import Header from './vinculo/jsfiles/headerDesktop';
-// import CartPage from './vinculo/jsfiles/cart';
-// import Footer from './vinculo/jsfiles/footerDesktop';
-// import Home from './vinculo/jsfiles/homepageDesktop';
-// import ProductDetails from './vinculo/jsfiles/productdetails';
+// import Kids from './vinculo/jsfiles/kids';
+/* import Offer from './vinculo/jsfiles/offer'; */
+//import Infantboys from './vinculo/jsfiles/Infantboys';
 //import OrderConfirmation from './vinculo/jsfiles/orderConfirmationPage';
-import ProductDetails from './vinculo/jsfiles/productdetails';
-import Footermobile from './vinculo/jsfiles/footerMobile';
-import Boys from './vinculo/jsfiles/2-8boys';
+// import ProductDetails from './vinculo/jsfiles/productdetails';
 //import Login from './Login';
-// import Infantgirls from './vinculo/jsfiles/infantgirls';
+import Infantgirls from './vinculo/jsfiles/infantgirls';
+import HeaderMobile from './vinculo/mobilehome/headerMobile';
 // import Wishlist from './vinculo/jsfiles/wishlist';
 // import Faq from './vinculo/jsfiles/faq';
 
 //import Wishlist from './vinculo/jsfiles/wishlist';
 //import Faq from './vinculo/jsfiles/faq';
 //import AboutUs from "./vinculo/jsfiles/about";
-// //import Header from "./vinculo/mobilehome/headerMobile";
-// import HeaderMobile from "./vinculo/mobilehome/headerMobile";
-//import Footer from './vinculo/jsfiles/footerDesktop';
-//import AddressForm from './vinculo/jsfiles/AddressForm';
-//import {  Route, Routes , Router } from 'react-router-dom';
-//import AddressForm from './vinculo/jsfiles/AddressForm';
-//import NewAddressForm from './vinculo/jsfiles/NewAddressForm';
+
+
+// import Footer from './vinculo/jsfiles/footerDesktop';
+
 //import Brandnameheader from './vinculo/jsfiles/brandnameheader';
-//import AddressForm from './vinculo/jsfiles/AddressForm';
-// import { BrowserRouter ,Routes,Route} from 'react-router-dom';
+
+
+
+
 
 function App() {
   return (
     <>
-{/* <BrowserRouter>
-<Routes>
-<Route path="" element={HeaderMobile}/>
-<Route path="/cart" element={CartPage }/>
-
-
-
-</Routes>
-
-</BrowserRouter> */}
-
-{/*<Router>
-      <Routes>
-        <Route path="/" element={<AddressForm />} />
-        <Route path="/new-address" element={<NewAddressForm />} />
-      </Routes>
-    </Router>*/}
- {/* <HeaderMobile/> */}
 
 
     
      {/* <Wishlist />  */}
-  
- {/*<NewAddressForm/> */}
- {/*<AddressForm/> */}
+
       {/* <Footer/> */}
       
      {/*<CartPage/> */}
 
-      {/*<Faq /> */}
+    {/*<Faq /> */}
      {/* <About/>*/}
     {/*<Wishlist /> */}
     
      {/* <AboutUs/> */} 
       {/* <Wishlist />  */}
-       {/*<Faq /> */}
+      {/*<Faq /> */}
       {/* <About/>*/}
-       <Footer/>
+      {/* <Footer/> */}
       {/* <ProductDetails/> */}
     {/* <Faq /> */}
-     {/* <Offer/> */}
-     {/* <Boys/> */}
+    {/*  <Offer/>  */}
+ {/* <Infantgirls/>  */}
+{/* <Kids/> */}
 
-{/*<Kids/>*/}
 
 
 
@@ -103,30 +73,21 @@ function App() {
       
       
       {/* <Footer/> */}
-      {/* <Header/>*/}
-      {/*<CartPage/> */}
+      {/* <Header/>
+      <CartPage/> */}
       {/* <OrderConfirmation/>  */}
        
       {/* <ProductDetails/> */}
+      <HeaderMobile/>
 
 
 
       
 
       {/* <AccountPage/> */}
-      {/*<HeaderMobile /> */}
+      
       {/*<OrderConfirmation /> */}
-     {/* <Footer/> */}
-     <Footermobile/>
-=======
-import NotificationPage from "./vinculo/jsfiles/Notification";
-import Faq from "./vinculo/jsfiles/faq";
-function App() {
-  return (
-    <>
-    <Faq/>
-    <NotificationPage/>
->>>>>>> 1e62644ae847bb524294e1e563c71315ef9db2c8
+       {/* <Footer/> */}
     </>
   );
 }
