@@ -1,5 +1,5 @@
 //import './App.css';
-// import Header from './vinculo/jsfiles/headerDesktop';
+import Header from './vinculo/jsfiles/headerDesktop';
 
 // import CartPage from './vinculo/jsfiles/cart';
 
@@ -31,15 +31,17 @@ import Kids from './vinculo/jsfiles/kids';
 import Boys from './vinculo/jsfiles/boys';
 import Faq from './vinculo/jsfiles/faq';
 import SignupPage from './vinculo/jsfiles/Loginpage';
+import Footer from './vinculo/jsfiles/footerDesktop';
 function App() {
   return (
     <>
-
+      <Header />
       {/* <Wishlist />  */}
       {/* <Footer/> */}
       {/* <ProductDetails/> */}
       {/* <AccountPage /> */}
       <Boys />
+      <Footer/>
     </>
   );
 }
