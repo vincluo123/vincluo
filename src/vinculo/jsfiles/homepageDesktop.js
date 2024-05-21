@@ -90,9 +90,6 @@ function Home() {
                                 />
                             </Carousel.Item>
                         </Carousel>
-<<<<<<< HEAD
-
-=======
                         <Carousel className='round'>
                             <Carousel.Item>
                                 <img
@@ -117,7 +114,6 @@ function Home() {
                                 />
                             </Carousel.Item>
                         </Carousel>
->>>>>>> c1cdc2e4365a1e81aca37fd2b1c73748d8c00c73
                     </div>
                     <div className="container">
                         <h1 className='catagories-header'>Categories</h1>
@@ -134,14 +130,10 @@ function Home() {
                                 <img src="./assets/tshirt3.avif" alt="Category 3" />
                                 <p>T-shirts</p>
                             </div>
-<<<<<<< HEAD
-
-=======
                             <div className="circle">
                                 <img src="./assets/tshirt4.avif" alt="Category 4" />
                                 <p>T-shirts</p>
                             </div>
->>>>>>> c1cdc2e4365a1e81aca37fd2b1c73748d8c00c73
                         </div>
                     </div>
 
