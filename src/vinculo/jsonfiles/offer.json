@@ -1,0 +1,176 @@
+{
+    "boysProducts": [
+        {
+            "id": 1,
+            "name": "T-shirt",
+            "cname": "combo of 3",
+            "price": 999,
+            "image": "offer/boys/combo1.jpg"
+        },
+        {
+            "id": 2,
+            "name": "T-shirt",
+            "cname": "combo of 2",
+            "price": 689,
+            "image": "offer/boys/combo 2.jpeg"
+        },
+        {
+            "id": 3,
+            "name": "T-shirt",
+            "cname": "pack of 3",
+            "price": 759,
+            "image": "offer/boys/combo 3.jpg"
+        },
+        {
+            "id": 4,
+            "name": "T-shirt",
+            "cname": "combo of 4",
+            "price": 899,
+            "image": "offer/boys/combo5.jpg"
+        },
+        {
+            "id": 5,
+            "name": "T-shirt",
+            "cname": "combo of 2",
+            "price": 500,
+            "image": "offer/boys/combo 2.jpeg"
+        },
+        {
+            "id": 6,
+            "name": "T-shirt",
+            "cname": "combo of 3",
+            "price": 1200,
+            "image": "offer/boys/combo 3.jpg"
+        },
+        {
+            "id": 7,
+            "name": "T-shirt",
+            "cname": "pack of 3",
+            "price": 600,
+            "image": "offer/boys/combo 3.jpg"
+        },
+        {
+            "id": 8,
+            "name": "T-shirt",
+            "cname": "pack of 4",
+            "price": 1000,
+            "image": "offer/boys/combo5.jpg"
+        }
+    ],
+    "girlsProducts": [
+        {
+            "id": 9,
+            "name": "Dress",
+            "cname": "combo of 3",
+            "price": 1299,
+            "image": "offer/girls/combo of 3.jpeg"
+        },
+        {
+            "id": 10,
+            "name": "Dress",
+            "cname": "combo of 2",
+            "price": 899,
+            "image": "offer/girls/combo of 2.jpg"
+        },
+        {
+            "id": 11,
+            "name": "Dress",
+            "cname": "pack of 3",
+            "price": 1099,
+            "image": "offer/girls/combo of 3.jpeg"
+        },
+        {
+            "id": 12,
+            "name": "Dress",
+            "cname": "combo of 4",
+            "price": 1399,
+            "image": "offer/girls/combo of 4.jpg"
+        },
+        {
+            "id": 13,
+            "name": "Dress",
+            "cname": "combo of 2",
+            "price": 799,
+            "image": "offer/girls/combo of 2.jpg"
+        },
+        {
+            "id": 14,
+            "name": "Dress",
+            "cname": "combo of 4",
+            "price": 1599,
+            "image": "offer/girls/combo of 4.jpg"
+        },
+        {
+            "id": 15,
+            "name": "Dress",
+            "cname": "pack of 3",
+            "price": 999,
+            "image": "offer/girls/combo of 3.jpeg"
+        },
+        {
+            "id": 16,
+            "name": "Dress",
+            "cname": "pack of 4",
+            "price": 1999,
+            "image": "offer/girls/combo of 4.jpg"
+        }
+    ],
+    "kidsProducts": [
+        {
+            "id": 17,
+            "name": "Kids T-shirt",
+            "cname": "combo of 3",
+            "price": 799,
+            "image": "offer/kids/combo of 3.jpg"
+        },
+        {
+            "id": 18,
+            "name": "Kids T-shirt",
+            "cname": "combo of 2",
+            "price": 599,
+            "image": "offer/kids/combo of 2.jpeg"
+        },
+        {
+            "id": 19,
+            "name": "Kids T-shirt",
+            "cname": "pack of 3",
+            "price": 699,
+            "image": "offer/kids/combo of 3.jpg"
+        },
+        {
+            "id": 20,
+            "name": "Kids T-shirt",
+            "cname": "combo of 4",
+            "price": 899,
+            "image": "offer/kids/combo of 4.jpg"
+        },
+        {
+            "id": 21,
+            "name": "Kids T-shirt",
+            "cname": "combo of 2",
+            "price": 499,
+            "image": "offer/kids/combo of 2.jpeg"
+        },
+        {
+            "id": 22,
+            "name": "Kids T-shirt",
+            "cname": "combo of 4",
+            "price": 1099,
+            "image": "offer/kids/combo of 4.jpg"
+        },
+        {
+            "id": 23,
+            "name": "Kids T-shirt",
+            "cname": "pack of 3",
+            "price": 649,
+            "image": "offer/kids/combo of 3.jpg"
+        },
+        {
+            "id": 24,
+            "name": "Kids T-shirt",
+            "cname": "pack of 2",
+            "price": 1299,
+            "image": "offer/kids/combo of 2.jpeg"
+        }
+    ]
+}
