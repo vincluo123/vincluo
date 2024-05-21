@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //import './App.css';
 // import Header from './vinculo/jsfiles/headerDesktop';
 
@@ -117,6 +118,15 @@ function App() {
       {/*<OrderConfirmation /> */}
      {/* <Footer/> */}
      <Footermobile/>
+=======
+import NotificationPage from "./vinculo/jsfiles/Notification";
+import Faq from "./vinculo/jsfiles/faq";
+function App() {
+  return (
+    <>
+    <Faq/>
+    <NotificationPage/>
+>>>>>>> 1e62644ae847bb524294e1e563c71315ef9db2c8
     </>
   );
 }
