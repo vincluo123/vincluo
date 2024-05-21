@@ -3,6 +3,9 @@ import '../cssfiles/faq.css';
 
 function Faq() {
   return (
+    <div className='main'>
+      <div className='side'><img src="vinculo.png" className='imgside' /> 
+      
     <div className='faq'>
       <h1>Frequently Asked Questions</h1>
       <input id='faq-a' type='checkbox' />
@@ -42,6 +45,8 @@ function Faq() {
         <p className="faq-text">We regularly update our collection with new designs, so be sure to check back often!</p>
       </label>
 
+    </div>
+    </div>
     </div>
   );
 }

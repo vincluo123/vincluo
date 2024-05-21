@@ -1,72 +1,88 @@
 import React, { useState } from 'react';
-import '../cssfiles/AddressForm.css'; // Make sure to create a corresponding CSS file
+import '../cssfiles/AddressForm.css';
 
-function AddressForm() {
-  const [address, setAddress] = useState({
-    name: '',
-    pincode: '',
-    mobileNumber: '',
-    locality: '',
-    address: '',
-    city: '',
-    state: '',
-    landmark: '',
-    alternatePhone: '',
-    addressType: 'home',
-  });
+const AddressPage = () => {
+  const [addresses, setAddresses] = useState([]);
+  const [newAddress, setNewAddress] = useState('');
+  const [selectedAddressId, setSelectedAddressId] = useState(null);
+  const [isEditing, setIsEditing] = useState(false);
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setAddress({ ...address, [name]: value });
+  const handleAddAddress = (e) => {
+    e.preventDefault();
+
+    if (newAddress.trim() !== '') {
+      if (isEditing) {
+        setAddresses(
+          addresses.map((address) =>
+            address.id === selectedAddressId
+              ? { ...address, text: newAddress }
+              : address
+          )
+        );
+        setIsEditing(false);
+        setSelectedAddressId(null);
+      } else {
+        const address = {
+          id: addresses.length + 1,
+          text: newAddress,
+        };
+        setAddresses([...addresses, address]);
+      }
+      setNewAddress('');
+    }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log(address);
+  const handleSelectAddress = (id) => {
+    setSelectedAddressId(id);
+  };
+
+  const handleEditAddress = (id) => {
+    const addressToEdit = addresses.find((address) => address.id === id);
+    setNewAddress(addressToEdit.text);
+    setSelectedAddressId(id);
+    setIsEditing(true);
+  };
+
+  const handleDeleteAddress = (id) => {
+    setAddresses(addresses.filter((address) => address.id !== id));
+    if (selectedAddressId === id) {
+      setSelectedAddressId(null);
+      setNewAddress('');
+      setIsEditing(false);
+    }
   };
 
   return (
-    <div className="address-form-container">
-      <h2>Manage Addresses</h2>
-      <button className="new-address-btn">ADD A NEW ADDRESS</button>
-      <button className="location-btn">Use my current location</button>
-      <form onSubmit={handleSubmit} className="address-form">
-        {/* Input fields for the form */}
-        <label>
-          Name
-          <input type="text" name="name" value={address.name} onChange={handleInputChange} />
-        </label>
-        {/* Include other fields like pincode, mobileNumber, etc. */}
-        <div className="address-type">
-          <label>
-            <input
-              type="radio"
-              name="addressType"
-              value="home"
-              checked={address.addressType === 'home'}
-              onChange={handleInputChange}
-            />
-            Home
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="addressType"
-              value="work"
-              checked={address.addressType === 'work'}
-              onChange={handleInputChange}
-            />
-            Work
-          </label>
-        </div>
-        <div className="form-buttons">
-          <button type="submit" className="save-btn">SAVE</button>
-          <button type="button" className="cancel-btn">CANCEL</button>
-        </div>
+    <div className="address-container">
+      <h1>Address Page</h1>
+      <form onSubmit={handleAddAddress}>
+        <textarea
+          value={newAddress}
+          onChange={(e) => setNewAddress(e.target.value)}
+          placeholder="Enter your address"
+        ></textarea>
+        <br />
+        <button type="submit">{isEditing ? 'Save Address' : 'Add New Address'}</button>
       </form>
+      <ul>
+        {addresses.map((address) => (
+          <li key={address.id}>
+            <input
+              type="radio"
+              name="address"
+              id={`address-${address.id}`}
+              value={address.id}
+              checked={selectedAddressId === address.id}
+              onChange={() => handleSelectAddress(address.id)}
+            />
+            <label htmlFor={`address-${address.id}`}>{address.text}</label>
+            <button className="edit" onClick={() => handleEditAddress(address.id)}>Edit</button>
+            <button className="delete" onClick={() => handleDeleteAddress(address.id)}>Delete</button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
-}
+};
 
-export default AddressForm;
+export default AddressPage;
