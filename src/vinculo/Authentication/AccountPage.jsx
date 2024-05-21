@@ -1,7 +1,7 @@
 import React from 'react';
 import './AccountPage.css';
 import { Link } from 'react-router-dom';
-import { FaHome, FaShoppingCart, FaBox, FaUser, FaBell, FaQuestionCircle, FaCog, FaStar, FaHeart, FaSignOutAlt, FaShoppingBasket } from 'react-icons/fa';
+import { FaHome, FaShoppingCart, FaBox, FaUser, FaBell, FaQuestionCircle, FaStar, FaHeart, FaSignOutAlt, FaShoppingBasket } from 'react-icons/fa';
 
 const Navigation = () => {
     return (

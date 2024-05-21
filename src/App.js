@@ -8,7 +8,7 @@ import OrderConfirmation from './vinculo/jsfiles/orderConfirmationPage';
 // import ProductDetails from './vinculo/jsfiles/productdetails';
 //import Login from './Login';
 // import Infantgirls from './vinculo/jsfiles/infantgirls';
-import Wishlist from './vinculo/jsfiles/wishlist';
+// import Wishlist from './vinculo/jsfiles/wishlist';
 import Faq from './vinculo/jsfiles/faq';
 
 import WishlistPage from './vinculo/jsfiles/wishlist';
@@ -26,7 +26,7 @@ import WishlistPage from './vinculo/jsfiles/wishlist';
 
 import Account from './vinculo/Authentication/AccountPage';
 
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   const [showAccountPage, setShowAccountPage] = useState(true);

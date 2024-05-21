@@ -9,7 +9,7 @@ const CartPage = () => {
     { id: 3, name: 'Product 3', price: 20, quantity: 1, image: "BOYS-4_page-0001.jpg" },
   ]);
   const [buyLaterItems, setBuyLaterItems] = useState([]);
-  const [shippingInfo, setShippingInfo] = useState({});
+  // const [shippingInfo, setShippingInfo] = useState({});
   const [couponCode, setCouponCode] = useState('');
   const [paymentMethod, setPaymentMethod] = useState('');
 
