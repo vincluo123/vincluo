@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/https//vincluo123.github.io/vinculo/static/css/main.9d18003f.css",
-    "main.js": "/https//vincluo123.github.io/vinculo/static/js/main.22311604.js",
-    "static/js/453.9f81171e.chunk.js": "/https//vincluo123.github.io/vinculo/static/js/453.9f81171e.chunk.js",
-    "static/media/cod.svg": "/https//vincluo123.github.io/vinculo/static/media/cod.7cbb5e08c5de48adbc2edbc1e954be43.svg",
-    "static/media/phonepe.svg": "/https//vincluo123.github.io/vinculo/static/media/phonepe.560c63952e425af55af80cd4d494ed71.svg",
-    "static/media/amazon-pay.svg": "/https//vincluo123.github.io/vinculo/static/media/amazon-pay.f599e3016f6ae4c978f5ed163f356f78.svg",
-    "static/media/instagram.svg": "/https//vincluo123.github.io/vinculo/static/media/instagram.d7a1c0edc668087857a904cbd1fb0fa7.svg",
-    "static/media/whatsapp.svg": "/https//vincluo123.github.io/vinculo/static/media/whatsapp.a1d47355dc44c1ee595df5d35a27a365.svg",
-    "static/media/paytm.svg": "/https//vincluo123.github.io/vinculo/static/media/paytm.a105b2a75305420c22fa72a349257321.svg",
-    "static/media/google-pay.svg": "/https//vincluo123.github.io/vinculo/static/media/google-pay.b1d2f2a111a2f792233c10265d1f0cbd.svg",
-    "index.html": "/https//vincluo123.github.io/vinculo/index.html",
-    "static/media/twitter.svg": "/https//vincluo123.github.io/vinculo/static/media/twitter.69e4ca96a2b2b7195087d8d3e56f8dd6.svg",
-    "static/media/facebook.svg": "/https//vincluo123.github.io/vinculo/static/media/facebook.c6497cfad44bf6d8daaf64b0948540de.svg",
-    "main.9d18003f.css.map": "/https//vincluo123.github.io/vinculo/static/css/main.9d18003f.css.map",
-    "main.22311604.js.map": "/https//vincluo123.github.io/vinculo/static/js/main.22311604.js.map",
-    "453.9f81171e.chunk.js.map": "/https//vincluo123.github.io/vinculo/static/js/453.9f81171e.chunk.js.map"
+    "main.css": "/vinculo/static/css/main.9d18003f.css",
+    "main.js": "/vinculo/static/js/main.0231e1b4.js",
+    "static/js/453.9f81171e.chunk.js": "/vinculo/static/js/453.9f81171e.chunk.js",
+    "static/media/cod.svg": "/vinculo/static/media/cod.7cbb5e08c5de48adbc2edbc1e954be43.svg",
+    "static/media/phonepe.svg": "/vinculo/static/media/phonepe.560c63952e425af55af80cd4d494ed71.svg",
+    "static/media/amazon-pay.svg": "/vinculo/static/media/amazon-pay.f599e3016f6ae4c978f5ed163f356f78.svg",
+    "static/media/instagram.svg": "/vinculo/static/media/instagram.d7a1c0edc668087857a904cbd1fb0fa7.svg",
+    "static/media/whatsapp.svg": "/vinculo/static/media/whatsapp.a1d47355dc44c1ee595df5d35a27a365.svg",
+    "static/media/paytm.svg": "/vinculo/static/media/paytm.a105b2a75305420c22fa72a349257321.svg",
+    "static/media/google-pay.svg": "/vinculo/static/media/google-pay.b1d2f2a111a2f792233c10265d1f0cbd.svg",
+    "index.html": "/vinculo/index.html",
+    "static/media/twitter.svg": "/vinculo/static/media/twitter.69e4ca96a2b2b7195087d8d3e56f8dd6.svg",
+    "static/media/facebook.svg": "/vinculo/static/media/facebook.c6497cfad44bf6d8daaf64b0948540de.svg",
+    "main.9d18003f.css.map": "/vinculo/static/css/main.9d18003f.css.map",
+    "main.0231e1b4.js.map": "/vinculo/static/js/main.0231e1b4.js.map",
+    "453.9f81171e.chunk.js.map": "/vinculo/static/js/453.9f81171e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9d18003f.css",
-    "static/js/main.22311604.js"
+    "static/js/main.0231e1b4.js"
   ]
 }
