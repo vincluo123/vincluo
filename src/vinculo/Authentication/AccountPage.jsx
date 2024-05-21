@@ -141,7 +141,7 @@ const Notification = () => {
 const AccountPage = () => {
     return (
         <div className='account'>
-            <Navigation />
+            {/* <Navigation /> */}
             <div className='content-section'>
                 <Profile />
                 <div className='section'>
@@ -153,10 +153,10 @@ const AccountPage = () => {
                         <ContactSection />
                         <Notification />
                     </div>
-                    <div className='main-section'>
+                    {/* <div className='main-section'>
                         <ContactSection />
                         <Notification />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

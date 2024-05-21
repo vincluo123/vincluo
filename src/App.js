@@ -2,9 +2,8 @@ import { useState } from 'react';
 import './App.css';
 import Header from './vinculo/jsfiles/headerDesktop';
 import CartPage from './vinculo/jsfiles/cart';
-// import Footer from './vinculo/jsfiles/footerDesktop';
+import Footer from './vinculo/jsfiles/footerDesktop';
 import Home from './vinculo/jsfiles/homepageDesktop';
-// import ProductDetails from './vinculo/jsfiles/productdetails';
 import OrderConfirmation from './vinculo/jsfiles/orderConfirmationPage';
 // import ProductDetails from './vinculo/jsfiles/productdetails';
 //import Login from './Login';
@@ -12,7 +11,7 @@ import OrderConfirmation from './vinculo/jsfiles/orderConfirmationPage';
 import Wishlist from './vinculo/jsfiles/wishlist';
 import Faq from './vinculo/jsfiles/faq';
 
-//import Wishlist from './vinculo/jsfiles/wishlist';
+import WishlistPage from './vinculo/jsfiles/wishlist';
 //import Faq from './vinculo/jsfiles/faq';
 //import AboutUs from "./vinculo/jsfiles/about";
 //import Header from "./vinculo/mobilehome/headerMobile";
@@ -113,12 +112,16 @@ function App() {
             <Route path="/" element={<Home hideAccountPage={hideAccountPage} />} />
             <Route path="/home" element={<Home hideAccountPage={hideAccountPage} />} />
             <Route path="/orders" element={<OrderConfirmation hideAccountPage={hideAccountPage} />} />
-            <Route path="/wishlist" element={<Wishlist hideAccountPage={hideAccountPage} />} />
             <Route path="/cart" element={<CartPage hideAccountPage={hideAccountPage} />} />
             <Route path="/faq" element={<Faq hideAccountPage={hideAccountPage} />} />
+            <Route path="/Accountpage" element={<Account hideAccountPage={hideAccountPage} />} />
+            <Route path="/Wishlist" element={<WishlistPage hideAccountPage={hideAccountPage} />} />
+
+
           </Routes>
         </>
       </>
+      <Footer />
     </Router>
 
   );
