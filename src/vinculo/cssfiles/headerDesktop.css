@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> c1cdc2e4365a1e81aca37fd2b1c73748d8c00c73
 
 /* header.css */
 .header {
@@ -6,10 +9,16 @@
     justify-content: space-between;
     align-items: center;
     background-color: #102C57;
+<<<<<<< HEAD
     padding: 20px;
 
   padding: 20px;
    
+=======
+   padding: 20px;
+
+    padding: 20px;
+>>>>>>> c1cdc2e4365a1e81aca37fd2b1c73748d8c00c73
 }
 
 .logo img {
@@ -17,10 +26,15 @@
 }
 
 
+<<<<<<< HEAD
 
 
     .dropdown-menu {
         list-style-type: none;
+=======
+    .dropdown-menu {
+         list-style-type: none;
+>>>>>>> c1cdc2e4365a1e81aca37fd2b1c73748d8c00c73
         margin: 0;
         padding: 0;
     }
@@ -33,17 +47,29 @@
     .nav-item a {
         text-decoration: none;
         color: #ffffff;
+<<<<<<< HEAD
        font-weight: 400px;
+=======
+         font-weight: 400px;
+>>>>>>> c1cdc2e4365a1e81aca37fd2b1c73748d8c00c73
         transition: color 0.3s ease;
     }
 
     .nav-item a:hover {
+<<<<<<< HEAD
       font-weight: 400;
+=======
+        font-weight: 400;
+>>>>>>> c1cdc2e4365a1e81aca37fd2b1c73748d8c00c73
         transition: color 0.3s ease;
     }
 
     .nav-item a:hover {
+<<<<<<< HEAD
         color: #fabd10;
+=======
+         color: #fabd10;
+>>>>>>> c1cdc2e4365a1e81aca37fd2b1c73748d8c00c73
     }
 
     .search-bar input[type="text"] {

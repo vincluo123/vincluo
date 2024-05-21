@@ -13,7 +13,11 @@ const Header = () => {
       <nav className="navbar">
         <ul className="nav-menu">
           <li className="nav-item">
+<<<<<<< HEAD
             <a href="/new-arrivals">New Arrivals</a>
+=======
+            <a href="/home">New Arrivals</a>
+>>>>>>> c1cdc2e4365a1e81aca37fd2b1c73748d8c00c73
           </li>
           <li className="nav-item dropdown">
             <a href="#">Infant</a>
@@ -32,7 +36,11 @@ const Header = () => {
             </ul>
           </li>
           <li className="nav-item dropdown">
+<<<<<<< HEAD
             <Link path="/boys">Boys</Link>
+=======
+            <a href="#">Boys</a>
+>>>>>>> c1cdc2e4365a1e81aca37fd2b1c73748d8c00c73
             <ul className="dropdown-menu">
               <li><a href="#">Category 1</a></li>
               <li><a href="#">Category 2</a></li>
@@ -52,7 +60,11 @@ const Header = () => {
 
       <div className="icons">
         <div className="icon">
+<<<<<<< HEAD
           <a href="/favorites">
+=======
+          <a href="/Wishlist">
+>>>>>>> c1cdc2e4365a1e81aca37fd2b1c73748d8c00c73
             <FaHeart />
           </a>
         </div>
@@ -67,7 +79,11 @@ const Header = () => {
           </a>
         </div>
         <div className="icon dropdown">
+<<<<<<< HEAD
           <a href="/profile" className="dropdown-toggle">
+=======
+          <a href="/Accountpage" className="dropdown-toggle">
+>>>>>>> c1cdc2e4365a1e81aca37fd2b1c73748d8c00c73
             <FaUser />
           </a>
           <ul className="dropdown-menu">
