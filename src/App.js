@@ -14,7 +14,7 @@ import Footer from './vinculo/jsfiles/footerDesktop';
 // import Home from './vinculo/jsfiles/homepageDesktop';
 // import ProductDetails from './vinculo/jsfiles/productdetails';
 //import Kids from './vinculo/jsfiles/kids';
-// import Offer from './vinculo/jsfiles/offer';
+import Offer from './vinculo/jsfiles/offer';
 
 import './App.css';
 // import AccountPage from './vinculo/jsfiles/AccountPage';
@@ -26,6 +26,7 @@ import './App.css';
 //import OrderConfirmation from './vinculo/jsfiles/orderConfirmationPage';
 import ProductDetails from './vinculo/jsfiles/productdetails';
 import Footermobile from './vinculo/jsfiles/footerMobile';
+import Boys from './vinculo/jsfiles/2-8boys';
 //import Login from './Login';
 // import Infantgirls from './vinculo/jsfiles/infantgirls';
 // import Wishlist from './vinculo/jsfiles/wishlist';
@@ -85,10 +86,11 @@ function App() {
       {/* <Wishlist />  */}
        {/*<Faq /> */}
       {/* <About/>*/}
-       {/*<Footer/> */}
+       <Footer/>
       {/* <ProductDetails/> */}
     {/* <Faq /> */}
      {/* <Offer/> */}
+     {/* <Boys/> */}
 
 {/*<Kids/>*/}
 
