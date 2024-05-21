@@ -1,215 +1,135 @@
 [
-    {
-        "id": 1,
-        "name": "T-shirt",
-        "cname": "combo of 3",
-        "price": 999,
-        "color": "red",
-        "size": "M",
-        "fit": "Regular",
-        "neckType": "Round Neck",
-        "sleeveType": "Short",
-        "image": "girl1.jpg"
+  {
+    "id": 1,
+    "name": "T-shirt",
+    "cname": "combo of 3",
+    "price": 999,
+    "color": "red",
+    "size": "M",
+    "fit": "Regular",
+    "neckType": "Round Neck",
+    "sleeveType": "Short",
+    "image": "girl1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "T-shirt",
+    "cname": "combo of 2",
+    "price": 689,
+    "color": "blue",
+    "size": "M",
+    "fit": "Regular",
 
-    },
-    {
-        "id": 2,
-        "name": "T-shirt",
-        "cname": "combo of 2",
-        "price": 689,
-        "color": "blue",
-        "size": "M",
-        "fit": "Regular",
+    "image": "girl2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "T-shirt",
+    "cname": "pack of 3",
+    "price": 759,
+    "color": "pink",
+    "size": "M",
+    "fit": "Regular",
 
+    "image": "girl3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "T-shirt",
+    "cname": "combo of 4",
+    "price": 899,
+    "color": "green",
+    "size": "L",
+    "fit": "Regular",
 
+    "image": "girl4.jpg"
+  },
+  {
+    "id": 5,
+    "name": "T-shirt",
+    "cname": "combo of 2",
+    "price": 500,
+    "color": "orange",
+    "size": "M",
+    "fit": "Regular",
 
-        "image": "girl2.jpg"
-    },
-    {
-        "id": 3,
-        "name": "T-shirt",
-        "cname":"pack of 3",
-        "price": 759,
-        "color": "pink",
-        "size": "M",
-        "fit": "Regular",
+    "image": "girl2.jpg"
+  },
+  {
+    "id": 6,
+    "name": "T-shirt",
+    "cname": "combo of 5",
+    "price": 1200,
+    "color": "yellow",
+    "size": "XL",
+    "fit": "Regular",
 
+    "image": "girl4.jpg"
+  },
+  {
+    "id": 4,
+    "name": "T-shirt",
+    "cname": "combo of 4",
+    "price": 899,
+    "color": "green",
+    "size": "L",
+    "fit": "Regular",
 
+    "image": "girl4.jpg"
+  },
+  {
+    "id": 5,
+    "name": "T-shirt",
+    "cname": "combo of 2",
+    "price": 500,
+    "color": "orange",
+    "size": "M",
+    "fit": "Regular",
 
-        "image": "girl3.jpg"
-    },
-    {
-        "id": 4,
-        "name": "T-shirt",
-        "cname":"combo of 4",
-        "price": 899,
-        "color": "green",
-        "size": "L",
-        "fit": "Regular",
+    "image": "girl2.jpg"
+  },
+  {
+    "id": 6,
+    "name": "T-shirt",
+    "cname": "combo of 5",
+    "price": 1200,
+    "color": "yellow",
+    "size": "XL",
+    "fit": "Regular",
 
+    "image": "girl4.jpg"
+  },
+  {
+    "id": 4,
+    "name": "T-shirt",
+    "cname": "combo of 4",
+    "price": 899,
+    "color": "green",
+    "size": "L",
+    "fit": "Regular",
 
+    "image": "girl4.jpg"
+  },
+  {
+    "id": 5,
+    "name": "T-shirt",
+    "cname": "combo of 2",
+    "price": 500,
+    "color": "orange",
+    "size": "M",
+    "fit": "Regular",
 
-        "image": "girl4.jpg"
-    },
-    {
-        "id": 5,
-        "name": "T-shirt",
-        "cname":"combo of 2",
-        "price": 500,
-        "color": "orange",
-        "size": "M",
-        "fit": "Regular",
+    "image": "girl2.jpg"
+  },
+  {
+    "id": 6,
+    "name": "T-shirt",
+    "cname": "combo of 5",
+    "price": 1200,
+    "color": "yellow",
+    "size": "XL",
+    "fit": "Regular",
 
-
-
-        "image": "girl2.jpg"
-    },
-    {
-        "id": 6,
-        "name": "T-shirt",
-        "cname":"combo of 5",
-        "price": 1200,
-        "color": "yellow",
-        "size": "XL",
-        "fit": "Regular",
-
-
-
-        "image": "girl4.jpg"
-    },
-    {
-        "id": 7,
-        "name": "T-shirt",
-        "cname":"pack of 3",
-        "price":600,      
-        "color": "green",
-        "size": "L",
-        "fit": "Regular",
-
-
-
-
-        "image": "girl3.jpg"
-    },
-    {
-        "id": 8,
-        "name": "T-shirt",
-        "cname":"pack of 6",
-        "price": 1000,
-        "color": "red",
-        "size": "M",
-        "fit": "Regular",
-
-
-
-        "image": "girl1.jpg"
-    },
-    {
-        "id": 9,
-        "name": "T-shirt",
-        "cname": "combo of 3",
-        "price": 999,
-        "color": "red",
-        "size": "XL",
-        "fit": "Regular",
-
-
-
-        "image": "girl3.jpg"
-    },
-    {
-        "id": 10,
-        "name": "T-shirt",
-        "cname": "combo of 2",
-        "price": 689,
-        "color": "blue",
-        "size": "M",
-        "fit": "Regular",
-
-
-
-        "image": "girl1.jpg"
-    },
-    {
-        "id": 11,
-        "name": "T-shirt",
-        "cname":"pack of 3",
-        "price": 759,
-        "color": "green",
-        "size": "L",
-        "fit": "Regular",
-
-
-
-        "image": "girl4.jpg"
-    },
-    {
-        "id": 12,
-        "name": "T-shirt",
-        "cname":"combo of 4",
-        "price": 899,
-        "color": "pink",
-        "size": "XL",
-        "fit": "Regular",
-
-
-
-        "image": "girl2.jpg"
-    },
-    {
-        "id": 13,
-        "name": "T-shirt",
-        "cname":"combo of 2",
-        "price": 500,
-        "color": "orange",
-        "size": "XL",
-        "fit": "Regular",
-
-
-
-        "image": "girl1.jpg"
-    },
-    {
-        "id": 14,
-        "name": "T-shirt",
-        "cname":"combo of 5",
-        "price": 1200,
-        "color": "yellow",
-        "size": "M",
-        "fit": "Regular",
-
-
-
-        "image": "girl4.jpg"
-    },
-    {
-        "id": 15,
-        "name": "T-shirt",
-        "cname":"pack of 3",
-        "price":600,
-        "color": "red",
-        "size": "M",
-        "fit": "Regular",
-
-
-
-        "image": "girl3.jpg"
-    },
-    {
-        "id": 16,
-        "name": "T-shirt",
-        "cname":"pack of 6",
-        "price": 1000,
-        "color": "blue",
-        "size": "L",
-        "fit": "Regular",
-
-
-
-
-        "image": "girl1.jpg"
-    }
-    
-
-
+    "image": "girl4.jpg"
+  }
 ]

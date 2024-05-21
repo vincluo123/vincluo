@@ -41,51 +41,51 @@ function App() {
     <>
 
 
-    
-     {/* <Wishlist />  */}
+
+      {/* <Wishlist />  */}
 
       {/* <Footer/> */}
-      
-     {/*<CartPage/> */}
 
-    {/*<Faq /> */}
-     {/* <About/>*/}
-    {/*<Wishlist /> */}
-    
-     {/* <AboutUs/> */} 
+      {/*<CartPage/> */}
+
+      {/*<Faq /> */}
+      {/* <About/>*/}
+      {/*<Wishlist /> */}
+
+      {/* <AboutUs/> */}
       {/* <Wishlist />  */}
       {/*<Faq /> */}
       {/* <About/>*/}
       {/* <Footer/> */}
       {/* <ProductDetails/> */}
-    {/* <Faq /> */}
-    {/*  <Offer/>  */}
- <Infantgirls/> 
-{/* <Kids/> */}
+      {/* <Faq /> */}
+      {/*  <Offer/>  */}
+      <Infantgirls />
+      {/* <Kids/> */}
 
 
 
 
 
 
-      {/* <Header/>*/ }
-      
-      
+      {/* <Header/>*/}
+
+
       {/* <Footer/> */}
       {/* <Header/>
       <CartPage/> */}
       {/* <OrderConfirmation/>  */}
-       
+
       {/* <ProductDetails/> */}
 
 
 
-      
+
 
       {/* <AccountPage/> */}
       {/*<HeaderMobile /> */}
       {/*<OrderConfirmation /> */}
-       <Footer/>
+      <Footer />
     </>
   );
 }
