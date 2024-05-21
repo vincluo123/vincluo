@@ -17,7 +17,7 @@
 //import Offer from './vinculo/jsfiles/offer';
 
 import OrderConfirmation from './vinculo/jsfiles/orderConfirmationPage';
-// import ProductDetails from './vinculo/jsfiles/productdetails';
+import ProductDetails from './vinculo/jsfiles/productdetails';
 //import Login from './Login';
 import Infantgirls from './vinculo/jsfiles/infantgirls';
 // import Wishlist from './vinculo/jsfiles/wishlist';
@@ -69,7 +69,7 @@ function App() {
  {/*<AddressForm/> */}
       {/* <Footer/> */}
       
-     <CartPage/> 
+     {/* <CartPage/>  */}
 
       {/*<Faq /> */}
      {/* <About/>*/}
@@ -80,7 +80,7 @@ function App() {
        {/*<Faq /> */}
       {/* <About/>*/}
        {/*<Footer/> */}
-      {/* <ProductDetails/> */}
+      <ProductDetails/>
     {/* <Faq /> */}
      {/*<Offer/> */}
 
@@ -102,12 +102,12 @@ function App() {
 
 
 
-      <OrderConfirmationPopup/>
+      {/* <OrderConfirmationPopup/> */}
       
 
       {/* <AccountPage/> */}
       {/*<HeaderMobile /> */}
-      <OrderConfirmation /> 
+      {/* <OrderConfirmation />  */}
      {/* <Footer/> */}
     </>
   );
