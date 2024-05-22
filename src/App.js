@@ -6,8 +6,8 @@ import HeaderMobile from "./vinculo/mobilehome/headerMobile";
 function App() {
   return (
     <>
-    {/* <HeaderMobile/> */}
-    <Header/>
+     <HeaderMobile/> 
+    {/* <Header/> */}
     </>
   );
 }
