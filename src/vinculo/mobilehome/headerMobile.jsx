@@ -1,5 +1,4 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 import '../cssfiles/headermobile.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
@@ -7,12 +6,23 @@ import productsData from '../jsonfiles/products.json';
 import carouselImages from "../jsonfiles/carousel.json";
 import categoryImages from "../jsonfiles/categoryimg.json";
 import Header from './brandnameheader';
+import ProductDetails from './productDetails';
 import '../cssfiles/header.css';
 import '../cssfiles/navheader.css';
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 
 function HeaderMobile() {
+    const [clickedProduct, setClickedProduct] = useState(null);
+
+    const handleBack = () => {
+        setClickedProduct(null);
+    };
+
+    if (clickedProduct) {
+        return <ProductDetails product={clickedProduct} onBack={handleBack} />;
+    }
+
     return (
         <div className="App">
             <Header />
@@ -47,11 +57,11 @@ function HeaderMobile() {
 
             <div className="container">
                 {productsData.map(product => (
-                    <Link to={`/product/${product.id}`} key={product.id} className="product">
+                    <div className="product" key={product.id} onClick={() => setClickedProduct(product)}>
                         <img src={product.image} alt={product.name} />
                         <h3>{product.name}</h3>
                         <p>${product.price.toFixed(2)}</p>
-                    </Link>
+                    </div>
                 ))}
             </div>
         </div>

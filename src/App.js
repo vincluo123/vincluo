@@ -5,12 +5,9 @@ import ProductDetails from './vinculo/mobilehome/productDetails';
 
 function App() {
     return (
-      <Router>
-      <Routes>
-          <Route path="/" element={<HeaderMobile />} />
-          <Route path="/product/:id" element={<ProductDetails />} />
-      </Routes>
-  </Router>
+      <>
+      <HeaderMobile/>
+      </>
     );
 }
 
