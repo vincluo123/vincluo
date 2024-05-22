@@ -14,8 +14,8 @@ body {
 .sidebar {
     width: 15%;
     padding: 20px;
-    color: #d4dbe3;
-    background-color: #0e0e41;
+    color: black;
+    background-color: white;
 }
 
 .sidebar h2 {

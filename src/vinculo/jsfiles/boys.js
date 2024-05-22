@@ -1,21 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../cssfiles/boys.css';
 import { FaHeart } from 'react-icons/fa';
-// Sample data for products
-const products = [
-    { id: 1, name: "T-Shirt 1", price: 19.99, size: "M", color: "Red", image: "BOYS-4_page-0001.jpg", fit: "Regular", neck: "Round", sleeve: "Short" },
-    { id: 2, name: "T-Shirt 2", price: 12.99, size: "L", color: "Blue", image: "BOYS-5_page-0001.jpg", fit: "Slim", neck: "V-Neck", sleeve: "Long" },
-    { id: 3, name: "T-Shirt 3", price: 50.99, size: "XL", color: "Black", image: "BOYS-6_page-0001.jpg", fit: "Regular", neck: "Round", sleeve: "Short" },
-    { id: 4, name: "T-Shirt 4", price: 19.99, size: "XL", color: "Black", image: "BOYS-7_page-0001.jpg", fit: "Regular", neck: "Round", sleeve: "Short" },
-    { id: 5, name: "T-Shirt 5", price: 19.99, size: "XL", color: "Black", image: "BOYS-8_page-0001.jpg", fit: "Slim", neck: "Round", sleeve: "Short" },
-    { id: 6, name: "T-Shirt 6", price: 19.99, size: "XL", color: "Black", image: "BOYS-9_page-0001.jpg", fit: "Regular", neck: "Round", sleeve: "Long" },
-    { id: 7, name: "T-Shirt 7", price: 19.99, size: "XL", color: "Black", image: "BOYS-10_page-0001.jpg", fit: "Regular", neck: "V-Neck", sleeve: "Long" },
-    { id: 8, name: "T-Shirt 8", price: 19.99, size: "XL", color: "Black", image: "BOYS-11_page-0001.jpg", fit: "Slim", neck: "V-Neck", sleeve: "Short" },
-    { id: 9, name: "T-Shirt 9", price: 19.99, size: "XL", color: "Black", image: "BOYS-10_page-0001.jpg", fit: "Regular", neck: "Round", sleeve: "Short" },
-    { id: 10, name: "T-Shirt 10", price: 19.99, size: "XL", color: "Black", image: "BOYS-11_page-0001.jpg", fit: "Regular", neck: "Round", sleeve: "Short" },
-];
 
-// Sample filter options
 const sizes = ['S', 'M', 'L', 'XL'];
 const colors = ['Red', 'Blue', 'Green', 'Black'];
 const costRanges = ['0-20', '21-40', '41-60'];
@@ -32,6 +18,14 @@ const Boys = () => {
         fit: [],
         neck: [],
     });
+    const [products, setProducts] = useState([]);
+    const [clickedHearts, setClickedHearts] = useState({});
+
+    useEffect(() => {
+        fetch('/products.json')
+            .then(response => response.json())
+            .then(data => setProducts(data));
+    }, []);
 
     const handleFilterChange = (filterType, value) => {
         setFilters(prevFilters => {
@@ -50,7 +44,7 @@ const Boys = () => {
                 (filters.color.length === 0 || filters.color.includes(product.color)) &&
                 (filters.cost.length === 0 || filters.cost.some(range => {
                     const [min, max] = range.split('-').map(Number);
-                    return product.cost >= min && product.cost <= max;
+                    return product.price >= min && product.price <= max;
                 })) &&
                 (filters.sleeve.length === 0 || filters.sleeve.includes(product.sleeve)) &&
                 (filters.fit.length === 0 || filters.fit.includes(product.fit)) &&
@@ -58,7 +52,6 @@ const Boys = () => {
             );
         });
     };
-    const [clickedHearts, setClickedHearts] = useState({});
 
     const handleClick = (productId) => {
         setClickedHearts(prevState => ({
@@ -68,6 +61,7 @@ const Boys = () => {
 
         console.log(productId);
     };
+
     return (
         <div className="boys-container">
             <div className="sidebar">
@@ -155,7 +149,7 @@ const Boys = () => {
                 <h1>8-16 Boys</h1>
                 {[0, 1].map(rowIndex => (
                     <div className="product-list" key={rowIndex}>
-                        {filterProducts().slice(rowIndex * 5, (rowIndex + 1) * 5).map(product => (
+                        {filterProducts().slice(rowIndex * 10, (rowIndex + 1) * 10).map(product => (
                             <div className="product-card" key={product.id}>
                                 <img src={product.image} alt={product.name} />
                                 <h4>{product.name}</h4>
