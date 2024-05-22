@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import './App.css';
 import Header from './vinculo/jsfiles/headerDesktop';
@@ -29,7 +30,15 @@ import Account from './vinculo/Authentication/AccountPage';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import ProductDetails from './vinculo/jsfiles/productdetails';
 import Offer from './vinculo/jsfiles/offer';
+=======
+//import NotificationPage from "./vinculo/jsfiles/Notification";
+//import Faq from "./vinculo/jsfiles/faq";
+// import Header from './vinculo/mobilehome/headerMobile';
+>>>>>>> 4a4e526a6e1397da44dd70fd822a878b131b103d
 
+import AboutUs from "./vinculo/jsfiles/about";
+
+// import HeaderDesktop from "./vinculo/jsfiles/headerDesktop";
 function App() {
   const [showAccountPage, setShowAccountPage] = useState(true);
 
@@ -38,12 +47,19 @@ function App() {
   };
 
   return (
+<<<<<<< HEAD
 <>
 {/* <ProductDetails/> */}
 {/* <Offer/> */}
 <WishlistPage/>
 </>
 
+=======
+    <>
+      <AboutUs/>
+    
+    </>
+>>>>>>> 4a4e526a6e1397da44dd70fd822a878b131b103d
   );
 }
 

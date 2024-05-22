@@ -1,0 +1,87 @@
+
+[
+    {
+        "id": 1,
+        "name": "T-shirt",
+        "cname": "vinculo",
+        "price": 300,
+        "image": "boys2_shirt.jpg"
+    },
+    {
+        "id": 2,
+        "name": "T-shirt",
+        "cname": "vinculo",
+        "price": 300,
+        "image": "boys1_shirt.jpg"
+    },
+    {
+        "id": 3,
+        "name": "T-shirt",
+        "cname": "vinculo",
+        "price": 300,
+        "image": "boys3_shirt.jpg"
+    },
+    {
+        "id": 4,
+        "name": "T-shirt",
+        "cname": "vinculo",
+        "price": 300,
+        "image": "BOYS-4_page-0001.jpg"
+    },
+    {
+        "id": 5,
+        "name": "T-shirt",
+        "cname": "vinculo",
+        "price": 300,
+        "image": "BOYS-5_page-0001.jpg"
+    },
+    {
+        "id": 6,
+        "name": "T-shirt",
+        "cname": "vinculo",
+        "price": 300,
+        "image": "BOYS-6_page-0001.jpg"
+    },
+    {
+        "id": 7,
+        "name": "T-shirt",
+        "cname": "vinculo",
+        "price": 300,
+        "image": "BOYS-7_page-0001.jpg"
+    },
+    {
+        "id": 8,
+        "name": "T-shirt",
+        "cname": "vinculo",
+        "price": 300,
+        "image": "BOYS-8_page-0001.jpg"
+    },
+    {
+        "id": 9,
+        "name": "T-shirt",
+        "cname": "vinculo",
+        "price": 12.99,
+        "image": "BOYS-12_page-0001.jpg"
+    },
+    {
+        "id": 10,
+        "name": "T-shirt",
+        "cname": "vinculo",
+        "price": 300,
+        "image": "BOYS-9_page-0001.jpg"
+    },
+    {
+        "id": 11,
+        "name": "T-shirt",
+        "cname": "vinculo",
+        "price": 300,
+        "image": "BOYS-10_page-0001.jpg"
+    },
+    {
+        "id": 12,
+        "name": "T-shirt",
+        "cname": "vinculo",
+        "price": 300,
+        "image": "BOYS-11_page-0001.jpg"
+    }
+]
