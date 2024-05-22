@@ -18,7 +18,7 @@ import HeaderMobile from "./vinculo/mobilehome/headerMobile";
 
 
 import { BrowserRouter ,Routes,Route} from 'react-router-dom';
-import WishlistPage from './vinculo/jsfiles/wishlist';
+
 
 
 function App() {
@@ -52,7 +52,7 @@ function App() {
       {/*<ProductDetails/> */}
       {/* <OrderConfirmationPopup/> */}
       {/* <Footer/> */}
-      <WishlistPage/>
+     
     </>
   );
 }
