@@ -5,15 +5,8 @@ import HeaderDesktop from "./vinculo/jsfiles/headerDesktop";
 function App() {
   return (
     <>
-<<<<<<< HEAD
-     <HeaderMobile/> 
-    {/* <Header/> */}
-=======
-   <Header/>
-   {/* <NotificationPage/> */}
-   {/* <HeaderDesktop/> */}
-  
->>>>>>> f3629043e5f261c9a09b010e4ebb5d7edf530968
+      
+    <Header/>
     </>
   );
 }
