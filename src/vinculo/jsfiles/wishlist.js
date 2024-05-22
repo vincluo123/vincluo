@@ -1,14 +1,10 @@
 import React, { useState } from 'react';
 import '../cssfiles/wishlist.css';
 import { FaHeart, FaTrash, FaShoppingCart } from 'react-icons/fa';
+import wishlistData from '../jsonfiles/wishlist.json'; // Adjust the path as needed
 
 const WishlistPage = () => {
-  const [wishlist, setWishlist] = useState([
-    { id: 1, name: 'Cotton T-shirt (Black)', price: 20, image: 'girl1.jpg' },
-    { id: 2, name: 'Plain T-shirt (Yellow)', price: 30, image: 'girl2.jpg' },
-    { id: 3, name: 'Plain T-shirt(White)', price: 25, image: 'girl3.jpg' },
-    { id: 4, name: 'Plain T-shirt(White)', price: 25, image: 'girl4.jpg' }
-  ]);
+  const [wishlist, setWishlist] = useState(wishlistData);
 
   const removeFromWishlist = (id) => {
     setWishlist(wishlist.filter(item => item.id !== id));
