@@ -7,13 +7,13 @@ const Header = () => {
   return (
     <header className="header">
       <div className="logo">
-        <img src="Hilsa.png" alt="Logo" />
+        <img src="./assets/Hilsa.png" alt="Logo" />
       </div>
 
       <nav className="navbar">
         <ul className="nav-menu">
           <li className="nav-item">
-            <a href="/home">New Arrivals</a>
+            <a href="/new-arrivals">New Arrivals</a>
           </li>
           <li className="nav-item dropdown">
             <a href="#">Infant</a>
@@ -52,7 +52,7 @@ const Header = () => {
 
       <div className="icons">
         <div className="icon">
-          <a href="/Wishlist">
+          <a href="/favorites">
             <FaHeart />
           </a>
         </div>
@@ -67,7 +67,7 @@ const Header = () => {
           </a>
         </div>
         <div className="icon dropdown">
-          <a href="/Accountpage" className="dropdown-toggle">
+          <a href="/profile" className="dropdown-toggle">
             <FaUser />
           </a>
           <ul className="dropdown-menu">

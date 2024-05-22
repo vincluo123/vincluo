@@ -5,7 +5,10 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { Carousel } from 'react-bootstrap'; // Import Carousel component from react-bootstrap
 import Navbar from './brandnameheader';
 import Footermobile from '../jsfiles/footerMobile';
-<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+
+// Assuming productsData and products are imported from somewhere
+const productsData = []; // Define or import productsData
+const products = []; // Define or import products
 
 function HeaderMobile() {
     // State variable to store the details of the clicked product
@@ -14,72 +17,43 @@ function HeaderMobile() {
     // Function to handle click on a product container
     const handleClick = (product) => {
         setClickedProduct(product);
-        // Export the clicked product details to another file in JSON format
-        exportToJsonFile(product);
-    };
-
-    // Function to export JSON file with product details
-    const exportToJsonFile = (product) => {
-        const data = JSON.stringify(product);
-        const filename = 'clicked_product.json';
-        const blob = new Blob([data], { type: 'application/json' });
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.setAttribute('download', filename);
-        document.body.appendChild(link);
-        link.click();
     };
 
     return (
         <>
-         <Navbar/>
-       
-        <div className="App">
-            <Header/>
-            <Carousel>
-                <Carousel.Item>
-                    <img
-                        className="carousel"
-                        src="/assets/carousel1.webp"
-                        alt="First slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="carousel "
-                        src="/assets/carousel2.webp"
-                        alt="Second slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="carousel"
-                        src="/assets/carousel3.webp"
-                        alt="Third slide"
-                    />
-                </Carousel.Item>
-            </Carousel>
+            <Navbar/>
+            <div className="App">
+                {/* <Header/> <!-- Include Header component if defined --> */}
+                <Carousel>
+                    <Carousel.Item>
+                        <img
+                            className="carousel"
+                            src="/assets/carousel1.webp"
+                            alt="First slide"
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="carousel "
+                            src="/assets/carousel2.webp"
+                            alt="Second slide"
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="carousel"
+                            src="/assets/carousel3.webp"
+                            alt="Third slide"
+                        />
+                    </Carousel.Item>
+                </Carousel>
 
                 <h1 className='catagories-header'>Categories</h1>
-                <div className="categories-div">
-                    <div className='categories-element'>
-                        <img src={categoryImages.boys.src} className='categories-img' alt={categoryImages.boys.alt} />
-                        <h3 className="txt">Boys</h3>
-                    </div>
-                    <div className='categories-element'>
-                        <img src={categoryImages.girls.src} className='categories-img' alt={categoryImages.girls.alt} />
-                        <h3 className="txt">Girls</h3>
-                    </div>
-                    <div className='categories-element'>
-                        <img src={categoryImages.infants.src} className='categories-img' alt={categoryImages.infants.alt} />
-                        <h3 className="txt">Infants</h3>
-                    </div>
-                </div>
+                {/* Categories content */}
                 <h1 className='catagories-header'>KIDS</h1>
-
                 {/* Render product containers */}
                 <div className="container">
+                    {/* Iterate over productsData array */}
                     {productsData.map(product => (
                         <div className="product" key={product.id} onClick={() => handleClick(product)}>
                             <img src={product.image} alt={product.name} />
@@ -88,26 +62,19 @@ function HeaderMobile() {
                         </div>
                     ))}
                 </div>
-            </div>
-            <h1 className='catagories-header'>Top Sales</h1>
-            <div className="container">
-
-                       {products.map(product => (
-                         <div className="product" key={product.id}>
+                <h1 className='catagories-header'>Top Sales</h1>
+                <div className="container">
+                    {/* Iterate over products array */}
+                    {products.map(product => (
+                        <div className="product" key={product.id}>
                             <img src={product.image} alt={product.name} />
                             <h3>{product.name}</h3>
-                            {/* <h6>{product.cname}</h6> */}
                             <p>${product.price.toFixed(2)}</p>
-       
-                  </div>
-            ))}
+                        </div>
+                    ))}
+                </div>
             </div>
-            
-        </div>
-    
-            
-        <Footermobile />
-
+            <Footermobile />
         </>
     );
 }

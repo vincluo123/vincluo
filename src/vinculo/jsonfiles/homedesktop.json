@@ -1,98 +1,97 @@
 {
-    "carouselImages": [
-      {
-        "id": 1,
-        "src": "slide 11.gif",
-        "alt": "First slide"
-      },
-      {
-        "id": 2,
-        "src": "slide 12.gif",
-        "alt": "Second slide"
-      },
-      {
-        "id": 3,
-        "src": "slide 11.gif",
-        "alt": "Third slide"
-      }
-    ],
-    "newArrivals": [
-      {
-        "id": 1,
-        "name": "T-SHIRT",
-        "price": 250.00,
-        "image": "./assets/tshirt4.avif"
-      },
-      {
-        "id": 2,
-        "name": "T-SHIRT",
-        "price": 250.00,
-        "image": "./assets/tshirt9.jpg"
-      },
-      {
-        "id": 3,
-        "name": "T-SHIRT",
-        "price": 250.00,
-        "image": "./assets/tshirt6.jpg"
-      },
-      {
-        "id": 4,
-        "name": "T-SHIRT",
-        "price": 250.00,
-        "image": "./assets/tshirt7.jpg"
-      }
-    ],
-    "topSellings": [
-      {
-        "id": 5,
-        "name": "T-SHIRT",
-        "price": 250.00,
-        "image": "./assets/tshirt8.jpg"
-      },
-      {
-        "id": 6,
-        "name": "T-SHIRT",
-        "price": 250.00,
-        "image": "./assets/tshirt12.avif"
-      },
-      {
-        "id": 7,
-        "name": "T-SHIRT",
-        "price": 250.00,
-        "image": "./assets/tshirt10.jpg"
-      },
-      {
-        "id": 8,
-        "name": "T-SHIRT",
-        "price": 250.00,
-        "image": "./assets/tshirt11.jpg"
-      }
-    ],
-    "kids": [
-      {
-        "id": 9,
-        "name": "T-SHIRT",
-        "price": 250.00,
-        "image": "./assets/tshirt6.jpg"
-      },
-      {
-        "id": 10,
-        "name": "T-SHIRT",
-        "price": 250.00,
-        "image": "./assets/tshirt12.avif"
-      },
-      {
-        "id": 11,
-        "name": "T-SHIRT",
-        "price": 250.00,
-        "image": "./assets/tshirt10.jpg"
-      },
-      {
-        "id": 12,
-        "name": "T-SHIRT",
-        "price": 250.00,
-        "image": "./assets/tshirt11.jpg"
-      }
-    ]
-  }
-  
+  "carouselImages": [
+    {
+      "id": 1,
+      "src": "slide 11.gif",
+      "alt": "First slide"
+    },
+    {
+      "id": 2,
+      "src": "slide 12.gif",
+      "alt": "Second slide"
+    },
+    {
+      "id": 3,
+      "src": "slide 11.gif",
+      "alt": "Third slide"
+    }
+  ],
+  "newArrivals": [
+    {
+      "id": 1,
+      "name": "T-SHIRT",
+      "price": 250.00,
+      "image": "./assets/tshirt4.avif"
+    },
+    {
+      "id": 2,
+      "name": "T-SHIRT",
+      "price": 250.00,
+      "image": "./assets/tshirt9.jpg"
+    },
+    {
+      "id": 3,
+      "name": "T-SHIRT",
+      "price": 250.00,
+      "image": "./assets/tshirt6.jpg"
+    },
+    {
+      "id": 4,
+      "name": "T-SHIRT",
+      "price": 250.00,
+      "image": "./assets/tshirt7.jpg"
+    }
+  ],
+  "topSellings": [
+    {
+      "id": 5,
+      "name": "T-SHIRT",
+      "price": 250.00,
+      "image": "./assets/tshirt8.jpg"
+    },
+    {
+      "id": 6,
+      "name": "T-SHIRT",
+      "price": 250.00,
+      "image": "./assets/tshirt12.avif"
+    },
+    {
+      "id": 7,
+      "name": "T-SHIRT",
+      "price": 250.00,
+      "image": "./assets/tshirt10.jpg"
+    },
+    {
+      "id": 8,
+      "name": "T-SHIRT",
+      "price": 250.00,
+      "image": "./assets/tshirt11.jpg"
+    }
+  ],
+  "kids": [
+    {
+      "id": 9,
+      "name": "T-SHIRT",
+      "price": 250.00,
+      "image": "./assets/tshirt6.jpg"
+    },
+    {
+      "id": 10,
+      "name": "T-SHIRT",
+      "price": 250.00,
+      "image": "./assets/tshirt12.avif"
+    },
+    {
+      "id": 11,
+      "name": "T-SHIRT",
+      "price": 250.00,
+      "image": "./assets/tshirt10.jpg"
+    },
+    {
+      "id": 12,
+      "name": "T-SHIRT",
+      "price": 250.00,
+      "image": "./assets/tshirt11.jpg"
+    }
+  ]
+}
