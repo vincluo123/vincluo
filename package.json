@@ -1,5 +1,5 @@
 {
-  "homepage": "https://vincluo123.github.io/react-gh-pages",
+  "homepage": "https://vincluo123.github.io/vinculo",
  "name": "vinculo",
  "version": "0.1.0",
  "private": true,
@@ -31,8 +31,8 @@
   "test": "react-scripts test",
   "eject": "react-scripts eject",
   "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
- },
+  "deploy": "gh-pages -b vijayvs -d build"
+},
  "eslintConfig": {
   "extends": [
    "react-app",
