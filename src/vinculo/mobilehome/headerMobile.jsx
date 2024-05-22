@@ -101,7 +101,12 @@ function HeaderMobile() {
     ];
     return (
         <>
+<<<<<<< HEAD
 
+=======
+        
+      
+>>>>>>> 0e7323b916136e488f824cc7638ad7db36ef28c2
         <div className="App">
             <Header/>
             <Carousel>
