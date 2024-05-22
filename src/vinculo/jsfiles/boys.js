@@ -13,7 +13,6 @@ const products = [
     { id: 8, name: "T-Shirt 8", price: 19.99, size: "XL", color: "Black", image: "BOYS-11_page-0001.jpg", fit: "Slim", neck: "V-Neck", sleeve: "Short" },
     { id: 9, name: "T-Shirt 9", price: 19.99, size: "XL", color: "Black", image: "BOYS-10_page-0001.jpg", fit: "Regular", neck: "Round", sleeve: "Short" },
     { id: 10, name: "T-Shirt 10", price: 19.99, size: "XL", color: "Black", image: "BOYS-11_page-0001.jpg", fit: "Regular", neck: "Round", sleeve: "Short" },
-
 ];
 
 // Sample filter options
