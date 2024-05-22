@@ -1,5 +1,6 @@
 {
-    "product": {
+  "products": [
+    {
       "id": 1,
       "name": "T-Shirt",
       "price": {
@@ -19,8 +20,7 @@
         "sizeRange": "8 to 16 Yrs",
         "pattern": "Printed",
         "suitableFor": "Casual Wear",
-        "fabricCare": "Gentle Machine Wash",
-        "manufacturer": "ABC Company"
+        "fabricCare": "Gentle Machine Wash"
       },
       "manufacturer": {
         "name": "ABC Company",
@@ -44,5 +44,5 @@
         "10% off on Citi-branded Credit Card EMI Transactions, up to ₹2,000 on orders of ₹5,000 and above"
       ]
     }
-  }
-  
+  ]
+}

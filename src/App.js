@@ -27,6 +27,8 @@ import WishlistPage from './vinculo/jsfiles/wishlist';
 import Account from './vinculo/Authentication/AccountPage';
 
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import ProductDetails from './vinculo/jsfiles/productdetails';
+import Offer from './vinculo/jsfiles/offer';
 
 function App() {
   const [showAccountPage, setShowAccountPage] = useState(true);
@@ -36,93 +38,10 @@ function App() {
   };
 
   return (
-
-    //     <>
-    //       {/* <BrowserRouter>
-    // <Routes>
-    // <Route path="" element={HeaderMobile}/>
-    // <Route path="/cart" element={CartPage }/>
-
-
-
-    // </Routes>
-
-    // </BrowserRouter> */}
-
-    //       {/*<Router>
-    //       <Routes>
-    //         <Route path="/" element={<AddressForm />} />
-    //         <Route path="/new-address" element={<NewAddressForm />} />
-    //       </Routes>
-    //     </Router>*/}
-
-    //       {/* <HeaderMobile/> */}
-
-
-
-    //       {/* <Wishlist />  */}
-
-    //       {/*<NewAddressForm/> */}
-    //       {/*<AddressForm/> */}
-    //       {/* <Footer/> */}
-
-    //       {/*<CartPage/> */}
-
-    //       {/*<Faq /> */}
-    //       {/* <About/>*/}
-    //       {/*<Wishlist /> */}
-
-    //       {/* <AboutUs/> */}
-    //       {/* <Wishlist />  */}
-    //       {/*<Faq /> */}
-    //       {/* <About/>*/}
-    //       {/*<Footer/> */}
-    //       {/* <ProductDetails/> */}
-    //       {/* <Faq /> */}
-    //       {/*<Offer/> */}
-
-    //       {/*<Kids/>*/}
-
-
-
-
-
-    //       {/* <Header/>*/}
-
-
-    //       {/* <Footer/> */}
-    //       {/* <ProductDetails/> */}
-
-    //     </>
-    
-    <Router>
-      <Header />
-      <>
-        <>
-          {/* Render the AccountPage component if showAccountPage is true */}
-          {showAccountPage && (
-            <Routes>
-              <Route path="/account" element={<Account />} />
-            </Routes>
-          )}
-
-          {/* Define routes */}
-          <Routes>
-            {/* Route for the Home page */}
-            <Route path="/" element={<Home hideAccountPage={hideAccountPage} />} />
-            <Route path="/home" element={<Home hideAccountPage={hideAccountPage} />} />
-            <Route path="/orders" element={<OrderConfirmation hideAccountPage={hideAccountPage} />} />
-            <Route path="/cart" element={<CartPage hideAccountPage={hideAccountPage} />} />
-            <Route path="/faq" element={<Faq hideAccountPage={hideAccountPage} />} />
-            <Route path="/Accountpage" element={<Account hideAccountPage={hideAccountPage} />} />
-            <Route path="/Wishlist" element={<WishlistPage hideAccountPage={hideAccountPage} />} />
-
-
-          </Routes>
-        </>
-      </>
-      <Footer />
-    </Router>
+<>
+<ProductDetails/>
+{/* <Offer/> */}
+</>
 
   );
 }
