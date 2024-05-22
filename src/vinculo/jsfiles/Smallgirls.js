@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../cssfiles/Smallboys.css';
+import '../cssfiles/Smallgirls.css';
 import { FaHeart } from 'react-icons/fa';
 // Sample data for products
 const products = [
