@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "src": "carousel1.webp",
+        "alt": "First slide"
+    },
+    {
+        "id": 2,
+        "src": "carousel2.webp",
+        "alt": "Second slide"
+    },
+    {
+        "id": 3,
+        "src": "carousel3.webp",
+        "alt": "Third slide"
+    }
+]

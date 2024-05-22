@@ -23,8 +23,14 @@ const Boys = () => {
 
     useEffect(() => {
         fetch('/boysproducts.json')
-            .then(response => response.json())
-            .then(data => setProducts(data));
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => setProducts(data))
+            .catch(error => console.error('There was a problem with the fetch operation:', error));
     }, []);
 
     const handleFilterChange = (filterType, value) => {
@@ -58,8 +64,6 @@ const Boys = () => {
             ...prevState,
             [productId]: !prevState[productId]
         }));
-
-        console.log(productId);
     };
 
     return (
@@ -147,7 +151,7 @@ const Boys = () => {
             </div>
             <div className="product-list-container">
                 <h1>8-16 Boys</h1>
-                {[0, 1].map(rowIndex => (
+                {[0, , 1, 2].map(rowIndex => (
                     <div className="product-list" key={rowIndex}>
                         {filterProducts().slice(rowIndex * 10, (rowIndex + 1) * 10).map(product => (
                             <div className="product-card" key={product.id}>
@@ -160,7 +164,6 @@ const Boys = () => {
                                     </span>
                                 </button>
                             </div>
-
                         ))}
                     </div>
                 ))}

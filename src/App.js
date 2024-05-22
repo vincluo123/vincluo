@@ -39,7 +39,7 @@ import Boys from './vinculo/jsfiles/boys';
 function App() {
   return (
     <>
-      <Header />
+
 
 
       {/* <Wishlist />  */}
