@@ -1,39 +1,36 @@
-import React from 'react';
-import { useState } from 'react'; // Import useState hook
+// HeaderMobile.js
+import React, { useState } from 'react';
 import '../cssfiles/headermobile.css';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import { Carousel } from 'react-bootstrap'; // Import Carousel component from react-bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Carousel } from 'react-bootstrap';
 import productsData from '../jsonfiles/products.json';
-import carouselImages from "../jsonfiles/carousel.json"
-import categoryImages from "../jsonfiles/categoryimg.json"
+import carouselImages from "../jsonfiles/carousel.json";
+import categoryImages from "../jsonfiles/categoryimg.json";
 import Header from './brandnameheader';
+import ProductDetails from './productDetails';
 import '../cssfiles/header.css';
 import '../cssfiles/navheader.css';
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 
 function HeaderMobile() {
-    // State variable to store the details of the clicked product
     const [clickedProduct, setClickedProduct] = useState(null);
 
-    // Function to handle click on a product container
     const handleClick = (product) => {
         setClickedProduct(product);
-        // Export the clicked product details to another file in JSON format
         exportToJsonFile(product);
     };
 
-    // Function to export JSON file with product details
     const exportToJsonFile = (product) => {
         const data = JSON.stringify(product);
         const filename = 'clicked_product.json';
         const blob = new Blob([data], { type: 'application/json' });
         const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.setAttribute('download', filename);
-        document.body.appendChild(link);
-        link.click();
+        // const link = document.createElement('a');
+        // link.href = url;
+        // // link.setAttribute('download', filename);
+        // document.body.appendChild(link);
+        // link.click();
     };
 
     return (
@@ -52,7 +49,7 @@ function HeaderMobile() {
                     ))}
                 </Carousel>
 
-                <h1 className='catagories-header'>Categories</h1>
+                <h1 className='categories-header'>Categories</h1>
                 <div className="categories-div">
                     <div className='categories-element'>
                         <img src={categoryImages.boys.src} className='categories-img' alt={categoryImages.boys.alt} />
@@ -67,9 +64,8 @@ function HeaderMobile() {
                         <h3 className="txt">Infants</h3>
                     </div>
                 </div>
-                <h1 className='catagories-header'>KIDS</h1>
+                <h1 className='categories-header'>KIDS</h1>
 
-                {/* Render product containers */}
                 <div className="container">
                     {productsData.map(product => (
                         <div className="product" key={product.id} onClick={() => handleClick(product)}>
@@ -79,6 +75,8 @@ function HeaderMobile() {
                         </div>
                     ))}
                 </div>
+
+                {clickedProduct && <ProductDetails product={clickedProduct} />}
             </div>
         </>
     );
