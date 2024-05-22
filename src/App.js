@@ -9,7 +9,7 @@ import ProductDetails from './vinculo/jsfiles/productdetails';
 
 //import CartPage from './vinculo/jsfiles/cart';
 // import Footer from './vinculo/jsfiles/footerDesktop';
- import CartPage from './vinculo/jsfiles/cart';
+ //import CartPage from './vinculo/jsfiles/cart';
 //  import Footer from './vinculo/jsfiles/footerDesktop';
 // import Home from './vinculo/jsfiles/homepageDesktop';
 // import ProductDetails from './vinculo/jsfiles/productdetails';
@@ -17,7 +17,7 @@ import ProductDetails from './vinculo/jsfiles/productdetails';
 //import Offer from './vinculo/jsfiles/offer';
 
 import OrderConfirmation from './vinculo/jsfiles/orderConfirmationPage';
-import ProductDetails from './vinculo/jsfiles/productdetails';
+//import ProductDetails from './vinculo/jsfiles/productdetails';
 //import Login from './Login';
 import Infantgirls from './vinculo/jsfiles/infantgirls';
 // import Wishlist from './vinculo/jsfiles/wishlist';
@@ -38,6 +38,7 @@ import HeaderMobile from "./vinculo/mobilehome/headerMobile";
 //import Brandnameheader from './vinculo/jsfiles/brandnameheader';
 //import AddressForm from './vinculo/jsfiles/AddressForm';
 import { BrowserRouter ,Routes,Route} from 'react-router-dom';
+import CartPage from './vinculo/jsfiles/cart';
 
 function App() {
   return (
@@ -61,7 +62,7 @@ function App() {
     </Router>*/}
  {/* <HeaderMobile/> */}
 
-
+    
     
      {/* <Wishlist />  */}
   
@@ -80,9 +81,10 @@ function App() {
        {/*<Faq /> */}
       {/* <About/>*/}
        {/*<Footer/> */}
-      <ProductDetails/>
+     {/* <ProductDetails/> */}
     {/* <Faq /> */}
      {/*<Offer/> */}
+     <CartPage/>
 
 {/*<Kids/>*/}
 
@@ -96,9 +98,9 @@ function App() {
       {/* <Footer/> */}
       {/* <Header/>*/}
       {/*<CartPage/> */}
-      {/* <OrderConfirmation/>  */}
+      <OrderConfirmation/>  
        
-      <ProductDetails/>
+      {/*<ProductDetails/> */}
 
 
 
