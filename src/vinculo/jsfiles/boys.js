@@ -22,7 +22,7 @@ const Boys = () => {
     const [clickedHearts, setClickedHearts] = useState({});
 
     useEffect(() => {
-        fetch('/products.json')
+        fetch('/boysproducts.json')
             .then(response => response.json())
             .then(data => setProducts(data));
     }, []);
