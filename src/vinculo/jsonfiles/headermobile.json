@@ -4,21 +4,21 @@
         "id": 1,
         "name": "T-shirt",
         "cname": "vinculo",
-        "price": 300,
+        "price": 400,
         "image": "boys2_shirt.jpg"
     },
     {
         "id": 2,
         "name": "T-shirt",
         "cname": "vinculo",
-        "price": 300,
+        "price": 310,
         "image": "boys1_shirt.jpg"
     },
     {
         "id": 3,
         "name": "T-shirt",
         "cname": "vinculo",
-        "price": 300,
+        "price": 320,
         "image": "boys3_shirt.jpg"
     },
     {
@@ -83,7 +83,7 @@
         "cname": "vinculo",
         "price": 300,
         "image": "BOYS-11_page-0001.jpg"
-    },
+    }
    
 
 ]
