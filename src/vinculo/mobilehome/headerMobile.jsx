@@ -9,7 +9,7 @@ import categoryImages from "../jsonfiles/categoryimg.json"
 import Header from './brandnameheader';
 import '../cssfiles/header.css';
 import '../cssfiles/navheader.css';
-import Footermobile from '../jsfiles/footerMobile';
+
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 

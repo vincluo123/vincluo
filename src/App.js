@@ -30,6 +30,7 @@ import ProductDetails from './vinculo/jsfiles/productdetails';
 import Offer from './vinculo/jsfiles/offer';
 
 import AboutUs from "./vinculo/jsfiles/about";
+import HeaderMobile from './vinculo/mobilehome/headerMobile';
 
 // import HeaderDesktop from "./vinculo/jsfiles/headerDesktop";
 function App() {
@@ -41,9 +42,8 @@ function App() {
 
   return (
 <>
-{/* <ProductDetails/> */}
-{/* <Offer/> */}
-<WishlistPage/>
+{/* <HeaderMobile/> */}
+<Header
 </>
 
   );
