@@ -3,7 +3,7 @@ import React from 'react';
 import '../cssfiles/headermobile.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { Carousel } from 'react-bootstrap'; // Import Carousel component from react-bootstrap
-import Navbar from './searchheader';
+
 import Header from './brandnameheader';
 import '../cssfiles/header.css';
 import '../cssfiles/navheader.css';
@@ -103,7 +103,7 @@ function HeaderMobile() {
     ];
     return (
         <>
-        <Navbar/>
+      
       
         <div className="App">
             <Header/>
