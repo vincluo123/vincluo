@@ -36,11 +36,11 @@
 //import Brandnameheader from './vinculo/jsfiles/brandnameheader';
 //import AddressForm from './vinculo/jsfiles/AddressForm';
 //import { BrowserRouter ,Routes,Route} from 'react-router-dom';
-import Smallgirls from "./vinculo/jsfiles/Smallgirls";
+import Smallboys from "./vinculo/jsfiles/Smallgirls";
 function App() {
   return (
     <>
-    <Smallgirls/>
+    <Smallboys/>
     </>
   );
 }
