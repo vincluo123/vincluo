@@ -74,7 +74,7 @@ function App() {
 
       {/* <Login /> */}
 
-      {/* <Home /> */}
+      <Home />
 
       {/* <RegistrationPage /> */}
 

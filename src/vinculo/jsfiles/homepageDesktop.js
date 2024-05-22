@@ -1,148 +1,48 @@
 // App.js
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../cssfiles/homepageDesktop.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { Carousel } from 'react-bootstrap'; // Import Carousel component from react-bootstrap
+import imageData from '../jsonfiles/homedesktop.json';
 
 function Home() {
 
-    const products = [
-        {
-            id: 1,
-            name: "T-SHIRT",
-            price:  250.00,
-            image: "./assets/tshirt4.avif"
-        },
-        {
-            id: 2,
-            name: "T-SHIRT",
-            price:  250.00,
-            image: "./assets/tshirt9.jpg"
-        },
-        {
-            id: 3,
-            name: "T-SHIRT",
-            price:  250.00,
-            image: "./assets/tshirt6.jpg"
-        },
-        {
-            id: 4,
-            name: "T-SHIRT",
-            price:  250.00,
-            image: "./assets/tshirt7.jpg"
-        }
-    ];
+    const [carouselImages, setCarouselImages] = useState([]);
+    const [newArrivals, setNewArrivals] = useState([]);
+    const [topSellings, setTopSellings] = useState([]);
+    const [kids, setKids] = useState([]);
 
-    const products1 = [
-        {
-            id: 5,
-            name: "T-SHIRT",
-            price:  250.00,
-            image: "./assets/tshirt8.jpg"
-        },
-        {
-            id: 6,
-            name: "T-SHIRT",
-            price:  250.00,
-            image: "./assets/tshirt12.avif"
-        },
-        {
-            id: 7,
-            name: "T-SHIRT",
-            price:  250.00,
-            image: "./assets/tshirt10.jpg"
-        },
-        {
-            id: 8,
-            name: "T-SHIRT",
-            price:  250.00,
-            image: "./assets/tshirt11.jpg"
-        }
-    ];
-    const products2 = [
-        {
-            id: 5,
-            name: "T-SHIRT",
-            price:  250.00,
-            image: "./assets/tshirt6.jpg"
-        },
-        {
-            id: 6,
-            name: "T-SHIRT",
-            price:  250.00,
-            image: "./assets/tshirt12.avif"
-        },
-        {
-            id: 7,
-            name: "T-SHIRT",
-            price:  250.00,
-            image: "./assets/tshirt10.jpg"
-        },
-        {
-            id: 8,
-            name: "T-SHIRT",
-            price:  250.00,
-            image: "./assets/tshirt11.jpg"
-        }
-    ]
+    useEffect(() => {
+        setCarouselImages(imageData.carouselImages);
+        setNewArrivals(imageData.newArrivals);
+        setTopSellings(imageData.topSellings);
+        setKids(imageData.kids);
+    }, []);
         
-        
-    
     return (
         <div className='container'>
             <div className='row'>
                 <div className="App">
+                    {/* Carousel Component */}
                     <div className='carouseldiv'>
-                    <Carousel>
-                <Carousel.Item>
-                    <img
-                        className="carousel"
-                        src="slide 11.gif"
-                        alt="First slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="carousel "
-                        src="slide 12.gif"
-                        alt="Second slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="carousel"
-                        src="slide 11.gif"
-                        alt="Third slide"
-                    />
-                </Carousel.Item>
-            </Carousel>
-            </div>
-                    {/* <div className="container">
-                        <h1 className='catagories-header'>Categories</h1>
-                        <div className="circle-container card-container d-flex flex-row">
-                            <div className="circle">
-                                <img src="./assets/tshirt1.avif" alt="Category 1" />
-                                <p>T-shirts</p>
-                            </div>
-                            <div className="circle">
-                                <img src="./assets/tshiet2.avif" alt="Category 2" />
-                                <p>T-shirts</p>
-                            </div>
-                            <div className="circle">
-                                <img src="./assets/tshirt3.avif" alt="Category 3" />
-                                <p>T-shirts</p>
-                            </div>
-                            <div className="circle">
-                                <img src="./assets/tshirt4.avif" alt="Category 4" />
-                                <p>T-shirts</p>
-                            </div>
-                        </div>
-                    </div> */}
+                        <Carousel>
+                            {carouselImages.map(image => (
+                                <Carousel.Item key={image.id}>
+                                    <img
+                                        className="carousel"
+                                        src={image.src}
+                                        alt={image.alt}
+                                    />
+                                </Carousel.Item>
+                            ))}
+                        </Carousel>
+                    </div>
 
+                    {/* New Arrivals Section */}
                     <div className="new-arrival-container">
-                        <h1 className='new-arrival'>New Arrivals</h1><br></br>
+                        <h1 className='new-arrival'>New Arrivals</h1><br />
                         <div className="container container-row">
-                            {products.map(product => (
+                            {newArrivals.map(product => (
                                 <div className="product" key={product.id}>
                                     <img src={product.image} alt={product.name} />
                                     <h3>{product.name}</h3>
@@ -152,30 +52,29 @@ function Home() {
                             ))}
                         </div>
                     </div>
-                    <hr></hr>
-                    <br></br>
-                    
+                    <div className='hypercode'><hr /></div><br />
+
+                    {/* Top Sellings Section */}
                     <div className="new-arrival-container">
-                        <h1 className='new-arrival'>Top Sellings</h1><br></br>
+                        <h1 className='new-arrival'>Top Sellings</h1><br />
                         <div className="container container-row">
-                            {products1.map(product => (
+                            {topSellings.map(product => (
                                 <div className="product" key={product.id}>
                                     <img src={product.image} alt={product.name} />
                                     <h3>{product.name}</h3>
                                     <p>₹{product.price.toFixed(2)}</p>
                                     <button className="btn" id='cart-btn' style={{ backgroundColor: '#102C57' }}>Add to Cart</button>
-                                    
                                 </div>
-                                
                             ))}
                         </div>
                     </div>
-                    <hr></hr>
-                    <br></br>
+                    <div className='hypercode'><hr /></div><br />
+
+                    {/* Kids Section */}
                     <div className="new-arrival-container">
-                        <h1 className='new-arrival'>Kids</h1><br></br>
+                        <h1 className='new-arrival'>Kids</h1><br />
                         <div className="container container-row">
-                            {products2.map(product => (
+                            {kids.map(product => (
                                 <div className="product" key={product.id}>
                                     <img src={product.image} alt={product.name} />
                                     <h3>{product.name}</h3>
@@ -189,8 +88,6 @@ function Home() {
             </div>
         </div>
     );
-
-
 }
 
-export default Home;
+export default Home;
