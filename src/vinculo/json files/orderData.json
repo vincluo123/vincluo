@@ -1,12 +1,65 @@
 {
-    "ordersGifUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCzrZExpuV21yLjxwqFTtezR5PCsqAZ8zcSsApuNeKyg&s",
-    "orderSummaryData": [
-      { "id": 1, "name": "Product 1", "quantity": 2, "price": 25.00, "image": "boys1_shirt.jpg" },
-      { "id": 2, "name": "Product 2", "quantity": 1, "price": 50.00, "image": "boys2_shirt.jpg" }
-    ],
-    "recommendedProductsData": [
-      { "id": 101, "name": "sample 1", "price": 30.00, "image": "BOYS-4_page-0001.jpg" },
-      { "id": 102, "name": "sample 2", "price": 35.00, "image": "boys3_shirt.jpg" }
-    ]
-  }
-  
+  "ordersGifUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCzrZExpuV21yLjxwqFTtezR5PCsqAZ8zcSsApuNeKyg&s",
+  "orderSummaryData": [
+    { 
+      "id": 1, 
+      "name": "Product 1", 
+      "brandname": "Brand A",
+      "quantity": 2, 
+      "price": 25.00, 
+      "imagefront": "boys1_shirt.jpg",
+      "imageback": "boys1_shirt.jpg",
+      "color": "Blue",
+      "Size": "M",
+      "necktype": "Round",
+      "fit": "Regular",
+      "sleevetype": "Short Sleeve",
+      "Productdescription": "A comfortable blue shirt for boys."
+    },
+    { 
+      "id": 2, 
+      "name": "Product 2", 
+      "brandname": "Brand B",
+      "quantity": 1, 
+      "price": 50.00, 
+      "imagefront": "boys2_shirt.jpg",
+      "imageback": "boys2_shirt.jpg",
+      "color": "Red",
+      "Size": "L",
+      "necktype": "V-Neck",
+      "fit": "Slim",
+      "sleevetype": "Long Sleeve",
+      "Productdescription": "A stylish red shirt for boys."
+    }
+  ],
+  "recommendedProductsData": [
+    { 
+      "id": 101, 
+      "name": "Sample 1", 
+      "brandname": "Brand C",
+      "price": 30.00, 
+      "imagefront": "BOYS-4_page-0001.jpg",
+      "imageback": "BOYS-4_page-0001.jpg",
+      "color": "Green",
+      "Size": "S",
+      "necktype": "Collar",
+      "fit": "Loose",
+      "sleevetype": "Sleeveless",
+      "Productdescription": "A trendy green shirt for boys."
+    },
+    { 
+      "id": 102, 
+      "name": "Sample 2", 
+      "brandname": "Brand D",
+      "price": 35.00, 
+      "imagefront": "boys3_shirt.jpg",
+      "imageback": "boys3_shirt.jpg",
+      "color": "Yellow",
+      "Size": "XL",
+      "necktype": "Crew Neck",
+      "fit": "Regular",
+      "sleevetype": "Short Sleeve",
+      "Productdescription": "A bright yellow shirt for boys."
+    }
+  ]
+}

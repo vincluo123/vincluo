@@ -1,12 +1,53 @@
 {
-    "cartItems": [
-      { "id": 1, "name": "Product 1", "price": 10, "quantity": 1, "image": "boys1_shirt.jpg" },
-      { "id": 2, "name": "Product 2", "price": 15, "quantity": 1, "image": "boys2_shirt.jpg" },
-      { "id": 3, "name": "Product 3", "price": 20, "quantity": 1, "image": "BOYS-4_page-0001.jpg" }
-    ],
-    "buyLaterItems": [],
-    "shippingInfo": {},
-    "couponCode": "",
-    "paymentMethod": ""
-  }
-  
+  "cartItems": [
+    { 
+      "id": 1, 
+      "name": "Product 1", 
+      "brandname": "Brand A",
+      "price": 10, 
+      "imagefront": "boys1_shirt.jpg", 
+      "imageback": "boys1_shirt_back.jpg",
+      "color": "Blue",
+      "Size": "M",
+      "necktype": "Round",
+      "fit": "Regular",
+      "sleevetype": "Short Sleeve",
+      "Productdescription": "A comfortable blue shirt for boys.",
+      "quantity": 1
+    },
+    { 
+      "id": 2, 
+      "name": "Product 2", 
+      "brandname": "Brand B",
+      "price": 15, 
+      "imagefront": "boys2_shirt.jpg", 
+      "imageback": "boys2_shirt_back.jpg",
+      "color": "Red",
+      "Size": "L",
+      "necktype": "V-Neck",
+      "fit": "Slim",
+      "sleevetype": "Long Sleeve",
+      "Productdescription": "A stylish red shirt for boys.",
+      "quantity": 1
+    },
+    { 
+      "id": 3, 
+      "name": "Product 3", 
+      "brandname": "Brand C",
+      "price": 20, 
+      "imagefront": "BOYS-4_page-0001.jpg", 
+      "imageback": "BOYS-4_page-0001_back.jpg",
+      "color": "Green",
+      "Size": "S",
+      "necktype": "Collar",
+      "fit": "Loose",
+      "sleevetype": "Sleeveless",
+      "Productdescription": "A trendy green shirt for boys.",
+      "quantity": 1
+    }
+  ],
+  "buyLaterItems": [],
+  "shippingInfo": {},
+  "couponCode": "",
+  "paymentMethod": ""
+}
