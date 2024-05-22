@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { FaHeart, FaShoppingBag } from 'react-icons/fa';
 import '../cssfiles/header.css';
