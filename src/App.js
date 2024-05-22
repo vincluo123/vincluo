@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import './App.css';
 import Header from './vinculo/jsfiles/headerDesktop';
@@ -11,7 +10,6 @@ import OrderConfirmation from './vinculo/jsfiles/orderConfirmationPage';
 // import Infantgirls from './vinculo/jsfiles/infantgirls';
 
 import Faq from './vinculo/jsfiles/faq';
-import WishlistPage from './vinculo/jsfiles/wishlist';
 
 //import Faq from './vinculo/jsfiles/faq';
 //import AboutUs from "./vinculo/jsfiles/about";
@@ -30,11 +28,6 @@ import Account from './vinculo/Authentication/AccountPage';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import ProductDetails from './vinculo/jsfiles/productdetails';
 import Offer from './vinculo/jsfiles/offer';
-=======
-//import NotificationPage from "./vinculo/jsfiles/Notification";
-//import Faq from "./vinculo/jsfiles/faq";
-// import Header from './vinculo/mobilehome/headerMobile';
->>>>>>> 4a4e526a6e1397da44dd70fd822a878b131b103d
 
 import AboutUs from "./vinculo/jsfiles/about";
 
@@ -47,19 +40,12 @@ function App() {
   };
 
   return (
-<<<<<<< HEAD
 <>
 {/* <ProductDetails/> */}
 {/* <Offer/> */}
 <WishlistPage/>
 </>
 
-=======
-    <>
-      <AboutUs/>
-    
-    </>
->>>>>>> 4a4e526a6e1397da44dd70fd822a878b131b103d
   );
 }
 
