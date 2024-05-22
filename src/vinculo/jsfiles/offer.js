@@ -8,7 +8,70 @@ import offer from '../jsonfiles/offer.json'; // Import the JSON file
 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 
 function Offer() {
+<<<<<<< HEAD
     const { boysProducts, girlsProducts, kidsProducts } = offer;
+=======
+    const products = [
+        {
+            id: 1,
+            name: "T-shirt",
+            cname: "combo of 3",
+            price: 999,
+            image: "boys2_shirt.jpg"
+        },
+        {
+            id: 2,
+            name: "T-shirt",
+            cname: "combo of 2",
+            price: 689,
+            image: "boys1_shirt.jpg"
+        },
+        {
+            id: 3,
+            name: "T-shirt",
+            cname:"pack of 3",
+            price: 759,
+            image: "boys3_shirt.jpg"
+        },
+        {
+            id: 4,
+            name: "T-shirt",
+            cname:"combo of 4",
+            price: 899,
+            image: "BOYS-4_page-0001.jpg"
+        },
+        {
+            id: 5,
+            name: "T-shirt",
+            cname:"combo of 2",
+            price: 500,
+            image: "BOYS-5_page-0001.jpg"
+        },
+        {
+            id: 6,
+            name: "T-shirt",
+            cname:"combo of 5",
+            price: 1200,
+            image: "BOYS-6_page-0001.jpg"
+        },
+        {
+            id: 7,
+            name: "T-shirt",
+            cname:"pack of 3",
+            price:600,
+            image: "BOYS-7_page-0001.jpg"
+        },
+        {
+            id: 8,
+            name: "T-shirt",
+            cname:"pack of 6",
+            price: 1000,
+            image: "BOYS-8_page-0001.jpg"
+        },
+   
+
+    ];
+>>>>>>> f77c981a42c1912c6239d31a1d4e6efbd7284bf8
 
     return (
         <div className="App">
@@ -20,35 +83,53 @@ function Offer() {
                 <h2>Exclusive Offer!</h2>
                 <p>Get flat 30% off on all kids' clothing. Hurry, limited time offer!</p>
             </div>
+            
             <Carousel>
+                {/* Carousel items */}
                 <Carousel.Item>
                     <img
-                        className="carousel"
-                        src="slide 11.gif"
+                        className="d-block w-100"
+                        src="carousel1.webp"
                         alt="First slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="carousel "
-                        src="slide 12.gif"
+                        className="d-block w-100"
+                        src="carousel2.webp"
                         alt="Second slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="carousel"
-                        src="slide 11.gif"
-                        alt="Third slide"
+                        className="d-block w-100"
+                        src="carousel3.webp"
+                        alt="Second slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
+<<<<<<< HEAD
                         className="carousel"
                         src="assets/car1.jpg"
                         alt="First slide"
                     />
                 </Carousel.Item>
+=======
+                        className="d-block w-100"
+                        src="carousel1.webp"
+                        alt="Second slide"
+                    />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src="carousel2.webp"
+                        alt="Second slide"
+                    />
+                </Carousel.Item>
+                {/* Add more Carousel items as needed */}
+>>>>>>> f77c981a42c1912c6239d31a1d4e6efbd7284bf8
             </Carousel>
 
             {/* Categories */}
@@ -66,6 +147,7 @@ function Offer() {
                             <h6>{product.cname}</h6>
                             <p>${product.price.toFixed(2)}</p>
                         </div>
+<<<<<<< HEAD
                         <button className="btn" style={{ backgroundColor: '#D4AF37' }}>Add to Cart</button>
                     </div>
                 ))}
@@ -95,6 +177,9 @@ function Offer() {
                             <p>${product.price.toFixed(2)}</p>
                         </div>
                         <button className="btn" style={{ backgroundColor: '#D4AF37' }}>Add to Cart</button>
+=======
+                        <button className="btn" style={{ backgroundColor: 'blue' }}>Add to Cart</button>
+>>>>>>> f77c981a42c1912c6239d31a1d4e6efbd7284bf8
                     </div>
                 ))}
             </div>

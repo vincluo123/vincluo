@@ -43,7 +43,7 @@ function App() {
   return (
 <>
 {/* <HeaderMobile/> */}
-<Header
+
 </>
 
   );

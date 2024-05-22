@@ -3,9 +3,11 @@
     justify-content: space-between;
     align-items: center;
     background-color: #ffffff;
-    padding:6px;
+    padding: 20px;
     box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1); 
-    
+    position: sticky;
+    top: 0;
+    width: 100%;
   }
   
   .logo img {
@@ -25,6 +27,7 @@
     margin-left: 10px; /* Adjust the margin as needed */
     color: #000000;
     margin-right: 10px;
+<<<<<<< HEAD
   }
   .search{
     margin-left:3px;
@@ -38,4 +41,6 @@
     .header{
       display: none;
     }
+=======
+>>>>>>> f77c981a42c1912c6239d31a1d4e6efbd7284bf8
   }

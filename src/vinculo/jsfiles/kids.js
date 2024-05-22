@@ -6,10 +6,24 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { Carousel } from 'react-bootstrap'; // Import Carousel component from react-bootstrap
 import '../jsfiles/footerDesktop.js';
 import '../cssfiles/footerDesktop.css';
+
+import { FaHeart } from 'react-icons/fa';
+import { useState } from 'react';
 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 
 function Kids() {
-    const products = [
+    const [clickedHearts, setClickedHearts] = useState({}); // State to track clicked hearts
+
+    const handleClick = (productId) => {
+        setClickedHearts(prevState => ({
+            ...prevState,
+            [productId]: !prevState[productId] // Toggle the clicked state for the product
+        }));
+
+        console.log(productId);
+
+    };
+const products = [
         {
             id: 1,
             name: "T-shirt",
@@ -67,33 +81,34 @@ function Kids() {
             image: "BOYS-8_page-0001.jpg"
         },
         {
-            id: 8,
+            id: 9,
             name: "T-shirt",
             cname: "vinculo",
             price: 12.99,
             image: "BOYS-12_page-0001.jpg"
         },
         {
-            id: 8,
+            id: 10,
             name: "T-shirt",
             cname: "vinculo",
             price: 300,
             image: "BOYS-9_page-0001.jpg"
         },
         {
-            id: 8,
+            id: 11,
             name: "T-shirt",
             cname: "vinculo",
             price: 300,
             image: "BOYS-10_page-0001.jpg"
         },
         {
-            id: 8,
+            id: 12,
             name: "T-shirt",
             cname: "vinculo",
             price: 300,
             image: "BOYS-11_page-0001.jpg"
         },
+        
 
 
     ];
@@ -120,7 +135,7 @@ function Kids() {
                 <Carousel.Item>
                     <img
                         className="carousel"
-                        src="carousel3.webp"
+                        src="slide 11.gif"
                         alt="Third slide"
                     />
                 </Carousel.Item>
@@ -151,6 +166,7 @@ function Kids() {
 
 
 
+<<<<<<< HEAD
             <div className="new-arrival-container">
 
                 <div className="container container-row">
@@ -163,12 +179,16 @@ function Kids() {
                         </div>
                     ))}
                 </div>
+=======
+>>>>>>> f77c981a42c1912c6239d31a1d4e6efbd7284bf8
 
+            <div className="container1">
                 {products.map(product => (
                     <div className="product" key={product.id}>
                         <img src={product.image} alt={product.name} />
                         <h3>{product.name}</h3>
                         <h6>{product.cname}</h6>
+<<<<<<< HEAD
                         <p>${product.price.toFixed(2)}</p>
 <<<<<<< HEAD
                         <button className="btn-cart" >Add to Cart</button>
@@ -179,6 +199,16 @@ function Kids() {
                         <button className="btn-cart" >Add to Cart</button>
 
 >>>>>>> 1e62644ae847bb524294e1e563c71315ef9db2c8
+=======
+                        <p>₹{product.price.toFixed(2)}</p>
+
+                        <button className="btn-cart" onClick={() => handleClick(product.id)}>
+                            <span>Add to Cart</span>
+                            <span style={{ marginLeft: '5px' }}>
+                                <FaHeart color={clickedHearts[product.id] ? 'red' : 'black'} />
+                            </span>
+                        </button>
+>>>>>>> f77c981a42c1912c6239d31a1d4e6efbd7284bf8
                     </div>
                 ))}
             </div>
@@ -186,7 +216,10 @@ function Kids() {
 
     );
 
-
 }
 
+
 export default Kids;
+
+
+
