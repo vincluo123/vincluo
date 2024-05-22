@@ -8,7 +8,7 @@ import Header from './vinculo/jsfiles/headerDesktop';
 
 // import Login from "./vinculo/Authentication/Login";
 
-// import HeaderMobile from "./vinculo/mobilehome/headerMobile";
+import HeaderMobile from "./vinculo/mobilehome/headerMobile";
 
 // import CartPage from './vinculo/jsfiles/cart';
 
@@ -42,20 +42,23 @@ import Footer from './vinculo/jsfiles/footerDesktop';
 //import Brandnameheader from './vinculo/jsfiles/brandnameheader';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Footermobile from './vinculo/jsfiles/footerMobile';
 
 
 
 function App() {
   return (
     <>
-      <Router>
+      
         <Header/>
 
 
         <Home />
         <Footer/>
 
-        
+        <HeaderMobile/>
+        <Footermobile/>
+        <Router>
 
 
 
