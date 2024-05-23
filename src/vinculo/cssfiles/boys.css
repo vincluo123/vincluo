@@ -106,3 +106,23 @@ body {
         max-width: 20%;
     }
 }
+.boys-container {
+    display: flex;
+}
+
+.sidebar {
+    width: 20%;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+}
+
+.filter-section {
+    margin-bottom: 20px;
+}
+
+.product-list-container {
+    width: 80%;
+    padding: 20px;
+}
+
+
