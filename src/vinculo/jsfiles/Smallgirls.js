@@ -1,21 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../cssfiles/Smallgirls.css';
 import { FaHeart } from 'react-icons/fa';
-// Sample data for products
-const products = [
-    { id: 1, name: "T-Shirt 1", price: 19.99, size: "M", color: "Red", image: "BOYS-4_page-0001.jpg", fit: "Regular", neck: "Round", sleeve: "Short" },
-    { id: 2, name: "T-Shirt 2", price: 12.99, size: "L", color: "Blue", image: "BOYS-5_page-0001.jpg", fit: "Slim", neck: "V-Neck", sleeve: "Long" },
-    { id: 3, name: "T-Shirt 3", price: 50.99, size: "XL", color: "Black", image: "BOYS-6_page-0001.jpg", fit: "Regular", neck: "Round", sleeve: "Short" },
-    { id: 4, name: "T-Shirt 4", price: 19.99, size: "XL", color: "Black", image: "BOYS-7_page-0001.jpg", fit: "Regular", neck: "Round", sleeve: "Short" },
-    { id: 5, name: "T-Shirt 5", price: 19.99, size: "XL", color: "Black", image: "BOYS-8_page-0001.jpg", fit: "Slim", neck: "Round", sleeve: "Short" },
-    { id: 6, name: "T-Shirt 6", price: 19.99, size: "XL", color: "Black", image: "BOYS-9_page-0001.jpg", fit: "Regular", neck: "Round", sleeve: "Long" },
-    { id: 7, name: "T-Shirt 7", price: 19.99, size: "XL", color: "Black", image: "BOYS-10_page-0001.jpg", fit: "Regular", neck: "V-Neck", sleeve: "Long" },
-    { id: 8, name: "T-Shirt 8", price: 19.99, size: "XL", color: "Black", image: "BOYS-11_page-0001.jpg", fit: "Slim", neck: "V-Neck", sleeve: "Short" },
-    { id: 9, name: "T-Shirt 9", price: 19.99, size: "XL", color: "Black", image: "BOYS-10_page-0001.jpg", fit: "Regular", neck: "Round", sleeve: "Short" },
-    { id: 10, name: "T-Shirt 10", price: 19.99, size: "XL", color: "Black", image: "BOYS-11_page-0001.jpg", fit: "Regular", neck: "Round", sleeve: "Short" },
-];
+import products from '../jsonfiles/Smallgirls.json';
 
-// Sample filter options
 const sizes = ['S', 'M', 'L', 'XL'];
 const colors = ['Red', 'Blue', 'Green', 'Black'];
 const costRanges = ['0-20', '21-40', '41-60'];
@@ -33,6 +21,9 @@ const Smallgirls = () => {
         neck: [],
     });
 
+    const [wishlist, setWishlist] = useState([]);
+    const navigate = useNavigate();
+
     const handleFilterChange = (filterType, value) => {
         setFilters(prevFilters => {
             const currentFilter = prevFilters[filterType];
@@ -46,28 +37,41 @@ const Smallgirls = () => {
     const filterProducts = () => {
         return products.filter(product => {
             return (
-                (filters.size.length === 0 || filters.size.includes(product.size)) &&
+                (filters.size.length === 0 || filters.size.includes(product.Size)) &&
                 (filters.color.length === 0 || filters.color.includes(product.color)) &&
                 (filters.cost.length === 0 || filters.cost.some(range => {
                     const [min, max] = range.split('-').map(Number);
-                    return product.cost >= min && product.cost <= max;
+                    return product.price >= min && product.price <= max;
                 })) &&
-                (filters.sleeve.length === 0 || filters.sleeve.includes(product.sleeve)) &&
+                (filters.sleeve.length === 0 || filters.sleeve.includes(product.sleevetype)) &&
                 (filters.fit.length === 0 || filters.fit.includes(product.fit)) &&
-                (filters.neck.length === 0 || filters.neck.includes(product.neck))
+                (filters.neck.length === 0 || filters.neck.includes(product.necktype))
             );
         });
     };
+
     const [clickedHearts, setClickedHearts] = useState({});
 
-    const handleClick = (productId) => {
+    const handleClick = (product) => {
+        navigate('/viewdetails', { state: { product } });
+    };
+
+    const handleWishlistClick = (product, e) => {
+        e.stopPropagation();
         setClickedHearts(prevState => ({
             ...prevState,
-            [productId]: !prevState[productId]
+            [product.id]: !prevState[product.id]
         }));
 
-        console.log(productId);
+        if (!clickedHearts[product.id]) {
+            setWishlist(prevWishlist => [...prevWishlist, product]);
+        } else {
+            setWishlist(prevWishlist => prevWishlist.filter(item => item.id !== product.id));
+        }
+
+        navigate('/wishlist', { state: { wishlist: [...wishlist, product] } });
     };
+
     return (
         <div className="Girls-container">
             <div className="sidebar">
@@ -156,17 +160,16 @@ const Smallgirls = () => {
                 {[0, 1].map(rowIndex => (
                     <div className="product-list" key={rowIndex}>
                         {filterProducts().slice(rowIndex * 5, (rowIndex + 1) * 5).map(product => (
-                            <div className="product-card" key={product.id}>
+                            <div className="product-card" key={product.id} onClick={() => handleClick(product)}>
                                 <img src={product.image} alt={product.name} />
                                 <h4>{product.name}</h4>
                                 <h6>{product.price}</h6>
-                                <button className="btn-heart" onClick={() => handleClick(product.id)}>
+                                <button className="btn-heart" onClick={(e) => handleWishlistClick(product, e)}>
                                     <span>
                                         <FaHeart color={clickedHearts[product.id] ? 'red' : 'gray'} />
                                     </span>
                                 </button>
                             </div>
-
                         ))}
                     </div>
                 ))}
