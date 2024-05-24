@@ -3,18 +3,29 @@ import { FaUser, FaShoppingCart, FaHeart, FaPhone } from 'react-icons/fa';
 import '../cssfiles/headerDesktop.css';
 import {Link} from 'react-router-dom'
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5dfa9a1909f58ba1341273d05f02ede6179160ac
 const Header = () => {
   return (
     <header className="header">
       <div className="logo">
+<<<<<<< HEAD
         <img src="vinculo.png" alt="Logo of the website" />
+=======
+        <img src="Hilsa.png" alt="Logo" />
+>>>>>>> 5dfa9a1909f58ba1341273d05f02ede6179160ac
       </div>
 
       <nav className="navbar">
         <ul className="nav-menu">
           <li className="nav-item">
+<<<<<<< HEAD
             <Link path="/boys">New Arrivals</Link>
+=======
+            <a href="/new-arrivals">New Arrivals</a>
+>>>>>>> 5dfa9a1909f58ba1341273d05f02ede6179160ac
           </li>
           <li className="nav-item dropdown">
             <a href="#">Infant</a>
@@ -32,9 +43,12 @@ const Header = () => {
               <li><a href="#">Submenu 3</a></li>
             </ul>
           </li>
-          {/* Dropdown for Shop */}
           <li className="nav-item dropdown">
+<<<<<<< HEAD
             <Link path="/boys">Boys</Link>
+=======
+            <a href="#">Boys</a>
+>>>>>>> 5dfa9a1909f58ba1341273d05f02ede6179160ac
             <ul className="dropdown-menu">
               <li><a href="#">Category 1</a></li>
               <li><a href="#">Category 2</a></li>
@@ -42,7 +56,7 @@ const Header = () => {
             </ul>
           </li>
           <li className="nav-item">
-            <a href="/contact">Deals</a>
+            <a href="/deals">Deals</a>
           </li>
         </ul>
       </nav>
@@ -54,7 +68,7 @@ const Header = () => {
 
       <div className="icons">
         <div className="icon">
-          <a href="/cart">
+          <a href="/favorites">
             <FaHeart />
           </a>
         </div>
@@ -63,14 +77,18 @@ const Header = () => {
             <FaShoppingCart />
           </a>
         </div>
-      
+        <div className="icon">
+          <a href="/contact">
+            <FaPhone />
+          </a>
+        </div>
         <div className="icon dropdown">
-          <a href="/cart">
+          <a href="/profile" className="dropdown-toggle">
             <FaUser />
           </a>
           <ul className="dropdown-menu">
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Register</a></li>
+            <li><a href="/login" className="dropdown-item">Login</a></li>
+            <li><a href="/register" className="dropdown-item">Register</a></li>
           </ul>
         </div>
       </div>
