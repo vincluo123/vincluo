@@ -1,91 +1,31 @@
-//import './App.css';
-// import Header from './vinculo/jsfiles/headerDesktop';
-
-// import CartPage from './vinculo/jsfiles/cart';
-
-// import Home from './vinculo/jsfiles/homepageDesktop';
-// import ProductDetails from './vinculo/jsfiles/productdetails';
-
-
-//import CartPage from './vinculo/jsfiles/cart';
-// import Footer from './vinculo/jsfiles/footerDesktop';
-// import CartPage from './vinculo/jsfiles/cart';
-//  import Footer from './vinculo/jsfiles/footerDesktop';
-// import Home from './vinculo/jsfiles/homepageDesktop';
-// import ProductDetails from './vinculo/jsfiles/productdetails';
-// import Kids from './vinculo/jsfiles/kids';
-/* import Offer from './vinculo/jsfiles/offer'; */
-//import Infantboys from './vinculo/jsfiles/Infantboys';
-//import OrderConfirmation from './vinculo/jsfiles/orderConfirmationPage';
-// import ProductDetails from './vinculo/jsfiles/productdetails';
-//import Login from './Login';
-import Infantgirls from './vinculo/jsfiles/infantgirls';
-// import Wishlist from './vinculo/jsfiles/wishlist';
-// import Faq from './vinculo/jsfiles/faq';
-
-//import Wishlist from './vinculo/jsfiles/wishlist';
-//import Faq from './vinculo/jsfiles/faq';
-//import AboutUs from "./vinculo/jsfiles/about";
-
-//import HeaderMobile from "./vinculo/jsfiles/headerMobile";
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Smallboys from './vinculo/jsfiles/Smallboys';
+import ViewDetails from './vinculo/jsfiles/viewdetails';
+import Header from './vinculo/jsfiles/headerDesktop';
+import Home from './vinculo/jsfiles/homepageDesktop';
 import Footer from './vinculo/jsfiles/footerDesktop';
-
-//import Brandnameheader from './vinculo/jsfiles/brandnameheader';
-
-
-
+import Smallgirls from './vinculo/jsfiles/Smallgirls';
+import WishlistPage from './vinculo/jsfiles/wishlist';
 
 
 function App() {
   return (
     <>
+   {/* <Header/>
+   <Home/>
+   <Footer/> */}
+   
 
-
-
-      {/* <Wishlist />  */}
-
-      {/* <Footer/> */}
-
-      {/*<CartPage/> */}
-
-      {/*<Faq /> */}
-      {/* <About/>*/}
-      {/*<Wishlist /> */}
-
-      {/* <AboutUs/> */}
-      {/* <Wishlist />  */}
-      {/*<Faq /> */}
-      {/* <About/>*/}
-      {/* <Footer/> */}
-      {/* <ProductDetails/> */}
-      {/* <Faq /> */}
-      {/*  <Offer/>  */}
-      <Infantgirls />
-      {/* <Kids/> */}
-
-
-
-
-
-
-      {/* <Header/>*/}
-
-
-      {/* <Footer/> */}
-      {/* <Header/>
-      <CartPage/> */}
-      {/* <OrderConfirmation/>  */}
-
-      {/* <ProductDetails/> */}
-
-
-
-
-
-      {/* <AccountPage/> */}
-      {/*<HeaderMobile /> */}
-      {/*<OrderConfirmation /> */}
-      <Footer />
+    <Router>
+      <Routes>
+        {/* <Route path="/" element={<Smallboys />} /> */}
+        <Route path="/" element={<Smallgirls />} />
+        <Route path="/viewdetails" element={<ViewDetails />} />
+        <Route path="/wishlist" element={<WishlistPage />} />
+      </Routes>
+    </Router>
     </>
   );
 }
