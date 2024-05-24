@@ -7,13 +7,13 @@ const Header = () => {
   return (
     <header className="header">
       <div className="logo">
-        <img src="vinculo.png" alt="Logo of the website" />
+        <img src="./assets/Hilsa.png" alt="Logo" />
       </div>
 
       <nav className="navbar">
         <ul className="nav-menu">
           <li className="nav-item">
-            <Link path="/boys">New Arrivals</Link>
+            <a href="/new-arrivals">New Arrivals</a>
           </li>
           <li className="nav-item dropdown">
             <a href="#">Infant</a>
@@ -32,7 +32,7 @@ const Header = () => {
             </ul>
           </li>
           <li className="nav-item dropdown">
-            <Link path="/boys">Boys</Link>
+            <a href="#">Boys</a>
             <ul className="dropdown-menu">
               <li><a href="#">Category 1</a></li>
               <li><a href="#">Category 2</a></li>

@@ -85,4 +85,4 @@ const AddressPage = () => {
   );
 };
 
-export default AddressPage;
+export default AddressForm;

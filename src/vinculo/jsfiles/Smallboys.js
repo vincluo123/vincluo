@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../cssfiles/boys.css';
+import '../cssfiles/Smallboys.css';
 import { FaHeart } from 'react-icons/fa';
-import products from '../jsonfiles/boys.json';
+import products from '../jsonfiles/Smallboys.json';
 
 const sizes = ['S', 'M', 'L', 'XL'];
 const colors = ['Red', 'Blue', 'Green', 'Black'];
@@ -11,7 +11,7 @@ const sleeves = ['Short', 'Long'];
 const fits = ['Regular', 'Slim'];
 const neckTypes = ['Round', 'V-Neck'];
 
-const Boys = () => {
+const Smallboys = () => {
     const [filters, setFilters] = useState({
         size: [],
         color: [],
@@ -73,7 +73,7 @@ const Boys = () => {
     };
 
     return (
-        <div className="Girls-container">
+        <div className="boys-container">
             <div className="sidebar">
                 <h2>Filters</h2>
                 <div className="filter-section">
@@ -156,7 +156,7 @@ const Boys = () => {
                 </div>
             </div>
             <div className="product-list-container">
-                <h1>8-16 Boys</h1>
+                <h1>2-8 Boys</h1>
                 {[0, 1].map(rowIndex => (
                     <div className="product-list" key={rowIndex}>
                         {filterProducts().slice(rowIndex * 5, (rowIndex + 1) * 5).map(product => (
@@ -178,4 +178,4 @@ const Boys = () => {
     );
 };
 
-export default Boys;
+export default Smallboys;

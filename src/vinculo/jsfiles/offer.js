@@ -1,189 +1,77 @@
-// App.js
 import React from 'react';
 import '../cssfiles/offer.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { Carousel } from 'react-bootstrap'; // Import Carousel component from react-bootstrap
+import offer from '../jsonfiles/offer.json'; // Import the JSON file
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 
 function Offer() {
-    const boysProducts = [
+<<<<<<< HEAD
+    const { boysProducts, girlsProducts, kidsProducts } = offer;
+=======
+    const products = [
         {
             id: 1,
             name: "T-shirt",
             cname: "combo of 3",
             price: 999,
-            image: "offer/boys/combo1.jpg"
+            image: "boys2_shirt.jpg"
         },
         {
             id: 2,
             name: "T-shirt",
             cname: "combo of 2",
             price: 689,
-            image: "offer/boys/combo 2.jpeg"
+            image: "boys1_shirt.jpg"
         },
         {
             id: 3,
             name: "T-shirt",
-            cname: "pack of 3",
+            cname:"pack of 3",
             price: 759,
-            image: "offer/boys/combo 3.jpg"
+            image: "boys3_shirt.jpg"
         },
         {
             id: 4,
             name: "T-shirt",
-            cname: "combo of 4",
+            cname:"combo of 4",
             price: 899,
-            image: "offer/boys/combo5.jpg"
+            image: "BOYS-4_page-0001.jpg"
         },
         {
             id: 5,
             name: "T-shirt",
-            cname: "combo of 2",
+            cname:"combo of 2",
             price: 500,
-            image: "offer/boys/combo 2.jpeg"
+            image: "BOYS-5_page-0001.jpg"
         },
         {
             id: 6,
             name: "T-shirt",
-            cname: "combo of 3",
+            cname:"combo of 5",
             price: 1200,
-            image: "offer/boys/combo 3.jpg"
+            image: "BOYS-6_page-0001.jpg"
         },
         {
             id: 7,
             name: "T-shirt",
-            cname: "pack of 3",
-            price: 600,
-            image: "offer/boys/combo 3.jpg"
+            cname:"pack of 3",
+            price:600,
+            image: "BOYS-7_page-0001.jpg"
         },
         {
             id: 8,
             name: "T-shirt",
-            cname: "pack of 4",
+            cname:"pack of 6",
             price: 1000,
-            image: "offer/boys/combo5.jpg"
-        }
-    ];
+            image: "BOYS-8_page-0001.jpg"
+        },
+   
 
-    const girlsProducts = [
-        {
-            id: 9,
-            name: "Dress",
-            cname: "combo of 3",
-            price: 1299,
-            image: "offer/girls/combo of 3.jpeg"
-        },
-        {
-            id: 10,
-            name: "Dress",
-            cname: "combo of 2",
-            price: 899,
-            image: "offer/girls/combo of 2.jpg"
-        },
-        {
-            id: 11,
-            name: "Dress",
-            cname: "pack of 3",
-            price: 1099,
-            image: "offer/girls/combo of 3.jpeg"
-        },
-        {
-            id: 12,
-            name: "Dress",
-            cname: "combo of 4",
-            price: 1399,
-            image: "offer/girls/combo of 4.jpg"
-        },
-        {
-            id: 13,
-            name: "Dress",
-            cname: "combo of 2",
-            price: 799,
-            image: "offer/girls/combo of 2.jpg"
-        },
-        {
-            id: 14,
-            name: "Dress",
-            cname: "combo of 4",
-            price: 1599,
-            image: "offer/girls/combo of 4.jpg"
-        },
-        {
-            id: 15,
-            name: "Dress",
-            cname: "pack of 3",
-            price: 999,
-            image: "offer/girls/combo of 3.jpeg"
-        },
-        {
-            id: 16,
-            name: "Dress",
-            cname: "pack of 4",
-            price: 1999,
-            image: "offer/girls/combo of 4.jpg"
-        }
     ];
-
-    const kidsProducts = [
-        {
-            id: 17,
-            name: "Kids T-shirt",
-            cname: "combo of 3",
-            price: 799,
-            image: "offer/kids/combo of 3.jpg"
-        },
-        {
-            id: 18,
-            name: "Kids T-shirt",
-            cname: "combo of 2",
-            price: 599,
-            image: "offer/kids/combo of 2.jpeg"
-        },
-        {
-            id: 19,
-            name: "Kids T-shirt",
-            cname: "pack of 3",
-            price: 699,
-            image: "offer/kids/combo of 3.jpg"
-        },
-        {
-            id: 20,
-            name: "Kids T-shirt",
-            cname: "combo of 4",
-            price: 899,
-            image: "offer/kids/combo of 4.jpg"
-        },
-        {
-            id: 21,
-            name: "Kids T-shirt",
-            cname: "combo of 2",
-            price: 499,
-            image: "offer/kids/combo of 2.jpeg"
-        },
-        {
-            id: 22,
-            name: "Kids T-shirt",
-            cname: "combo of 4",
-            price: 1099,
-            image: "offer/kids/combo of 4.jpg"
-        },
-        {
-            id: 23,
-            name: "Kids T-shirt",
-            cname: "pack of 3",
-            price: 649,
-            image: "offer/kids/combo of 3.jpg"
-        },
-        {
-            id: 24,
-            name: "Kids T-shirt",
-            cname: "pack of 2",
-            price: 1299,
-            image: "offer/kids/combo of 2.jpeg"
-        }
-    ];
+>>>>>>> f77c981a42c1912c6239d31a1d4e6efbd7284bf8
 
     return (
         <div className="App">
@@ -195,35 +83,53 @@ function Offer() {
                 <h2>Exclusive Offer!</h2>
                 <p>Get flat 30% off on all kids' clothing. Hurry, limited time offer!</p>
             </div>
+            
             <Carousel>
+                {/* Carousel items */}
                 <Carousel.Item>
                     <img
-                        className="carousel"
-                        src="slide 11.gif"
+                        className="d-block w-100"
+                        src="carousel1.webp"
                         alt="First slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="carousel "
-                        src="slide 12.gif"
+                        className="d-block w-100"
+                        src="carousel2.webp"
                         alt="Second slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="carousel"
-                        src="slide 11.gif"
-                        alt="Third slide"
+                        className="d-block w-100"
+                        src="carousel3.webp"
+                        alt="Second slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
+<<<<<<< HEAD
                         className="carousel"
                         src="assets/car1.jpg"
                         alt="First slide"
                     />
                 </Carousel.Item>
+=======
+                        className="d-block w-100"
+                        src="carousel1.webp"
+                        alt="Second slide"
+                    />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src="carousel2.webp"
+                        alt="Second slide"
+                    />
+                </Carousel.Item>
+                {/* Add more Carousel items as needed */}
+>>>>>>> f77c981a42c1912c6239d31a1d4e6efbd7284bf8
             </Carousel>
 
             {/* Categories */}
@@ -241,6 +147,7 @@ function Offer() {
                             <h6>{product.cname}</h6>
                             <p>${product.price.toFixed(2)}</p>
                         </div>
+<<<<<<< HEAD
                         <button className="btn" style={{ backgroundColor: '#D4AF37' }}>Add to Cart</button>
                     </div>
                 ))}
@@ -270,6 +177,9 @@ function Offer() {
                             <p>${product.price.toFixed(2)}</p>
                         </div>
                         <button className="btn" style={{ backgroundColor: '#D4AF37' }}>Add to Cart</button>
+=======
+                        <button className="btn" style={{ backgroundColor: 'blue' }}>Add to Cart</button>
+>>>>>>> f77c981a42c1912c6239d31a1d4e6efbd7284bf8
                     </div>
                 ))}
             </div>

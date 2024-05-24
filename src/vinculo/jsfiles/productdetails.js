@@ -1,24 +1,36 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import '../cssfiles/productdetails.css';
-import tshirt1 from '../product images/tshirt1.jpg';
-import tshirt2 from '../product images/tshirt2.jpeg';
-import tshirt3 from '../product images/tshirt3.jpeg';
-import tshirt4 from '../product images/tshirt1.jpg';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Accordion } from 'react-bootstrap';
+import productdetails from '../jsonfiles/productdetails.json';
+
+// Importing images
+import tshirt1 from '../product images/tshirt1.jpg';
+import tshirt2 from '../product images/tshirt2.jpeg';
+import tshirt3 from '../product images/tshirt3.jpeg';
+import tshirt4 from '../product images/tshirt1.jpg';
+
+const imageMap = {
+  "tshirt1.jpg": tshirt1,
+  "tshirt2.jpeg": tshirt2,
+  "tshirt3.jpeg": tshirt3,
+  "tshirt1.jpg": tshirt4
+};
 
 const ProductDetails = () => {
+  const { product } = productdetails;
   const [selectedColor, setSelectedColor] = useState('');
   const [selectedSize, setSelectedSize] = useState('');
-  const [selectedPrice, setSelectedPrice] = useState(379);
+  const [selectedPrice, setSelectedPrice] = useState(product.price.blue);
   const [productDetailsAccordion, setProductDetailsAccordion] = useState(false);
   const [manufacturerAccordion, setManufacturerAccordion] = useState(false);
 
   const handleColorChange = (color) => {
     setSelectedColor(color);
+    setSelectedPrice(product.price[color]);
   };
 
   const handleSizeChange = (size) => {
@@ -26,25 +38,10 @@ const ProductDetails = () => {
   };
 
   const handleApply = () => {
-    switch (selectedColor) {
-      case 'blue':
-        setSelectedPrice(379);
-        break;
-      case 'red':
-        setSelectedPrice(399);
-        break;
-      case 'green':
-        setSelectedPrice(419);
-        break;
-      case 'black':
-        setSelectedPrice(449);
-        break;
-      default:
-        setSelectedPrice(379);
+    if (selectedColor) {
+      setSelectedPrice(product.price[selectedColor]);
     }
   };
-
-  const images = [tshirt1, tshirt2, tshirt3, tshirt4];
 
   const settings = {
     dots: true,
@@ -58,26 +55,26 @@ const ProductDetails = () => {
 
   const handleProductDetailsAccordion = () => {
     setProductDetailsAccordion(!productDetailsAccordion);
-    setManufacturerAccordion(false); // Close Manufacturer accordion
+    setManufacturerAccordion(false);
   };
 
   const handleManufacturerAccordion = () => {
     setManufacturerAccordion(!manufacturerAccordion);
-    setProductDetailsAccordion(false); // Close Product Details accordion
+    setProductDetailsAccordion(false);
   };
 
   return (
     <div className="product-details">
       <Helmet>
-        <title>Product Details - T-Shirt</title>
+        <title>Product Details - {product.name}</title>
         <meta name="description" content="Buy high-quality T-Shirts in various colors and sizes. Check price details, ratings, and manufacturer information." />
         <meta name="keywords" content="T-Shirt, Buy T-Shirt, T-Shirt Price, T-Shirt Ratings, T-Shirt Manufacturer, T-Shirt Colors, T-Shirt Sizes, Cotton T-Shirt, Casual Wear T-Shirt, Printed T-Shirt, Short Sleeve T-Shirt" />
       </Helmet>
       <div className="product-image-container">
         <Slider {...settings}>
-          {images.map((image, index) => (
+          {product.images.map((image, index) => (
             <div key={index}>
-              <img src={image} alt={`T-Shirt ${index + 1}`} className="product-image" />
+              <img src={imageMap[image]} alt={`T-Shirt ${index + 1}`} className="product-image" />
             </div>
           ))}
         </Slider>
@@ -90,21 +87,15 @@ const ProductDetails = () => {
               <li>
                 Special Price: <strong>₹{selectedPrice}</strong>
               </li>
-              <li>
-                Bank Offer: Get ₹25* instant discount for the 1st Flipkart Order using Flipkart UPIT&C
-              </li>
-              <li>
-                Bank Offer: 5% Cashback on Flipkart Axis Bank CardT&C
-              </li>
-              <li>
-                Bank Offer: 10% off on Citi-branded Credit Card EMI Transactions, up to ₹2,000 on orders of ₹5,000 and aboveT&C
-              </li>
+              {product.offers.map((offer, index) => (
+                <li key={index}>{offer}</li>
+              ))}
             </ul>
           </div>
           <div className="ratings">
             <h3>Ratings</h3>
             <p>
-              <span className="stars">★★★★☆</span> (2456 Reviews)
+              <span className="stars">{"★".repeat(product.ratings.stars)}{"☆".repeat(5 - product.ratings.stars)}</span> ({product.ratings.reviews} Reviews)
             </p>
           </div>
         </div>
@@ -113,18 +104,23 @@ const ProductDetails = () => {
           <ul>
             <li>
               <span className="label">Color:</span>
-              <span className={`color-box blue ${selectedColor === 'blue' ? 'active' : ''}`} onClick={() => handleColorChange('blue')}></span>
-              <span className={`color-box red ${selectedColor === 'red' ? 'active' : ''}`} onClick={() => handleColorChange('red')}></span>
-              <span className={`color-box green ${selectedColor === 'green' ? 'active' : ''}`} onClick={() => handleColorChange('green')}></span>
-              <span className={`color-box black ${selectedColor === 'black' ? 'active' : ''}`} onClick={() => handleColorChange('black')}></span>
+              {Object.keys(product.price).map((color) => (
+                <span
+                  key={color}
+                  className={`color-box ${color} ${selectedColor === color ? 'active' : ''}`}
+                  onClick={() => handleColorChange(color)}
+                ></span>
+              ))}
             </li>
             <li>
-              <span className="label">Sizes:</span> 
-              <span className={`size ${selectedSize === 'S' ? 'active' : ''}`} onClick={() => handleSizeChange('S')}>S</span>
-              <span className={`size ${selectedSize === 'M' ? 'active' : ''}`} onClick={() => handleSizeChange('M')}>M</span>
-              <span className={`size ${selectedSize === 'L' ? 'active' : ''}`} onClick={() => handleSizeChange('L')}>L</span>
-              <span className={`size ${selectedSize === 'XL' ? 'active' : ''}`} onClick={() => handleSizeChange('XL')}>XL</span>
-              <span className={`size ${selectedSize === 'XXL' ? 'active' : ''}`} onClick={() => handleSizeChange('XXL')}>XXL</span>
+              <span className="label">Sizes:</span>
+              {['S', 'M', 'L', 'XL', 'XXL'].map((size) => (
+                <span
+                  key={size}
+                  className={`size ${selectedSize === size ? 'active' : ''}`}
+                  onClick={() => handleSizeChange(size)}
+                >{size}</span>
+              ))}
             </li>
           </ul>
           <button className="apply-button" onClick={handleApply}>Apply</button>
@@ -141,42 +137,11 @@ const ProductDetails = () => {
             </Accordion.Header>
             <Accordion.Body className={`accordion-content ${productDetailsAccordion ? 'active' : ''}`}>
               <ul>
-                <li>
-                  <span className="label">Type:</span> T-Shirt
-                </li>
-                <li>
-                  <span className="label">Sleeve:</span> Short Sleeve
-                </li>
-                <li>
-                  <span className="label">Fit:</span> Regular
-                </li>
-                <li>
-                  <span className="label">Fabric:</span> 100% Cotton
-                </li>
-                <li>
-                  <span className="label">Style Code:</span> #W-101
-                </li>
-                <li>
-                  <span className="label">Neck Type:</span> Round Neck
-                </li>
-                <li>
-                  <span className="label">Ideal For:</span> Boys
-                </li>
-                <li>
-                  <span className="label">Size:</span> 8 to 16 Yrs
-                </li>
-                <li>
-                  <span className="label">Pattern:</span> Printed
-                </li>
-                <li>
-                  <span className="label">Suitable For:</span> Casual Wear
-                </li>
-                <li>
-                  <span className="label">Fabric Care:</span> Gentle Machine Wash
-                </li>
-                <li>
-                  <span className="label">Manufacturer:</span> ABC Company
-                </li>
+                {Object.entries(product.details).map(([key, value]) => (
+                  <li key={key}>
+                    <span className="label">{key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}:</span> {value}
+                  </li>
+                ))}
               </ul>
             </Accordion.Body>
           </Accordion.Item>
@@ -189,18 +154,11 @@ const ProductDetails = () => {
             </Accordion.Header>
             <Accordion.Body className={`accordion-content ${manufacturerAccordion ? 'active' : ''}`}>
               <ul>
-                <li>
-                  <span className="label">Name:</span> ABC Company
-                </li>
-                <li>
-                  <span className="label">Address:</span> 123 Manufacturer Street, City, Country
-                </li>
-                <li>
-                  <span className="label">Phone:</span> +1234567890
-                </li>
-                <li>
-                  <span className="label">Email:</span> info@abccompany.com
-                </li>
+                {Object.entries(product.manufacturer).map(([key, value]) => (
+                  <li key={key}>
+                    <span className="label">{key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}:</span> {value}
+                  </li>
+                ))}
               </ul>
             </Accordion.Body>
           </Accordion.Item>

@@ -1,21 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import '../cssfiles/wishlist.css';
 import { FaHeart, FaTrash, FaShoppingCart } from 'react-icons/fa';
 
 const WishlistPage = () => {
-  const [wishlist, setWishlist] = useState([
-    { id: 1, name: 'Cotton T-shirt (Black)', price: 20, image: 'girl1.jpg' },
-    { id: 2, name: 'Plain T-shirt (Yellow)', price: 30, image: 'girl2.jpg' },
-    { id: 3, name: 'Plain T-shirt(White)', price: 25, image: 'girl3.jpg' },
-    { id: 4, name: 'Plain T-shirt(White)', price: 25, image: 'girl4.jpg' }
-  ]);
+  const location = useLocation();
+  const initialWishlist = location.state?.wishlist || [];
+  const [wishlist, setWishlist] = useState(initialWishlist);
+
+  useEffect(() => {
+    if (location.state?.wishlist) {
+      setWishlist(location.state.wishlist);
+    }
+  }, [location.state]);
 
   const removeFromWishlist = (id) => {
     setWishlist(wishlist.filter(item => item.id !== id));
   };
 
   const addToCart = (id) => {
-    // You can implement the logic to add the item to the cart here
     console.log(`Added item with ID ${id} to cart`);
   };
 
