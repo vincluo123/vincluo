@@ -1,7 +1,15 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
 .footer {
-  background-color:#002147 !important;
+  background-color: #102C57 !important;
   color: #ffffff;
   padding: 20px 20px;
+  font-family: 'Poppins', lato; /* Default font for footer */
 }
 
 .footer-container {
@@ -22,14 +30,16 @@
 .footer-contact h2 {
   text-decoration: underline;
   color: #ffffff;
+  font-weight: 700;
 }
 
 .footer-about .about-us {
   margin-bottom: 20px;
 }
 
-.footer-about p{
+.footer-about p {
   color: #ffffff;
+  font-family: 'Poppins', sans-serif;
 }
 
 .footer-links {
@@ -66,11 +76,13 @@
 .footer-contact {
   margin-top: 20px;
   color: #ffffff;
+  font-family: 'Lato', sans-serif; /* Use Lato font for contact section */
 }
 
 .footer-contact p {
   margin: 5px 0;
   color: #ffffff;
+  font-family: 'Lato', sans-serif;
 }
 
 .footer-contact .footer-social {
@@ -119,52 +131,9 @@
   margin: 0 10px;
 }
 
-/* Media query for mobile view */
+/* Hide footer in mobile view */
 @media screen and (max-width: 700px) {
-  .footer-toggle {
-    flex: 1 1 100%;
-  }
-
-  .footer-about,
-  .footer-links,
-  .footer-contact {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .footer-toggle h3 {
-    text-align: center;
-  }
-
-  .footer-toggle {
-    justify-content: space-between;
-    margin-bottom: 10px;
-  }
-
-  .footer-contact {
-    margin-top: 20px;
-  }
-
-  .footer-contact p {
-    margin: 5px 0;
-  }
-
-  .footer-social {
-    display: flex;
-    justify-content: center;
-  }
-
-  .footer-social a {
-    margin-right: 10px;
-    color: #ffffff;
-    font-size: 30px;
-  }
-
-  .payment-icons {
-    margin-top: 20px;
-  }
-
-  .payment-icons img {
-    margin: 0 5px;
+  .footer {
+    display: none;
   }
 }

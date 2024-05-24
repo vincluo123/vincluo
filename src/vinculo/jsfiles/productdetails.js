@@ -1,6 +1,5 @@
-// ProductDetails.js
-
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import '../cssfiles/productdetails.css';
 import tshirt1 from '../product images/tshirt1.jpg';
 import tshirt2 from '../product images/tshirt2.jpeg';
@@ -69,6 +68,11 @@ const ProductDetails = () => {
 
   return (
     <div className="product-details">
+      <Helmet>
+        <title>Product Details - T-Shirt</title>
+        <meta name="description" content="Buy high-quality T-Shirts in various colors and sizes. Check price details, ratings, and manufacturer information." />
+        <meta name="keywords" content="T-Shirt, Buy T-Shirt, T-Shirt Price, T-Shirt Ratings, T-Shirt Manufacturer, T-Shirt Colors, T-Shirt Sizes, Cotton T-Shirt, Casual Wear T-Shirt, Printed T-Shirt, Short Sleeve T-Shirt" />
+      </Helmet>
       <div className="product-image-container">
         <Slider {...settings}>
           {images.map((image, index) => (

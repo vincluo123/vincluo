@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import '../cssfiles/footerDesktop.css';
 import paytmIcon from '../footer images/paytm.svg';
 import gpayIcon from '../footer images/google-pay.svg';
@@ -11,7 +11,24 @@ import twitter from '../footer images/twitter.svg';
 import instagram from '../footer images/instagram.svg';
 
 const Footer = () => {
-  
+  useEffect(() => {
+    // Function to add meta tags
+    const addMetaTag = (name, content) => {
+      const meta = document.createElement('meta');
+      meta.name = name;
+      meta.content = content;
+      document.head.appendChild(meta);
+    };
+
+    addMetaTag('description', 'Buy high-quality t-shirts for both men and women. Enjoy secure payments, easy returns, and fast delivery.');
+    addMetaTag('keywords', 'quality t-shirts, men\'s t-shirts, women\'s t-shirts, online t-shirt store, t-shirt return policy, secure payment options, fashion blog, track t-shirt order, privacy policy, contact us');
+    addMetaTag('author', 'Your Company Name');
+
+    // Clean up function to remove meta tags if needed
+    return () => {
+      document.querySelectorAll('meta[name="description"], meta[name="keywords"], meta[name="author"]').forEach(meta => meta.remove());
+    };
+  }, []);
 
   return (
     <footer className="footer">
@@ -41,10 +58,10 @@ const Footer = () => {
         </div>
 
         <div className="footer-about">
-          <h3>About Us</h3>
+          <h3>About us</h3>
           <div className="about-us">
             <p style={{ textAlign: 'justify' }}>
-              In our company we are selling first quality t-shirts for both men and women.
+              In our company, We sell high-quality T-shirts for both men and women. Our T-shirts are known for their superior quality and stylish designs, making them a popular choice for fashion enthusiasts.
             </p>
           </div>
           <div className="footer-contact">

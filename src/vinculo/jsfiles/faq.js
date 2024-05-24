@@ -1,5 +1,5 @@
 import React from 'react';
-import '../cssfiles/faq.css'; 
+import '../cssfiles/faq.css';
 
 function Faq() {
   return (
@@ -7,7 +7,7 @@ function Faq() {
       <div className='side'><img src="vinculo.png" className='imgside' /> 
       
     <div className='faq'>
-        <h1>Frequently Asked Questions</h1>
+      <h1>Frequently Asked Questions</h1>
       <input id='faq-a' type='checkbox' />
       <label htmlFor='faq-a'>
         <p className="faq-heading">What sizes are available for boys ?</p>
@@ -44,7 +44,7 @@ function Faq() {
         <div className='faq-arrow'></div>
         <p className="faq-text">We regularly update our collection with new designs, so be sure to check back often!</p>
       </label>
-      
+
     </div>
     </div>
     </div>
