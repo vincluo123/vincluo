@@ -7,7 +7,7 @@ body {
 
 .Girls-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 
 }
 
@@ -16,6 +16,7 @@ body {
     padding: 20px;
     color: #d4dbe3;
     background-color: #a1187f;
+    flex-shrink: 0;
 }
 
 .sidebar h2 {
@@ -36,11 +37,11 @@ body {
 }
 
 .product-list-container {
-    flex: 3;
-    display: flex;
-    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%; /* Set width for the product list container */
     padding: 20px;
-    gap: 10px;
     background-color: white;
 }
 
@@ -78,7 +79,7 @@ body {
 
 /* Responsive design */
 @media (max-width: 600px) {
-    .boys-container {
+    .girls-container {
         display: flex;
         flex-wrap: nowrap;
     }
@@ -126,4 +127,27 @@ body {
         flex: 0 0 20%;
         max-width: 20%;
     }
+}
+
+.wishlist-icon-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.wishlist-icon {
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
 }
