@@ -127,3 +127,28 @@ body {
         max-width: 20%;
     }
 }
+
+
+
+.wishlist-icon-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.wishlist-icon {
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}

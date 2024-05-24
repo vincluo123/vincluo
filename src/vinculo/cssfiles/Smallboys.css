@@ -8,6 +8,7 @@ body {
 .boys-container {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .sidebar {
@@ -15,6 +16,7 @@ body {
     padding: 20px;
     color: black;
     background-color: white;
+    border-right: 1px solid #ccc;
 }
 
 .sidebar h2 {
@@ -40,6 +42,7 @@ body {
     padding: 20px;
     gap: 10px;
     background-color: white;
+    width: 85%;
 }
 
 .product-list {
@@ -106,23 +109,27 @@ body {
         max-width: 20%;
     }
 }
-.boys-container {
-    display: flex;
+
+.wishlist-icon-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
-.sidebar {
-    width: 20%;
-    padding: 20px;
-    border-right: 1px solid #ccc;
+.wishlist-icon {
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
 }
 
-.filter-section {
-    margin-bottom: 20px;
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
 }
-
-.product-list-container {
-    width: 80%;
-    padding: 20px;
-}
-
 

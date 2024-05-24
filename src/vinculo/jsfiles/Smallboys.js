@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../cssfiles/Smallboys.css';
-import { FaHeart } from 'react-icons/fa';
+import { FaHeart, FaShoppingCart } from 'react-icons/fa';
 import products from '../jsonfiles/Smallboys.json';
+import { WishlistContext } from '../jsfiles/wishcontext';
 
 const sizes = ['S', 'M', 'L', 'XL'];
 const colors = ['Red', 'Blue', 'Green', 'Black'];
@@ -20,8 +21,8 @@ const Smallboys = () => {
         fit: [],
         neck: [],
     });
-
-    const [wishlist, setWishlist] = useState([]);
+    const { wishlist, addToWishlist, removeFromWishlist, notification } = useContext(WishlistContext);
+    const [clickedHearts, setClickedHearts] = useState({});
     const navigate = useNavigate();
 
     const handleFilterChange = (filterType, value) => {
@@ -50,8 +51,6 @@ const Smallboys = () => {
         });
     };
 
-    const [clickedHearts, setClickedHearts] = useState({});
-
     const handleClick = (product) => {
         navigate('/viewdetails', { state: { product } });
     };
@@ -64,16 +63,21 @@ const Smallboys = () => {
         }));
 
         if (!clickedHearts[product.id]) {
-            setWishlist(prevWishlist => [...prevWishlist, product]);
+            addToWishlist(product);
         } else {
-            setWishlist(prevWishlist => prevWishlist.filter(item => item.id !== product.id));
+            removeFromWishlist(product.id);
         }
+    };
 
-        navigate('/wishlist', { state: { wishlist: [...wishlist, product] } });
+    const handleWishlistIconClick = () => {
+        navigate('/wishlist');
     };
 
     return (
         <div className="boys-container">
+            <div className="wishlist-icon-container">
+                <FaShoppingCart onClick={handleWishlistIconClick} className="wishlist-icon" />
+            </div>
             <div className="sidebar">
                 <h2>Filters</h2>
                 <div className="filter-section">
@@ -157,6 +161,7 @@ const Smallboys = () => {
             </div>
             <div className="product-list-container">
                 <h1>2-8 Boys</h1>
+                {notification && <div className="notification">{notification}</div>}
                 {[0, 1].map(rowIndex => (
                     <div className="product-list" key={rowIndex}>
                         {filterProducts().slice(rowIndex * 5, (rowIndex + 1) * 5).map(product => (
@@ -179,3 +184,12 @@ const Smallboys = () => {
 };
 
 export default Smallboys;
+
+
+
+
+
+
+
+
+
