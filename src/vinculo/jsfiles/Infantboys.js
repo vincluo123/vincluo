@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../cssfiles/Smallboys.css';
 import { FaHeart } from 'react-icons/fa';
-import products from '../jsonfiles/Smallboys.json';
+import products from '../json files/Smallboys.json';
 
 const sizes = ['S', 'M', 'L', 'XL'];
 const colors = ['Red', 'Blue', 'Green', 'Black'];
@@ -62,14 +62,12 @@ const Smallboys = () => {
             ...prevState,
             [product.id]: !prevState[product.id]
         }));
-
+    
         if (!clickedHearts[product.id]) {
             setWishlist(prevWishlist => [...prevWishlist, product]);
         } else {
             setWishlist(prevWishlist => prevWishlist.filter(item => item.id !== product.id));
         }
-
-        navigate('/wishlist', { state: { wishlist: [...wishlist, product] } });
     };
 
     return (
@@ -156,7 +154,7 @@ const Smallboys = () => {
                 </div>
             </div>
             <div className="product-list-container">
-                <h1>2-8 Boys</h1>
+                <h1>Infant boys</h1>
                 {[0, 1].map(rowIndex => (
                     <div className="product-list" key={rowIndex}>
                         {filterProducts().slice(rowIndex * 5, (rowIndex + 1) * 5).map(product => (

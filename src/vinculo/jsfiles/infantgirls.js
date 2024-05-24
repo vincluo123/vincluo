@@ -1,385 +1,181 @@
-// App.js
-import React from 'react';
-
-import '../cssfiles/infantgirls.css';
-import productsData from '../json files/products.json';
-
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import { Carousel } from 'react-bootstrap'; // Import Carousel component from react-bootstrap
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import '../cssfiles/Smallgirls.css';
 import { FaHeart } from 'react-icons/fa';
-import { useState } from 'react';
-import { useEffect } from 'react';
-import { Form } from 'react-bootstrap';
+import products from '../jsonfiles/Smallgirls.json';
 
+const sizes = ['S', 'M', 'L', 'XL'];
+const colors = ['Red', 'Blue', 'Green', 'Black'];
+const costRanges = ['0-20', '21-40', '41-60'];
+const sleeves = ['Short', 'Long'];
+const fits = ['Regular', 'Slim'];
+const neckTypes = ['Round', 'V-Neck'];
 
+const Smallgirls = () => {
+    const [filters, setFilters] = useState({
+        size: [],
+        color: [],
+        cost: [],
+        sleeve: [],
+        fit: [],
+        neck: [],
+    });
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    const [wishlist, setWishlist] = useState([]);
+    const navigate = useNavigate();
 
-function Infantgirls() {
-    const [products, setProducts] = useState([]);
-    const [selectedSize, setSelectedSize] = useState('');
-    const [selectedColor, setSelectedColor] = useState('');
-    const [minPrice, setMinPrice] = useState(0);
-    const [maxPrice, setMaxPrice] = useState(1000);
-    const [showPriceFilter, setShowPriceFilter] = useState(false);
-    const [showSizeFilters, setShowSizeFilters] = useState(false);
-    const [showColorFilters, setShowColorFilters] = useState(false);
-    const [filteredProducts, setFilteredProducts] = useState([]);
-    const zeroOrOneRowOfProducts = filteredProducts.length <= 6;
-    const contentHeight = window.innerHeight - 200;
-    const [selectedFit, setSelectedFit] = useState('');
-    const fits = ['Regular', 'Slim', 'Comfort'];
-    const [showFitFilters, setShowFitFilters] = useState(false); // Define showFitFilters state
-    const [selectedNeckTypes, setSelectedNeckTypes] = useState([]);
-    const [showNeckTypeFilters, setShowNeckTypeFilters] = useState(false);
-    const [selectedSleeveTypes, setSelectedSleeveTypes] = useState([]);
-    const [showSleeveTypeFilters, setShowSleeveTypeFilters] = useState(false);
-
-
-    const toggleFitFilters = () => { // Define toggleFitFilters function
-        setShowFitFilters(!showFitFilters);
-    };
-    const toggleNeckTypeFilters = () => {
-        setShowNeckTypeFilters(!showNeckTypeFilters);
+    const handleFilterChange = (filterType, value) => {
+        setFilters(prevFilters => {
+            const currentFilter = prevFilters[filterType];
+            const updatedFilter = currentFilter.includes(value)
+                ? currentFilter.filter(item => item !== value)
+                : [...currentFilter, value];
+            return { ...prevFilters, [filterType]: updatedFilter };
+        });
     };
 
-    const toggleSleeveTypeFilters = () => {
-        setShowSleeveTypeFilters(!showSleeveTypeFilters);
-    };
-    const handleSleeveTypeChange = (sleeveType) => {
-        setSelectedSleeveTypes((prevSleeveTypes) =>
-            prevSleeveTypes.includes(sleeveType)
-                ? prevSleeveTypes.filter((prevType) => prevType !== sleeveType)
-                : [...prevSleeveTypes, sleeveType]
-        );
-    };
-
-    // Calculate the margin dynamically based on the condition
-    const comboContainerMargin = zeroOrOneRowOfProducts ? contentHeight + 'px' : '20px';
-    const toggleSizeFilters = () => {
-        setShowSizeFilters(!showSizeFilters);
-    };
-    const toggleColorFilters = () => {
-        setShowColorFilters(!showColorFilters);
-    };
-    const handlePriceChange = (event) => {
-        const { id, value } = event.target;
-        if (id === 'minPrice') {
-            setMinPrice(parseInt(value));
-        } else if (id === 'maxPrice') {
-            setMaxPrice(parseInt(value));
-        }
-    };
-    const togglePriceFilter = () => {
-        setShowPriceFilter(!showPriceFilter);
-    };
-    useEffect(() => {
-        const applyFilters = () => {
-            const filtered = products.filter(product => {
-                // Filter by size
-                if (selectedSize.length > 0 && !selectedSize.includes(product.size)) {
-                    return false;
-                }
-                // Filter by color
-                if (selectedColor.length > 0 && !selectedColor.includes(product.color)) {
-                    return false;
-                }
-                // Filter by price range
-                if (product.price < minPrice || product.price > maxPrice) {
-                    return false;
-                }
-                if (selectedFit.length > 0 && !selectedFit.includes(product.fit)) {
-                    return false;
-                }
-                if (selectedNeckTypes.length > 0 && !selectedNeckTypes.includes(product.neckType)) {
-                    return false;
-                }
-                if (selectedSleeveTypes.length > 0 && !selectedSleeveTypes.includes(product.sleeveType)) {
-                    return false;
-                }
-                return true;
-            });
-            setFilteredProducts(filtered);
-        };
-        applyFilters(); // Call applyFilters inside useEffect
-
-        return () => {
-            // Cleanup function if needed
-        };
-    }, [selectedSize, selectedColor, minPrice, maxPrice, filteredProducts, selectedFit, products, selectedNeckTypes, selectedSleeveTypes]);
-    const handleNeckTypeChange = (neckType) => {
-        setSelectedNeckTypes((prevNeckTypes) =>
-            prevNeckTypes.includes(neckType)
-                ? prevNeckTypes.filter((prevNeckType) => prevNeckType !== neckType)
-                : [...prevNeckTypes, neckType]
-        );
+    const filterProducts = () => {
+        return products.filter(product => {
+            return (
+                (filters.size.length === 0 || filters.size.includes(product.Size)) &&
+                (filters.color.length === 0 || filters.color.includes(product.color)) &&
+                (filters.cost.length === 0 || filters.cost.some(range => {
+                    const [min, max] = range.split('-').map(Number);
+                    return product.price >= min && product.price <= max;
+                })) &&
+                (filters.sleeve.length === 0 || filters.sleeve.includes(product.sleevetype)) &&
+                (filters.fit.length === 0 || filters.fit.includes(product.fit)) &&
+                (filters.neck.length === 0 || filters.neck.includes(product.necktype))
+            );
+        });
     };
 
+    const [clickedHearts, setClickedHearts] = useState({});
 
-    useEffect(() => {
-        setProducts(productsData); // Set product data from JSON to state
-    }, []);
+    const handleClick = (product) => {
+        navigate('/viewdetails', { state: { product } });
+    };
 
-
-    const [clickedHearts, setClickedHearts] = useState({}); // State to track clicked hearts
-
-    const handleClick = (productId) => {
+    const handleWishlistClick = (product, e) => {
+        e.stopPropagation();
         setClickedHearts(prevState => ({
             ...prevState,
-            [productId]: !prevState[productId] // Toggle the clicked state for the product
+            [product.id]: !prevState[product.id]
         }));
 
-        console.log(productId);
+        if (!clickedHearts[product.id]) {
+            setWishlist(prevWishlist => [...prevWishlist, product]);
+        } else {
+            setWishlist(prevWishlist => prevWishlist.filter(item => item.id !== product.id));
+        }
 
+        navigate('/wishlist', { state: { wishlist: [...wishlist, product] } });
     };
-
-
-
-    const handleSizeChange = (size) => {
-        setSelectedSize((prevSizes) =>
-            prevSizes.includes(size)
-                ? prevSizes.filter((prevSize) => prevSize !== size)
-                : [...prevSizes, size]
-        );
-    };
-
-    // Function to handle color change
-    const handleColorChange = (color) => {
-        setSelectedColor((prevColors) =>
-            prevColors.includes(color)
-                ? prevColors.filter((prevColor) => prevColor !== color)
-                : [...prevColors, color]
-        );
-    };
-    const handleFitChange = (fit) => {
-        setSelectedFit(fit);
-    };
-
-
-
 
     return (
-        <div className="App">
-
-            <Carousel>
-                <Carousel.Item>
-                    <img
-                        className="carousel"
-                        src="slide 11.gif"
-                        alt="First slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="carousel "
-                        src="slide 12.gif"
-                        alt="Second slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="carousel"
-                        src="slide 11.gif"
-                        alt="Third slide"
-                    />
-                </Carousel.Item>
-            </Carousel>
-
-
-
-            {/* Combo Offers */}
-            <h1>Infant Girls</h1>
-            <div className="boys">
-                <div className="sidebar">
-                    <h3>Filters
-                    </h3>
-                    <button className="filter-toggle" onClick={toggleSizeFilters}>
-                        <span>Sizes</span>
-                        <span>{showSizeFilters ? ' ▲ ' : ' ▼ '}</span>
-                    </button>
-                    {showSizeFilters && (
-                        <div className="filter-options">
-                            <div className="filter-section">
-                                <h5>Sizes</h5>
-                                <div className="checkboxes">
-                                    <label>
-                                        <input type="checkbox" value="M" onChange={(e) => handleSizeChange(e.target.value)} />
-                                        M
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" value="L" onChange={(e) => handleSizeChange(e.target.value)} />
-                                        L
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" value="XL" onChange={(e) => handleSizeChange(e.target.value)} />
-                                        XL
-                                    </label>
-                                </div>
-                            </div>
-                            {/* Similar sections for colors, price ranges, etc. */}
-                        </div>
-                    )}
-
-                    <button className="filter-toggle-colors" onClick={toggleColorFilters}>
-                        <span>Colors</span>
-                        <span>{showColorFilters ? '▲' : '▼'}</span>
-                    </button>
-                    {showColorFilters && (
-                        <div className="filter-section-color">
-                            <h5>Colors</h5>
-                            <div className="color-options">
-                                <div className="checkbox-container">
-                                    <label>
-                                        <input type="checkbox" style={{ display: 'none' }} onChange={() => handleColorChange('red')} />
-                                        <span className="color-checkbox" style={{ backgroundColor: 'red' }}></span>
-                                        Red
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" style={{ display: 'none' }} onChange={() => handleColorChange('blue')} />
-                                        <span className="color-checkbox" style={{ backgroundColor: 'blue' }}></span>
-                                        Blue
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" style={{ display: 'none' }} onChange={() => handleColorChange('yellow')} />
-                                        <span className="color-checkbox" style={{ backgroundColor: 'yellow' }}></span>
-                                        Yellow
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" style={{ display: 'none' }} onChange={() => handleColorChange('pink')} />
-                                        <span className="color-checkbox" style={{ backgroundColor: 'pink' }}></span>
-                                        Pink
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" style={{ display: 'none' }} onChange={() => handleColorChange('green')} />
-                                        <span className="color-checkbox" style={{ backgroundColor: 'green' }}></span>
-                                        Green
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" style={{ display: 'none' }} onChange={() => handleColorChange('orange')} />
-                                        <span className="color-checkbox" style={{ backgroundColor: 'orange' }}></span>
-                                        Orange
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    )}
-
-                    <button className="filter-toggle-price" onClick={togglePriceFilter}>
-                        <span>Price Range</span>
-                        <span>{showPriceFilter ? '▲' : '▼'}</span>
-                    </button>
-                    {showPriceFilter && (
-                        <div className="filter-options-price">
-                            <h5>Select Range</h5>
-                            <Form>
-                                <Form.Group controlId="minPrice">
-                                    <Form.Label>Minimum Price: ${minPrice}</Form.Label>
-                                    <Form.Range
-                                        min={0}
-                                        max={1000}
-                                        value={minPrice}
-                                        onChange={handlePriceChange}
-                                    />
-                                </Form.Group>
-                                <Form.Group controlId="maxPrice">
-                                    <Form.Label>Maximum Price: ${maxPrice}</Form.Label>
-                                    <Form.Range
-                                        min={0}
-                                        max={1000}
-                                        value={maxPrice}
-                                        onChange={handlePriceChange}
-                                    />
-                                </Form.Group>
-                            </Form>
-                        </div>
-                    )}
-                    <button className="filter-toggle-fits" onClick={toggleFitFilters}>
-                        <span>Fit</span>
-                        <span>{showFitFilters ? '▲' : '▼'}</span>
-                    </button>
-                    {showFitFilters && (
-                        <div className="filter-options-fits">
-                            <h5>Fits</h5>
-                            <div className="checkboxes">
-                                {fits.map(fit => (
-                                    <label key={fit}>
-                                        <input type="checkbox" value={fit} onChange={() => handleFitChange(fit)} />
-                                        {fit}
-                                    </label>
-                                ))}
-                            </div>
-                        </div>
-                    )}
-                    <button className="filter-toggle-neck-types" onClick={toggleNeckTypeFilters}>
-                        <span>Neck Types</span>
-                        <span>{showNeckTypeFilters ? '▲' : '▼'}</span>
-                    </button>
-                    {showNeckTypeFilters && (
-                        <div className="filter-options-neck-types">
-                            <h5>Neck Types</h5>
-                            <div className="checkboxes">
-                                <label>
-                                    <input type="checkbox" value="Round Neck" onChange={() => handleNeckTypeChange('Round Neck')} />
-                                    Round Neck
-                                </label>
-                                {/* Add similar labels for other neck types */}
-                            </div>
-                        </div>
-                    )}
-                    <button className="filter-toggle-sleeve-type" onClick={toggleSleeveTypeFilters}>
-                        <span>Sleeve Type</span>
-                        <span>{showSleeveTypeFilters ? '▲' : '▼'}</span>
-                    </button>
-                    {showSleeveTypeFilters && (
-                        <div className="filter-options-sleeve-type">
-                            <h5>Sleeve Type</h5>
-                            <div className="checkboxes">
-                                <label>
-                                    <input type="checkbox" value="Short" onChange={() => handleSleeveTypeChange('Short')} />
-                                    Short
-                                </label>
-                                <label>
-                                    <input type="checkbox" value="Long" onChange={() => handleSleeveTypeChange('Long')} />
-                                    Long
-                                </label>
-                                {/* Add more labels for other sleeve types */}
-                            </div>
-                        </div>
-                    )}
-
+        <div className="Girls-container">
+            <div className="sidebar">
+                <h2>Filters</h2>
+                <div className="filter-section">
+                    <h3>Size</h3>
+                    {sizes.map(size => (
+                        <label key={size}>
+                            <input
+                                type="checkbox"
+                                checked={filters.size.includes(size)}
+                                onChange={() => handleFilterChange('size', size)}
+                            />
+                            {size}
+                        </label>
+                    ))}
+                </div>
+                <div className="filter-section">
+                    <h3>Color</h3>
+                    {colors.map(color => (
+                        <label key={color}>
+                            <input
+                                type="checkbox"
+                                checked={filters.color.includes(color)}
+                                onChange={() => handleFilterChange('color', color)}
+                            />
+                            {color}
+                        </label>
+                    ))}
+                </div>
+                <div className="filter-section">
+                    <h3>Cost</h3>
+                    {costRanges.map(range => (
+                        <label key={range}>
+                            <input
+                                type="checkbox"
+                                checked={filters.cost.includes(range)}
+                                onChange={() => handleFilterChange('cost', range)}
+                            />
+                            {range}
+                        </label>
+                    ))}
+                </div>
+                <div className="filter-section">
+                    <h3>Sleeve</h3>
+                    {sleeves.map(sleeve => (
+                        <label key={sleeve}>
+                            <input
+                                type="checkbox"
+                                checked={filters.sleeve.includes(sleeve)}
+                                onChange={() => handleFilterChange('sleeve', sleeve)}
+                            />
+                            {sleeve}
+                        </label>
+                    ))}
+                </div>
+                <div className="filter-section">
+                    <h3>Fit</h3>
+                    {fits.map(fit => (
+                        <label key={fit}>
+                            <input
+                                type="checkbox"
+                                checked={filters.fit.includes(fit)}
+                                onChange={() => handleFilterChange('fit', fit)}
+                            />
+                            {fit}
+                        </label>
+                    ))}
+                </div>
+                <div className="filter-section">
+                    <h3>Neck Type</h3>
+                    {neckTypes.map(neck => (
+                        <label key={neck}>
+                            <input
+                                type="checkbox"
+                                checked={filters.neck.includes(neck)}
+                                onChange={() => handleFilterChange('neck', neck)}
+                            />
+                            {neck}
+                        </label>
+                    ))}
                 </div>
             </div>
-            <div className="combo-container" style={{ marginBottom: comboContainerMargin }}>
-                {filteredProducts.map(product => (
-                    <div className="combo-card" key={product.id}>
-                        <button className="btn-heart" onClick={() => handleClick(product.id)}>
-                            <span >
-                                <FaHeart color={clickedHearts[product.id] ? 'red' : 'black'} />
-                            </span>
-                        </button>
-                        <img src={product.image} alt={product.name} />
-
-                        <div className="combo-details">
-                            <h3>{product.name}</h3>
-                            <h6>{product.cname}</h6>
-                            <p>${product.price.toFixed(2)}</p>
-                        </div>
-                        <button className="btn" style={{ backgroundColor: 'skyblue' }}>Add to Cart</button>
+            <div className="product-list-container">
+                <h1>2-8 Girls</h1>
+                {[0, 1].map(rowIndex => (
+                    <div className="product-list" key={rowIndex}>
+                        {filterProducts().slice(rowIndex * 5, (rowIndex + 1) * 5).map(product => (
+                            <div className="product-card" key={product.id} onClick={() => handleClick(product)}>
+                                <img src={product.image} alt={product.name} />
+                                <h4>{product.name}</h4>
+                                <h6>{product.price}</h6>
+                                <button className="btn-heart" onClick={(e) => handleWishlistClick(product, e)}>
+                                    <span>
+                                        <FaHeart color={clickedHearts[product.id] ? 'red' : 'gray'} />
+                                    </span>
+                                </button>
+                            </div>
+                        ))}
                     </div>
                 ))}
             </div>
-            <div className="combo-container" style={{ marginBottom: comboContainerMargin }}>
-
-
-            </div>
-
-
         </div>
     );
-}
+};
 
-export default Infantgirls;
-
-
-
-
+export default Smallgirls;
