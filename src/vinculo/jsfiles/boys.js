@@ -151,7 +151,7 @@ const Boys = () => {
             </div>
             <div className="product-list-container">
                 <h1>8-16 Boys</h1>
-                {[0, , 1, 2].map(rowIndex => (
+                {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(rowIndex => (
                     <div className="product-list" key={rowIndex}>
                         {filterProducts().slice(rowIndex * 10, (rowIndex + 1) * 10).map(product => (
                             <div className="product-card" key={product.id}>
