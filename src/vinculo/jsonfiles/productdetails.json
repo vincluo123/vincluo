@@ -1,0 +1,48 @@
+{
+    "product": {
+      "id": 1,
+      "name": "T-Shirt",
+      "price": {
+        "blue": 379,
+        "red": 399,
+        "green": 419,
+        "black": 449
+      },
+      "details": {
+        "type": "T-Shirt",
+        "sleeve": "Short Sleeve",
+        "fit": "Regular",
+        "fabric": "100% Cotton",
+        "styleCode": "#W-101",
+        "neckType": "Round Neck",
+        "idealFor": "Boys",
+        "sizeRange": "8 to 16 Yrs",
+        "pattern": "Printed",
+        "suitableFor": "Casual Wear",
+        "fabricCare": "Gentle Machine Wash",
+        "manufacturer": "ABC Company"
+      },
+      "manufacturer": {
+        "name": "ABC Company",
+        "address": "123 Manufacturer Street, City, Country",
+        "phone": "+1234567890",
+        "email": "info@abccompany.com"
+      },
+      "images": [
+        "tshirt1.jpg",
+        "tshirt2.jpeg",
+        "tshirt3.jpeg",
+        "tshirt1.jpg"
+      ],
+      "ratings": {
+        "stars": 4,
+        "reviews": 2456
+      },
+      "offers": [
+        "Get ₹25* instant discount for the 1st Flipkart Order using Flipkart UPI",
+        "5% Cashback on Flipkart Axis Bank Card",
+        "10% off on Citi-branded Credit Card EMI Transactions, up to ₹2,000 on orders of ₹5,000 and above"
+      ]
+    }
+  }
+  

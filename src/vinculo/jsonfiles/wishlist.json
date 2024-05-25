@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "name": "Cotton T-shirt (Black)",
+      "brandname": "Brand A",
+      "price": 20,
+      "imagefront": "girl1-front.jpg",
+      "imageback": "girl1-back.jpg",
+      "color": "Black",
+      "size": "M",
+      "necktype": "Round Neck",
+      "fit": "Regular Fit",
+      "sleevetype": "Short Sleeve",
+      "productdescription": "A comfortable cotton t-shirt in black.",
+      "image": "girl1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Plain T-shirt (Yellow)",
+      "brandname": "Brand B",
+      "price": 30,
+      "imagefront": "girl2-front.jpg",
+      "imageback": "girl2-back.jpg",
+      "color": "Yellow",
+      "size": "L",
+      "necktype": "V Neck",
+      "fit": "Slim Fit",
+      "sleevetype": "Short Sleeve",
+      "productdescription": "A stylish plain t-shirt in yellow.",
+      "image": "girl2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Plain T-shirt(White)",
+      "brandname": "Brand C",
+      "price": 25,
+      "imagefront": "girl3-front.jpg",
+      "imageback": "girl3-back.jpg",
+      "color": "White",
+      "size": "S",
+      "necktype": "Crew Neck",
+      "fit": "Regular Fit",
+      "sleevetype": "Short Sleeve",
+      "productdescription": "A simple plain t-shirt in white.",
+      "image": "girl3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Plain T-shirt(White)",
+      "brandname": "Brand D",
+      "price": 25,
+      "imagefront": "girl4-front.jpg",
+      "imageback": "girl4-back.jpg",
+      "color": "White",
+      "size": "XL",
+      "necktype": "Round Neck",
+      "fit": "Loose Fit",
+      "sleevetype": "Long Sleeve",
+      "productdescription": "A plain white t-shirt for everyday wear.",
+      "image": "girl4.jpg"
+    }
+  ]
+  

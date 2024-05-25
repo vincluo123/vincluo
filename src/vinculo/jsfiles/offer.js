@@ -1,27 +1,42 @@
-// App.js
 import React from 'react';
 import '../cssfiles/offer.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { Carousel } from 'react-bootstrap'; // Import Carousel component from react-bootstrap
+import offer from '../jsonfiles/offer.json'; // Import the JSON file
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 
 function Offer() {
+
     const boysProducts = [
+
+
+    const { boysProducts, girlsProducts, kidsProducts } = offer;
+
+    const products = [
+
         {
             id: 1,
             name: "T-shirt",
             cname: "combo of 3",
             price: 999,
+
             image: "offer/boys/combo1.jpg"
+
+            image: "boys2_shirt.jpg"
+
         },
         {
             id: 2,
             name: "T-shirt",
             cname: "combo of 2",
             price: 689,
+
             image: "offer/boys/combo 2.jpeg"
+
+            image: "boys1_shirt.jpg"
+
         },
         {
             id: 3,
@@ -185,6 +200,7 @@ function Offer() {
         }
     ];
 
+
     return (
         <div className="App">
             <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
@@ -195,35 +211,61 @@ function Offer() {
                 <h2>Exclusive Offer!</h2>
                 <p>Get flat 30% off on all kids' clothing. Hurry, limited time offer!</p>
             </div>
+            
             <Carousel>
+                {/* Carousel items */}
                 <Carousel.Item>
                     <img
-                        className="carousel"
-                        src="slide 11.gif"
+                        className="d-block w-100"
+                        src="carousel1.webp"
                         alt="First slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="carousel "
-                        src="slide 12.gif"
+                        className="d-block w-100"
+                        src="carousel2.webp"
                         alt="Second slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="carousel"
-                        src="slide 11.gif"
-                        alt="Third slide"
+                        className="d-block w-100"
+                        src="carousel3.webp"
+                        alt="Second slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
+
                         className="carousel"
                         src="assets/car1.jpg"
                         alt="First slide"
                     />
                 </Carousel.Item>
+
+                        className="d-block w-100"
+                        src="carousel1.webp"
+                        alt="Second slide"
+                    />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+
+                        className="carousel"
+                        src="assets/car1.jpg"
+                        alt="First slide"
+                    />
+                </Carousel.Item>
+
+                        className="d-block w-100"
+                        src="carousel2.webp"
+                        alt="Second slide"
+                    />
+                </Carousel.Item>
+                {/* Add more Carousel items as needed */}
+
+
             </Carousel>
 
             {/* Categories */}
@@ -232,8 +274,28 @@ function Offer() {
             
             {/* Combo Offers */}
             <h1>Boys</h1>
+
             <div className="combo-container">
                 {boysProducts.map(product => (
+
+            <div className="combo-container">
+                {boysProducts.map(product => (
+                    <div className="combo-card" key={product.id}>
+                        <img src={product.image} alt={product.name} />
+                        <div className="combo-details">
+                            <h3>{product.name}</h3>
+                            <h6>{product.cname}</h6>
+                            <p>${product.price.toFixed(2)}</p>
+                        </div>
+
+                        <button className="btn" style={{ backgroundColor: '#D4AF37' }}>Add to Cart</button>
+                    </div>
+                ))}
+            </div>
+            <h1>Girls</h1>
+            <div className="combo-container">
+                {girlsProducts.map(product => (
+
                     <div className="combo-card" key={product.id}>
                         <img src={product.image} alt={product.name} />
                         <div className="combo-details">
@@ -245,6 +307,7 @@ function Offer() {
                     </div>
                 ))}
             </div>
+
             <h1>Girls</h1>
             <div className="combo-container">
                 {girlsProducts.map(product => (
@@ -259,6 +322,7 @@ function Offer() {
                     </div>
                 ))}
             </div>
+
             <h1>Kids</h1>
             <div className="combo-container">
                 {kidsProducts.map(product => (
@@ -270,6 +334,8 @@ function Offer() {
                             <p>${product.price.toFixed(2)}</p>
                         </div>
                         <button className="btn" style={{ backgroundColor: '#D4AF37' }}>Add to Cart</button>
+                <button className="btn" style={{ backgroundColor: 'blue' }}>Add to Cart</button>
+
                     </div>
                 ))}
             </div>
