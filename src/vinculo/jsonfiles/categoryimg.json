@@ -1,0 +1,14 @@
+{
+    "boys": {
+        "src": "boys_image.jpg",
+        "alt": "Boys"
+    },
+    "girls": {
+        "src": "girls_image.jpg",
+        "alt": "Girls"
+    },
+    "infants": {
+        "src": "infants_image.jpg",
+        "alt": "Infants"
+    }
+}

@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.girls-container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.sidebar {
+    width: 15%;
+    padding: 20px;
+    color: black;
+    background-color: white;
+    border-right: 1px solid #ccc;
+}
+
+.sidebar h2 {
+    margin-top: 10px;
+}
+
+.filter-section {
+    margin-bottom: 20px;
+}
+
+.filter-section h3 {
+    margin: 10px 0;
+}
+
+.filter-section label {
+    display: block;
+}
+
+.product-list-container {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+    background-color: white;
+    width: 85%;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+}
+
+.product-card {
+    flex: 0 0 20%;
+    max-width: 20%;
+    margin: 10px;
+    padding: 15px;
+    background-color: #d4dbe3;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 14px rgb(119, 119, 124);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn-heart {
+    border: none;
+    background-color: #d4dbe3;
+    margin-left: 10px;
+    color: #d4dbe3;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .sidebar {
+        width: 25%;
+    }
+
+    .product-card {
+        flex: 0 0 70%;
+        max-width: 70%;
+    }
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        width: 15%;
+    }
+
+    .product-list-container {
+        width: 85%;
+    }
+
+    .product-card {
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .product-card {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+
+.wishlist-icon-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.wishlist-icon {
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
