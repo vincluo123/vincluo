@@ -66,17 +66,19 @@ body {
 .btn {
     color: #fff;
     border: black;
-<<<<<<< HEAD
+
     padding: 8px 10px;
     border-radius: 5px;
     cursor: pointer;
     height: 40px;
     width: 130px;
-=======
+
+
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
->>>>>>> f77c981a42c1912c6239d31a1d4e6efbd7284bf8
+
+
 }
 
 .btn:hover {
@@ -205,13 +207,18 @@ body {
 }
 
 .combo-card img {
-<<<<<<< HEAD
+
     width: 200px; /* Set the desired width */
     height: 200px; /* Set the desired height */
-=======
+
+
+    width: 200px; /* Set the desired width */
+    height: 200px; /* Set the desired height */
+
     max-width: 120%;
     height: auto;
->>>>>>> f77c981a42c1912c6239d31a1d4e6efbd7284bf8
+
+
     border-radius: 5px;
     object-fit: cover; /* Ensure the image covers the area without distortion */
 }

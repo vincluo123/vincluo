@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
 import '../cssfiles/headermobile.css';
+<<<<<<< HEAD
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
 import productsData from '../jsonfiles/products.json';
 import carouselImages from "../jsonfiles/carousel.json";
 import categoryImages from "../jsonfiles/categoryimg.json";
+=======
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import { Carousel } from 'react-bootstrap'; // Import Carousel component from react-bootstrap
+
+>>>>>>> 5dfa9a1909f58ba1341273d05f02ede6179160ac
 import Header from './brandnameheader';
 import ProductDetails from './productDetails';
 import '../cssfiles/header.css';
@@ -24,6 +30,12 @@ function HeaderMobile() {
     }
 
     return (
+<<<<<<< HEAD
+=======
+        <>
+        
+      
+>>>>>>> 5dfa9a1909f58ba1341273d05f02ede6179160ac
         <div className="App">
             <Header />
             <Carousel>
