@@ -66,11 +66,19 @@ body {
 .btn {
     color: #fff;
     border: black;
-    padding: 8px 20px;
+
+    padding: 8px 10px;
     border-radius: 5px;
     cursor: pointer;
     height: 40px;
     width: 130px;
+
+
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+
+
 }
 
 .btn:hover {
@@ -191,21 +199,26 @@ body {
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 90px;
-    
+    margin: 0 10px; /* Add margin between cards */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 275px;
     color: #333333;
     transition: transform 0.3s ease-in-out;
-    display: flex; /* Add flex container */
-    flex-direction: column; /* Align items vertically */
-    align-items: center; /* Center-align items horizontally */
-    margin: 20px;
-    height: 500px;
 }
 
 .combo-card img {
+
     width: 200px; /* Set the desired width */
     height: 200px; /* Set the desired height */
+
+
+    width: 200px; /* Set the desired width */
+    height: 200px; /* Set the desired height */
+
+    max-width: 120%;
+    height: auto;
+
+
     border-radius: 5px;
     object-fit: cover; /* Ensure the image covers the area without distortion */
 }
