@@ -1,0 +1,56 @@
+{
+  "cartItems": [
+    {
+      "id": 1,
+      "name": "Product 1",
+      "brandname": "Brand A",
+      "price": 10,
+      "imagefront": "boys1_shirt_front.jpg",
+      "imageback": "boys1_shirt_back.jpg",
+      "color": "Blue",
+      "size": "M",
+      "necktype": "Round",
+      "fit": "Regular",
+      "sleevetype": "Short Sleeve",
+      "Productdescription": "A comfortable blue shirt with a round neck and regular fit.",
+      "quantity": 1,
+      "image": "boys1_shirt.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "brandname": "Brand B",
+      "price": 15,
+      "imagefront": "boys2_shirt_front.jpg",
+      "imageback": "boys2_shirt_back.jpg",
+      "color": "Red",
+      "size": "L",
+      "necktype": "V-Neck",
+      "fit": "Slim",
+      "sleevetype": "Long Sleeve",
+      "Productdescription": "A stylish red shirt with a V-neck and slim fit.",
+      "quantity": 1,
+      "image": "boys2_shirt.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Product 3",
+      "brandname": "Brand C",
+      "price": 20,
+      "imagefront": "boys3_shirt_front.jpg",
+      "imageback": "boys3_shirt_back.jpg",
+      "color": "Green",
+      "size": "S",
+      "necktype": "Collar",
+      "fit": "Regular",
+      "sleevetype": "Short Sleeve",
+      "Productdescription": "A green shirt with a collar and regular fit, perfect for casual wear.",
+      "quantity": 1,
+      "image": "BOYS-4_page-0001.jpg"
+    }
+  ],
+  "buyLaterItems": [],
+  "shippingInfo": {},
+  "couponCode": "",
+  "paymentMethod": ""
+}

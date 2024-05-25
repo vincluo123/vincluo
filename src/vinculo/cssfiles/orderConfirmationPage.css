@@ -1,11 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Lato:wght@400;700&display=swap');
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
 .order-confirmation-container {
   max-width: 800px;
   margin: 0 auto;
-  background-color: rgba(87, 85, 85, 0.171);
+  background-color: #fff;
   backdrop-filter: blur(10px);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .confirmation-header {
@@ -18,13 +27,12 @@
   max-width: 100%;
   height: auto; /* Ensures aspect ratio is maintained */
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .confirmation-header h2 {
   margin-top: 20px; /* Add margin to separate the GIF and text */
   font-size: 36px; /* Increase font size */
-  font-weight:normal; /* Make text bold */
+  font-weight: normal; /* Make text bold */
   color: black; /* Change text color */
   text-transform: uppercase; /* Convert text to uppercase */
   letter-spacing: 2px; /* Add letter spacing */
@@ -48,7 +56,7 @@
 .order-summary li,
 .recommended-products li {
   margin-bottom: 20px;
-  background-color: #fff;
+  background-color: #D3D3D3;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -76,7 +84,7 @@
 
 button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #102c57;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -85,11 +93,11 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #d4af37;
 }
 
 .additional-options a {
-  color: #007bff;
+  color: #102c57;
   text-decoration: none;
 }
 
