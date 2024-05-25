@@ -8,7 +8,7 @@ body {
 .boys-container {
     display: flex;
     flex-wrap: wrap;
-
+    position: relative;
 }
 
 .sidebar {
@@ -16,11 +16,11 @@ body {
     padding: 20px;
     color: black;
     background-color: white;
+    border-right: 1px solid #ccc;
 }
 
 .sidebar h2 {
     margin-top: 10px;
-
 }
 
 .filter-section {
@@ -42,6 +42,7 @@ body {
     padding: 20px;
     gap: 10px;
     background-color: white;
+    width: 85%;
 }
 
 .product-list {
@@ -52,7 +53,7 @@ body {
 }
 
 .product-card {
-    flex: 0 0 45%;
+    flex: 0 0 20%;
     max-width: 20%;
     margin: 10px;
     padding: 15px;
@@ -68,7 +69,6 @@ body {
     height: auto;
 }
 
-
 .btn-heart {
     border: none;
     background-color: #d4dbe3;
@@ -78,32 +78,14 @@ body {
 
 /* Responsive design */
 @media (max-width: 600px) {
-    .boys-container {
-        display: flex;
-        flex-wrap: nowrap;
-    }
-
     .sidebar {
         width: 25%;
-
-
     }
 
     .product-card {
-        flex: 0 0 30%;
-        max-width: 30%;
+        flex: 0 0 70%;
+        max-width: 70%;
     }
-
-    .product-list-container {
-        flex: 3;
-        display: flex;
-        flex-direction: column;
-        padding: 20px;
-        gap: 10px;
-        background-color: white;
-    }
-
-
 }
 
 @media (min-width: 768px) {
@@ -127,3 +109,27 @@ body {
         max-width: 20%;
     }
 }
+
+.wishlist-icon-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.wishlist-icon {
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+

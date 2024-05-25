@@ -1,12 +1,13 @@
 import React from 'react';
 import { FaUser, FaShoppingCart, FaHeart, FaPhone } from 'react-icons/fa';
 import '../cssfiles/headerDesktop.css';
+import {Link} from 'react-router-dom'
 
 const Header = () => {
   return (
     <header className="header">
       <div className="logo">
-        <img src="Hilsa.png" alt="Logo" />
+        <img src="./assets/Hilsa.png" alt="Logo" />
       </div>
 
       <nav className="navbar">
