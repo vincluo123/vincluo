@@ -1,3 +1,4 @@
+
 // App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -10,12 +11,12 @@ import Smallgirls from './vinculo/jsfiles/Smallgirls';
 import WishlistPage from './vinculo/jsfiles/wishlist';
 import { WishlistProvider } from './vinculo/jsfiles/wishcontext'; // Import WishlistProvider
 
+
+
 function App() {
   return (
     <>
-   {/* <Header/>
-   <Home/>
-   <Footer/> */}
+
    
 
     <Router>
@@ -28,6 +29,7 @@ function App() {
         </Routes>
       </WishlistProvider>
     </Router>
+
     </>
   );
 }
