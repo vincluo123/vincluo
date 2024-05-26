@@ -1,16 +1,10 @@
 import React, { useState } from 'react';
 import '../cssfiles/headermobile.css';
-<<<<<<< HEAD
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
 import productsData from '../jsonfiles/products.json';
 import carouselImages from "../jsonfiles/carousel.json";
 import categoryImages from "../jsonfiles/categoryimg.json";
-=======
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import { Carousel } from 'react-bootstrap'; // Import Carousel component from react-bootstrap
-
->>>>>>> 5dfa9a1909f58ba1341273d05f02ede6179160ac
 import Header from './brandnameheader';
 import ProductDetails from './productDetails';
 import '../cssfiles/header.css';
@@ -25,17 +19,15 @@ function HeaderMobile() {
         setClickedProduct(null);
     };
 
+    const productsGroup1 = productsData.slice(0, Math.ceil(productsData.length / 3));
+    const productsGroup2 = productsData.slice(Math.ceil(productsData.length / 3), Math.ceil(2 * productsData.length / 3));
+    const productsGroup3 = productsData.slice(Math.ceil(2 * productsData.length / 3));
+
     if (clickedProduct) {
         return <ProductDetails product={clickedProduct} onBack={handleBack} />;
     }
 
     return (
-<<<<<<< HEAD
-=======
-        <>
-        
-      
->>>>>>> 5dfa9a1909f58ba1341273d05f02ede6179160ac
         <div className="App">
             <Header />
             <Carousel>
@@ -68,7 +60,27 @@ function HeaderMobile() {
             <h1 className='categories-header'>KIDS</h1>
 
             <div className="container">
-                {productsData.map(product => (
+                {productsGroup1.map(product => (
+                    <div className="product" key={product.id} onClick={() => setClickedProduct(product)}>
+                        <img src={product.image} alt={product.name} />
+                        <h3>{product.name}</h3>
+                        <p>${product.price.toFixed(2)}</p>
+                    </div>
+                ))}
+            </div>
+
+            <div className="container">
+                {productsGroup2.map(product => (
+                    <div className="product" key={product.id} onClick={() => setClickedProduct(product)}>
+                        <img src={product.image} alt={product.name} />
+                        <h3>{product.name}</h3>
+                        <p>${product.price.toFixed(2)}</p>
+                    </div>
+                ))}
+            </div>
+
+            <div className="container">
+                {productsGroup3.map(product => (
                     <div className="product" key={product.id} onClick={() => setClickedProduct(product)}>
                         <img src={product.image} alt={product.name} />
                         <h3>{product.name}</h3>
