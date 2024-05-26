@@ -1,9 +1,11 @@
 import React, { useContext, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import '../cssfiles/Smallgirls.css';
 import { FaHeart, FaShoppingCart } from 'react-icons/fa';
 import products from '../jsonfiles/Smallgirls.json';
 import { WishlistContext } from '../jsfiles/wishcontext';
+import ViewDetails from '../jsfiles/viewdetails';
+import WishlistPage from '../jsfiles/wishlist';
 
 const sizes = ['S', 'M', 'L', 'XL'];
 const colors = ['Red', 'Blue', 'Green', 'Black'];
@@ -75,110 +77,96 @@ const Smallgirls = () => {
 
     return (
         <div className="girls-container">
-            <div className="wishlist-icon-container">
-                <FaShoppingCart onClick={handleWishlistIconClick} className="wishlist-icon" />
-            </div>
-            <div className="sidebar">
-                <h2>Filters</h2>
-                <div className="filter-section">
-                    <h3>Size</h3>
-                    {sizes.map(size => (
-                        <label key={size}>
-                            <input
-                                type="checkbox"
-                                checked={filters.size.includes(size)}
-                                onChange={() => handleFilterChange('size', size)}
-                            />
-                            {size}
-                        </label>
-                    ))}
-                </div>
-                <div className="filter-section">
-                    <h3>Color</h3>
-                    {colors.map(color => (
-                        <label key={color}>
-                            <input
-                                type="checkbox"
-                                checked={filters.color.includes(color)}
-                                onChange={() => handleFilterChange('color', color)}
-                            />
-                            {color}
-                        </label>
-                    ))}
-                </div>
-                <div className="filter-section">
-                    <h3>Cost</h3>
-                    {costRanges.map(range => (
-                        <label key={range}>
-                            <input
-                                type="checkbox"
-                                checked={filters.cost.includes(range)}
-                                onChange={() => handleFilterChange('cost', range)}
-                            />
-                            {range}
-                        </label>
-                    ))}
-                </div>
-                <div className="filter-section">
-                    <h3>Sleeve</h3>
-                    {sleeves.map(sleeve => (
-                        <label key={sleeve}>
-                            <input
-                                type="checkbox"
-                                checked={filters.sleeve.includes(sleeve)}
-                                onChange={() => handleFilterChange('sleeve', sleeve)}
-                            />
-                            {sleeve}
-                        </label>
-                    ))}
-                </div>
-                <div className="filter-section">
-                    <h3>Fit</h3>
-                    {fits.map(fit => (
-                        <label key={fit}>
-                            <input
-                                type="checkbox"
-                                checked={filters.fit.includes(fit)}
-                                onChange={() => handleFilterChange('fit', fit)}
-                            />
-                            {fit}
-                        </label>
-                    ))}
-                </div>
-                <div className="filter-section">
-                    <h3>Neck Type</h3>
-                    {neckTypes.map(neck => (
-                        <label key={neck}>
-                            <input
-                                type="checkbox"
-                                checked={filters.neck.includes(neck)}
-                                onChange={() => handleFilterChange('neck', neck)}
-                            />
-                            {neck}
-                        </label>
-                    ))}
-                </div>
-            </div>
-            <div className="product-list-container">
-                <h1>2-8 Girls</h1>
-                {notification && <div className="notification">{notification}</div>}
-                {[0, 1].map(rowIndex => (
-                    <div className="product-list" key={rowIndex}>
-                        {filterProducts().slice(rowIndex * 5, (rowIndex + 1) * 5).map(product => (
-                            <div className="product-card" key={product.id} onClick={() => handleClick(product)}>
-                                <img src={product.image} alt={product.name} />
-                                <h4>{product.name}</h4>
-                                <h6>{product.price}</h6>
-                                <button className="btn-heart" onClick={(e) => handleWishlistClick(product, e)}>
-                                    <span>
-                                        <FaHeart color={clickedHearts[product.id] ? 'red' : 'gray'} />
-                                    </span>
-                                </button>
+            <Routes>
+                <Route path="/" element={
+                    <>
+                        <div className="wishlist-icon-container">
+                            <FaShoppingCart onClick={handleWishlistIconClick} className="wishlist-icon" />
+                        </div>
+                        <div className="sidebar">
+                            <h2>Filters</h2>
+                            <div class="filter-section">
+                                <div class="filter-select">
+                                    <label htmlFor="size-filter">Size:</label>
+                                    <select id="size-filter" onChange={(e) => handleFilterChange('size', e.target.value)}>
+                                        <option value="">Size</option>
+                                        {sizes.map(size => (
+                                            <option key={size} value={size}>{size}</option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <div class="filter-select">
+                                    <label htmlFor="color-filter">Color:</label>
+                                    <select id="color-filter" onChange={(e) => handleFilterChange('color', e.target.value)}>
+                                        <option value="">Color</option>
+                                        {colors.map(color => (
+                                            <option key={color} value={color}>{color}</option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <div class="filter-select">
+                                    <label htmlFor="cost-filter">Cost:</label>
+                                    <select id="cost-filter" onChange={(e) => handleFilterChange('cost', e.target.value)}>
+                                        <option value="">Cost</option>
+                                        {costRanges.map(range => (
+                                            <option key={range} value={range}>{range}</option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <div class="filter-select">
+                                    <label htmlFor="sleeve-filter">Sleeve:</label>
+                                    <select id="sleeve-filter" onChange={(e) => handleFilterChange('sleeve', e.target.value)}>
+                                        <option value="">Sleeve</option>
+                                        {sleeves.map(sleeve => (
+                                            <option key={sleeve} value={sleeve}>{sleeve}</option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <div class="filter-select">
+                                    <label htmlFor="fit-filter">Fit:</label>
+                                    <select id="fit-filter" onChange={(e) => handleFilterChange('fit', e.target.value)}>
+                                        <option value="">Fit</option>
+                                        {fits.map(fit => (
+                                            <option key={fit} value={fit}>{fit}</option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <div class="filter-select">
+                                    <label htmlFor="neck-filter">Neck Type:</label>
+                                    <select id="neck-filter" onChange={(e) => handleFilterChange('neck', e.target.value)}>
+                                        <option value="">Neck Type</option>
+                                        {neckTypes.map(neck => (
+                                            <option key={neck} value={neck}>{neck}</option>
+                                        ))}
+                                    </select>
+                                </div>
                             </div>
-                        ))}
-                    </div>
-                ))}
-            </div>
+                        </div>
+                        <div className="product-list-container">
+                            <h1>2-8 Girls</h1>
+                            {notification && <div className="notification">{notification}</div>}
+                            {[0, 1].map(rowIndex => (
+                                <div className="product-list" key={rowIndex}>
+                                    {filterProducts().slice(rowIndex * 5, (rowIndex + 1) * 5).map(product => (
+                                        <div className="product-card" key={product.id} onClick={() => handleClick(product)}>
+                                            <img src={product.image} alt={product.name} />
+                                            <h4>{product.name}</h4>
+                                            <h6>{product.price}</h6>
+                                            <button className="btn-heart" onClick={(e) => handleWishlistClick(product, e)}>
+                                                <span>
+                                                    <FaHeart color={clickedHearts[product.id] ? 'red' : 'gray'} />
+                                                </span>
+                                            </button>
+                                        </div>
+                                    ))}
+                                </div>
+                            ))}
+                        </div>
+                    </>
+                } />
+                <Route path="/viewdetails" element={<ViewDetails />} />
+                <Route path="/wishlist" element={<WishlistPage />} />
+            </Routes>
         </div>
     );
 };
