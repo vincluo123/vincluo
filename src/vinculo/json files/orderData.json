@@ -1,0 +1,69 @@
+{
+  "ordersGifUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCzrZExpuV21yLjxwqFTtezR5PCsqAZ8zcSsApuNeKyg&s",
+  "orderSummaryData": [
+    {
+      "id": 1,
+      "name": "Product 1",
+      "brandname": "Brand A",
+      "price": 25.00,
+      "imagefront": "boys1_shirt_front.jpg",
+      "imageback": "boys1_shirt_back.jpg",
+      "color": "Blue",
+      "size": "M",
+      "necktype": "Round",
+      "fit": "Regular",
+      "sleevetype": "Short Sleeve",
+      "Productdescription": "A comfortable blue shirt with a round neck and regular fit.",
+      "quantity": 2,
+      "image": "boys1_shirt.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "brandname": "Brand B",
+      "price": 50.00,
+      "imagefront": "boys2_shirt_front.jpg",
+      "imageback": "boys2_shirt_back.jpg",
+      "color": "Red",
+      "size": "L",
+      "necktype": "V-Neck",
+      "fit": "Slim",
+      "sleevetype": "Long Sleeve",
+      "Productdescription": "A stylish red shirt with a V-neck and slim fit.",
+      "quantity": 1,
+      "image": "boys2_shirt.jpg"
+    }
+  ],
+  "recommendedProductsData": [
+    {
+      "id": 101,
+      "name": "Sample 1",
+      "brandname": "Brand C",
+      "price": 30.00,
+      "imagefront": "sample1_shirt_front.jpg",
+      "imageback": "sample1_shirt_back.jpg",
+      "color": "Green",
+      "size": "S",
+      "necktype": "Collar",
+      "fit": "Regular",
+      "sleevetype": "Short Sleeve",
+      "Productdescription": "A green shirt with a collar and regular fit, perfect for casual wear.",
+      "image": "BOYS-4_page-0001.jpg"
+    },
+    {
+      "id": 102,
+      "name": "Sample 2",
+      "brandname": "Brand D",
+      "price": 35.00,
+      "imagefront": "sample2_shirt_front.jpg",
+      "imageback": "sample2_shirt_back.jpg",
+      "color": "Yellow",
+      "size": "XL",
+      "necktype": "Boat Neck",
+      "fit": "Loose",
+      "sleevetype": "Sleeveless",
+      "Productdescription": "A vibrant yellow shirt with a boat neck and loose fit.",
+      "image": "boys3_shirt.jpg"
+    }
+  ]
+}

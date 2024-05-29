@@ -166,7 +166,7 @@ const products = [
 
 
 
-<<<<<<< HEAD
+
             <div className="new-arrival-container">
 
                 <div className="container container-row">
@@ -179,8 +179,7 @@ const products = [
                         </div>
                     ))}
                 </div>
-=======
->>>>>>> f77c981a42c1912c6239d31a1d4e6efbd7284bf8
+
 
             <div className="container1">
                 {products.map(product => (
@@ -188,18 +187,20 @@ const products = [
                         <img src={product.image} alt={product.name} />
                         <h3>{product.name}</h3>
                         <h6>{product.cname}</h6>
-<<<<<<< HEAD
+<
                         <p>${product.price.toFixed(2)}</p>
-<<<<<<< HEAD
+
                         <button className="btn-cart" >Add to Cart</button>
-=======
+
 
                         <button className="btn" style={{ backgroundColor: '#B4B4B8' }}>Add to Cart</button>
 
                         <button className="btn-cart" >Add to Cart</button>
 
->>>>>>> 1e62644ae847bb524294e1e563c71315ef9db2c8
-=======
+
+
+                        <button className="btn-cart" >Add to Cart</button>
+
                         <p>₹{product.price.toFixed(2)}</p>
 
                         <button className="btn-cart" onClick={() => handleClick(product.id)}>
@@ -208,7 +209,7 @@ const products = [
                                 <FaHeart color={clickedHearts[product.id] ? 'red' : 'black'} />
                             </span>
                         </button>
->>>>>>> f77c981a42c1912c6239d31a1d4e6efbd7284bf8
+
                     </div>
                 ))}
             </div>

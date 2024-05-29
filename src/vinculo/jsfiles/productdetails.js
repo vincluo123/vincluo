@@ -66,7 +66,11 @@ const ProductDetails = () => {
   return (
     <div className="product-details">
       <Helmet>
+
+        <title>Product Details - T-Shirt</title>
+
         <title>Product Details - {product.name}</title>
+
         <meta name="description" content="Buy high-quality T-Shirts in various colors and sizes. Check price details, ratings, and manufacturer information." />
         <meta name="keywords" content="T-Shirt, Buy T-Shirt, T-Shirt Price, T-Shirt Ratings, T-Shirt Manufacturer, T-Shirt Colors, T-Shirt Sizes, Cotton T-Shirt, Casual Wear T-Shirt, Printed T-Shirt, Short Sleeve T-Shirt" />
       </Helmet>

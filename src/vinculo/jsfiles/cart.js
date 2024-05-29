@@ -1,17 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../cssfiles/cart.css';
-
+import cartData from '../json files/cartData.json';
 
 const CartPage = () => {
-  const [cartItems, setCartItems] = useState([
-    { id: 1, name: 'Product 1', price: 10, quantity: 1, image: "boys1_shirt.jpg" },
-    { id: 2, name: 'Product 2', price: 15, quantity: 1, image: "boys2_shirt.jpg" },
-    { id: 3, name: 'Product 3', price: 20, quantity: 1, image: "BOYS-4_page-0001.jpg" },
-  ]);
-  const [buyLaterItems, setBuyLaterItems] = useState([]);
-  const [shippingInfo, setShippingInfo] = useState({});
-  const [couponCode, setCouponCode] = useState('');
-  const [paymentMethod, setPaymentMethod] = useState('');
+  const [cartItems, setCartItems] = useState(cartData.cartItems);
+  const [buyLaterItems, setBuyLaterItems] = useState(cartData.buyLaterItems);
+  const [shippingInfo, setShippingInfo] = useState(cartData.shippingInfo);
+  const [couponCode, setCouponCode] = useState(cartData.couponCode);
+  const [paymentMethod, setPaymentMethod] = useState(cartData.paymentMethod);
+
+  useEffect(() => {
+    document.title = "Shopping Cart";
+
+    const metaDescription = document.createElement('meta');
+    metaDescription.name = "description";
+    metaDescription.content = "Your online shopping cart page for managing products, viewing order summary, applying discount codes, and checking out.";
+    document.head.appendChild(metaDescription);
+
+    const metaKeywords = document.createElement('meta');
+    metaKeywords.name = "keywords";
+    metaKeywords.content = "shopping cart, online shopping, e-commerce, discount codes, checkout, order summary, buy later";
+    document.head.appendChild(metaKeywords);
+
+    const viewportMeta = document.createElement('meta');
+    viewportMeta.name = "viewport";
+    viewportMeta.content = "width=device-width, initial-scale=1.0";
+    document.head.appendChild(viewportMeta);
+
+    return () => {
+      document.head.removeChild(metaDescription);
+      document.head.removeChild(metaKeywords);
+      document.head.removeChild(viewportMeta);
+    };
+  }, []);
 
   const handleRemoveItem = (id) => {
     const updatedCartItems = cartItems.filter(item => item.id !== id);
@@ -67,7 +88,6 @@ const CartPage = () => {
       <div className="cart-section">
         {cartItems.map(item => (
           <div key={item.id} className="cart-item">
-            {/* Item Info */}
             <div className="item-info">
               <div className="product-image">
                 <img src={item.image} alt={item.name} />
@@ -88,7 +108,6 @@ const CartPage = () => {
                 <p className="subtotal">Subtotal: ${calculateSubtotal(item)}</p>
               </div>
             </div>
-            {/* Buttons */}
             <div className="buttons">
               <button className="remove-button" onClick={() => handleRemoveItem(item.id)}>Remove</button>
               <button className="buy-later-button" onClick={() => handleBuyLater(item.id)}>Buy Later</button>
@@ -96,7 +115,6 @@ const CartPage = () => {
           </div>
         ))}
       </div>
-      {/* Total and Checkout Buttons */}
       {cartItems.length > 0 && (
         <>
           <div className="total">
@@ -104,49 +122,40 @@ const CartPage = () => {
             <button onClick={handleRemoveAll}>Remove All</button>
             <button onClick={handleCheckout}>Checkout</button>
           </div>
-          {/* Order Summary */}
           <div className="order-summary">
             <h2>Order Summary</h2>
             <p>Subtotal: ${calculateTotal()}</p>
             <p>Shipping: Free</p>
             <p>Total: ${calculateTotal()}</p>
           </div>
-          {/* Shipping Information */}
           <div className="shipping-info">
             <h2>Shipping Information</h2>
             {/* Add form fields for shipping information */}
           </div>
-          {/* Payment Options */}
           <div className="payment-options">
             <h2>Payment Options</h2>
             {/* Add payment method selection */}
           </div>
-          {/* Discount Coupon */}
           <div className="discount-coupon">
             <input type="text" placeholder="Enter Coupon Code" value={couponCode} onChange={(e) => setCouponCode(e.target.value)} />
             <button>Apply</button>
           </div>
-          {/* Delivery Time */}
           <div className="delivery-time">
             <p>Estimated Delivery Time: 3-5 business days</p>
           </div>
         </>
       )}
-      {/* Buy Now Button */}
       <div className="buy-now">
         <button onClick={handleCheckout}>Buy Now</button>
       </div>
-      {/* Return Policy */}
       <div className="return-policy">
-            <h2>Return Policy</h2>
-            <p>30-day return policy. Terms & conditions apply.</p>
-          </div>
-          {/* Customer Support */}
-          <div className="customer-support">
-            <h2>Customer Support</h2>
-            <p>Contact us: support@example.com | 1-800-123-4567</p>
-          </div>
-      {/* Buy Later Section */}
+        <h2>Return Policy</h2>
+        <p>30-day return policy. Terms & conditions apply.</p>
+      </div>
+      <div className="customer-support">
+        <h2>Customer Support</h2>
+        <p>Contact us: support@example.com | 1-800-123-4567</p>
+      </div>
       {buyLaterItems.length > 0 && (
         <div className="buy-later-section">
           <h2>Buy Later</h2>
@@ -164,7 +173,6 @@ const CartPage = () => {
               <div className="buttons">
                 <button className="add-to-cart-button" onClick={() => handleAddToCart(item.id)}>Add to Cart</button>
               </div>
-              
             </div>
           ))}
         </div>
