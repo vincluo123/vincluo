@@ -85,6 +85,7 @@ body {
     .product-card {
         flex: 0 0 70%;
         max-width: 70%;
+        
     }
 }
 
@@ -133,3 +134,53 @@ body {
     z-index: 1000;
 }
 
+/* Add responsive styles for mobile devices */
+@media (max-width: 600px) {
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .filter-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .filter-section h3 {
+        margin: 5px 0;
+    }
+
+    .filter-section label {
+        flex: 0 0 48%;
+        max-width: 48%;
+        margin-bottom: 5px;
+    }
+
+    .filter-select select {
+        width: 100%;
+    }
+
+    .product-list-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .product-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow-x: hidden;
+    }
+
+    .product-card {
+        flex: 0 0 45%;
+        max-width: 45%;
+        margin: 5px;
+        padding: 10px;
+    }
+}
+
+/* Other existing styles... */

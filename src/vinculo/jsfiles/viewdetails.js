@@ -5,11 +5,16 @@ import '../cssfiles/viewdetails.css';
 
 const ViewDetails = () => {
     const location = useLocation();
-    const { product } = location.state;
+    const product = location.state?.product;
 
-    // Image carousel logic
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    const [imageList] = useState([product.imagefront, product.image, product.imageback]);
+    const [imageList, setImageList] = useState([]);
+
+    useEffect(() => {
+        if (product) {
+            setImageList([product.imagefront, product.image, product.imageback]);
+        }
+    }, [product]);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -25,6 +30,10 @@ const ViewDetails = () => {
     const nextImage = () => {
         setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imageList.length);
     };
+
+    if (!product) {
+        return <div>Product not found</div>;
+    }
 
     return (
         <div className="view-details-container">
@@ -55,7 +64,6 @@ const ViewDetails = () => {
                 <p>Neck Type: {product.necktype}</p>
                 <p>Sleeve: {product.sleevetype}</p>
                 <p>Product Description: {product.Productdescription}</p>
-                {/* Add additional product details here */}
                 <button className="buy-button">Buy Now</button>
                 <div className="delivery-details">
                     <h3>Manufacturer Details:</h3>
