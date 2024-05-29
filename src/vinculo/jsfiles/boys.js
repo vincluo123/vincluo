@@ -66,7 +66,7 @@ const Boys = () => {
     const handleClick = (product) => {
         setSelectedProduct(product);
     };
-=======
+
 const sizes = ['S', 'M', 'L', 'XL'];
 const colors = ['Red', 'Blue', 'Green', 'Black'];
 const costRanges = ['0-20', '21-40', '41-60'];
